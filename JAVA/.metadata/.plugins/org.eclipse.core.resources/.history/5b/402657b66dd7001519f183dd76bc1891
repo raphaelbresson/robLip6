@@ -1,0 +1,22 @@
+package robLip6.core.tcp;
+import java.util.*;
+import java.util.concurrent.locks.*;
+public class Receiver extends Thread 
+{
+	public Vector<Integer> m_bufferLowLevel;
+	public Receiver()
+	{
+		Lock l = new ReentrantLock();
+	}
+	
+	public void initialiseBuffer()
+	{
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

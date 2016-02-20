@@ -1,0 +1,7 @@
+package robLip6.core.tcp;
+
+import java.util.Vector;
+
+public class Capteur {
+	private Vector<Integer> m_bufferCapteur;
+}

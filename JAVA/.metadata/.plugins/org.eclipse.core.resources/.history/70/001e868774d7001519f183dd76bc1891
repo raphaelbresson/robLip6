@@ -1,0 +1,41 @@
+package robLip6.core.tcp;
+import java.util.*;
+import java.net.*;
+import java.io.*;
+
+/*
+ * Classe qui reçoit les données des capteurs de la LOW LEVEL
+ */
+public class Receiver extends Thread 
+{
+	private Vector<Capteur> m_capteurs;
+	private InputStream m_in;
+	private OutputStream m_out;
+	private Socket m_client;
+	
+	public Receiver(ServerSocket serv) throws IOException
+	{
+		this.m_socket = serv.accept();
+		this.initialiseCapteurs();
+	}
+	
+	/*
+	 * 1) Envoie une requete TCP pour savoir combien de capteurs il faut gérer
+	 * 2) Initialise tous les buffers
+	 */
+	public void initialiseCapteurs()
+	{
+		
+	}
+	
+	public Capteur getCapteur(Integer i)
+	{
+		return this.m_capteurs.elementAt(i);
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

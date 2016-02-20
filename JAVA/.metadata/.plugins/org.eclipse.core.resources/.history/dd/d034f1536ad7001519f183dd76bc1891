@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package robLip6.core.tcp;
+
+/**
+ * @author Raf
+ *
+ */
+public class BufferPartage 
+{
+	public synchronized void set(int i)
+	{
+		
+	}
+	public synchronized int get(int i)
+	{
+		
+	}
+}

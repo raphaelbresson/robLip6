@@ -1,0 +1,10 @@
+import java.util.*;
+package robLip6.core.tcp;
+public class Receiver implements Runnable {
+	private static int bufferLowLevel;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

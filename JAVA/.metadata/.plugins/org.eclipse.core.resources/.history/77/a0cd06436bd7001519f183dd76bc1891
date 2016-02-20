@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package robLip6.core.tcp;
+
+/**
+ * @author Raphaël Bresson
+ *
+ */
+public class BufferPartage 
+{
+	public int m_data;
+	BufferPartage(int data)
+	{
+		
+	}
+	public synchronized void set(int data)
+	{
+		m_data = data;
+	}
+	public synchronized int get()
+	{
+		return m_data;
+	}
+}

@@ -1,0 +1,15 @@
+package robLip6.core.tcp;
+import java.util.*;
+public class Receiver extends Thread 
+{
+	public Vector<byte> m_bufferLowLevel;
+	public Receiver()
+	{
+		
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

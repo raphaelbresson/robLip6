@@ -1,0 +1,40 @@
+package robLip6.core.tcp;
+import java.util.*;
+import java.net.*;
+import java.io.*;
+import java.util.concurrent.locks.*;
+/*
+ * Classe qui reçoit les données des capteurs de la LOW LEVEL
+ */
+public class Receiver extends Thread 
+{
+	private Vector<Integer> m_bufferLowLevel;
+	private Vector<Lock> m_mutexes;
+	private Socket m_socket;
+	
+	public Receiver(ServerSocket serv) throws IOException
+	{
+		m_socket = serv.accept();
+		this.initialiseBuffer();
+		for(int i=0 ; i< m_bufferLowLevel.size() ; i++)
+		{
+			Lock l = new ReentrantLock();
+			m_mutexes.add(l);
+		}
+	}
+	
+	public void initialiseBuffer()
+	{
+	}
+	
+	public Integer get(Integer i)
+	{
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+}

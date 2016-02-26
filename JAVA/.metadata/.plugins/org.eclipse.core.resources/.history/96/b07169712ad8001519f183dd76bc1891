@@ -1,0 +1,21 @@
+package robLip6.core.tcp;
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+import robLip6.core.element.*;
+
+public class Sender implements Runnable 
+{
+	private DataOutputStream m_out;
+	public Sender(DataOutputStream out, Vector<Actionneur> actionneurs)
+	{
+		this.m_out = out;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package robLip6.core.tcp;
+
+import java.net.*;
+import java.io.*;
+
+public class Sender implements Runnable 
+{
+	public Sender(Socket client)
+	{
+		
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

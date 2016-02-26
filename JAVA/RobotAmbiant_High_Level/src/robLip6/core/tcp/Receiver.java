@@ -1,6 +1,8 @@
 package robLip6.core.tcp;
 import java.util.*;
-import java.net.*;
+
+import robLip6.core.element.Capteur;
+
 import java.io.*;
 
 /*
@@ -11,38 +13,12 @@ public class Receiver implements Runnable
 	private Vector<Capteur> m_capteurs;
 	private InputStream m_input;
 	private BufferedReader m_in;
-	private DataOutputStream m_out;
-	private Socket m_client;
 	
-	public Receiver(ServerSocket serv) throws IOException
+	public Receiver(InputStream input, BufferedReader in, Vector<Capteur> capteurs) throws IOException
 	{
-		this.m_client = serv.accept();
-		this.m_input = this.m_client.getInputStream();
-		this.m_in = new BufferedReader(new InputStreamReader(this.m_input));
-		this.m_out = new DataOutputStream(this.m_client.getOutputStream());
-		this.initialiseCapteurs();
-	}
-	
-	/*
-	 * 1) Envoie une reponse TCP et reçoit en retour une requête contenant le nombre de
-	 *  capteurs à gérer
-	 * 3) Initialise les buffers de ces capteurs via la classe capteur
-	 */
-	private void initialiseCapteurs() throws IOException
-	{
-		this.m_out.write("ok".getBytes());
-		while(this.m_input.available() >= 4);
-		// on lit le nombre de capteurs à gérer
-		Integer nbCapteurs = Integer.parseInt(this.m_in.readLine()); 
-		for(Integer i=0 ; i < nbCapteurs ; i++)
-		{
-			this.m_out.write("ok".getBytes());// on dit au client qu'il peut passer à la requête suivante
-			while(this.m_input.available() >= 4);
-			// on lit le nombre d'entiers nécessaires pour les données de ce capteur
-			Integer nbByteCapt = Integer.parseInt(this.m_in.readLine()); 
-			Capteur capt = new Capteur(nbByteCapt);
-			this.m_capteurs.addElement(capt);
-		}
+		this.m_input = input;
+		this.m_in = in;
+		m_capteurs = capteurs;
 	}
 	
 	public Capteur getCapteur(Integer i)
@@ -51,7 +27,8 @@ public class Receiver implements Runnable
 	}
 	
 	@Override
-	public void run(){
+	public void run()
+	{
 		while(true)
 		{
 			try
@@ -64,8 +41,7 @@ public class Receiver implements Runnable
 				}
 			}catch(IOException e)
 			{
-				System.err.println(e.getMessage());
-				System.exit(-1);
+				e.printStackTrace();
 			}
 		}
 

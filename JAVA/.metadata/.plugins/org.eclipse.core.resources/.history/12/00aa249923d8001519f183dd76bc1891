@@ -1,0 +1,14 @@
+package robLip6.core.tcp;
+
+public class Capteur extends ElementElect implements Runnable{
+	Capteur(Integer nbByteCapt)
+	{
+		super(nbByteCapt);
+	}
+	
+	@override
+	void run()
+	{
+		
+	}
+}

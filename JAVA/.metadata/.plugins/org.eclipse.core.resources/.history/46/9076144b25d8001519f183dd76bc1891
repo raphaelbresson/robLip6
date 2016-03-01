@@ -1,0 +1,11 @@
+package robLip6.core.tcp;
+public class Sender implements Runnable 
+{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

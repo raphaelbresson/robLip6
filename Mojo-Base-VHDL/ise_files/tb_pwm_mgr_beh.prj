@@ -1,0 +1,2 @@
+vhdl work "../../HARDWARE/vhdl/PWM/pwm_mgr.vhd"
+vhdl work "../../HARDWARE/vhdl/PWM/tb_pwm_mgr.vhd"

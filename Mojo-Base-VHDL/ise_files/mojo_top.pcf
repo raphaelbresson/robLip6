@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Mar 04 14:42:12 2016
+// Written by: Map P.20131013 on Sat Mar 05 19:06:21 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -9,7 +9,6 @@ COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 PIN rst_n_pin<0> = BEL "rst_n" PINNAME PAD;
 PIN "rst_n_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
-COMP "pwm_out" LOCATE = SITE "P58" LEVEL 1;
 COMP "spi_channel<0>" LOCATE = SITE "P46" LEVEL 1;
 COMP "spi_channel<1>" LOCATE = SITE "P61" LEVEL 1;
 COMP "spi_channel<2>" LOCATE = SITE "P62" LEVEL 1;
@@ -91,6 +90,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         BEL "analog_inputs/samples_q_2_3" BEL "analog_inputs/samples_q_2_2"
         BEL "analog_inputs/samples_q_2_1" BEL "analog_inputs/samples_q_2_0"
         BEL "gen_led_pwm[7].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[7].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[7].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[7].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[7].pwm_output_leds/cmp_q_7" BEL
@@ -102,6 +111,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[7].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[7].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[6].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[6].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[6].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[6].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[6].pwm_output_leds/cmp_q_7" BEL
@@ -113,6 +132,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[6].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[6].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[5].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[5].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[5].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[5].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[5].pwm_output_leds/cmp_q_7" BEL
@@ -124,6 +153,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[5].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[5].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[4].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[4].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[4].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[4].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[4].pwm_output_leds/cmp_q_7" BEL
@@ -135,6 +174,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[4].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[4].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[3].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[3].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[3].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[3].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[3].pwm_output_leds/cmp_q_7" BEL
@@ -146,6 +195,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[3].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[3].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[2].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[2].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[2].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[2].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[2].pwm_output_leds/cmp_q_7" BEL
@@ -157,6 +216,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[2].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[2].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[1].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[1].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[1].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[1].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[1].pwm_output_leds/cmp_q_7" BEL
@@ -168,6 +237,16 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[1].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[1].pwm_output_leds/cmp_q_0" BEL
         "gen_led_pwm[0].pwm_output_leds/pwm_q" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_19" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_18" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_17" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_16" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_15" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_14" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_13" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_12" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_11" BEL
+        "gen_led_pwm[0].pwm_output_leds/cmp_q_10" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_9" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_8" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_7" BEL
@@ -178,7 +257,17 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_2" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_1" BEL
         "gen_led_pwm[0].pwm_output_leds/cmp_q_0" BEL
-        "avr_interface/spi_slave/bit_ct_q_2" BEL
+        "avr_interface/serial_tx/state_q_FSM_FFd1" BEL
+        "avr_interface/serial_tx/state_q_FSM_FFd2" BEL
+        "avr_interface/serial_tx/ctr_q_6" BEL
+        "avr_interface/serial_tx/ctr_q_5" BEL
+        "avr_interface/serial_tx/ctr_q_4" BEL
+        "avr_interface/serial_tx/ctr_q_3" BEL
+        "avr_interface/serial_tx/ctr_q_2" BEL
+        "avr_interface/serial_tx/ctr_q_1" BEL
+        "avr_interface/serial_tx/ctr_q_0" BEL
+        "avr_interface/serial_tx/block_q" BEL "avr_interface/serial_tx/tx_q"
+        BEL "avr_interface/spi_slave/bit_ct_q_2" BEL
         "avr_interface/spi_slave/bit_ct_q_1" BEL
         "avr_interface/spi_slave/bit_ct_q_0" BEL
         "avr_interface/spi_slave/dout_q_7" BEL
@@ -201,8 +290,17 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "avr_interface/spi_slave/sck_old_q" BEL
         "avr_interface/spi_slave/mosi_q" BEL "avr_interface/spi_slave/sck_q"
         BEL "avr_interface/spi_slave/ss_q" BEL "avr_interface/byte_ct_q" BEL
-        "avr_interface/spi_slave/miso_q" BEL "clk_BUFGP/BUFG" BEL
-        "gen_led_pwm[0].pwm_output_leds/pwm_q_1";
+        "avr_interface/spi_slave/miso_q" BEL
+        "avr_interface/serial_tx/bit_ctr_q_2" BEL
+        "avr_interface/serial_tx/bit_ctr_q_1" BEL
+        "avr_interface/serial_tx/bit_ctr_q_0" BEL
+        "avr_interface/serial_tx/data_q_6" BEL
+        "avr_interface/serial_tx/data_q_5" BEL
+        "avr_interface/serial_tx/data_q_4" BEL
+        "avr_interface/serial_tx/data_q_3" BEL
+        "avr_interface/serial_tx/data_q_2" BEL
+        "avr_interface/serial_tx/data_q_1" BEL
+        "avr_interface/serial_tx/data_q_0" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

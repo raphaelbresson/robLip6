@@ -5,5 +5,14 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="957" delta="unknown" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 93: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="unknown" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 96: Case choice must be a locally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="957" delta="unknown" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 99: Case choice must be a locally static expression
+</msg>
+
 </messages>
 

@@ -22,8 +22,8 @@ entity mojo_top is
 		spi_channel : out std_logic_vector(3 downto 0);  -- analog read channel (input to AVR service task)
 		avr_tx		: in  std_logic;		-- serial data transmited from AVR/USB (FPGA recieve)
 		avr_rx		: out std_logic;		-- serial data for AVR/USB to receive (FPGA transmit)
-		avr_rx_busy : in  std_logic;			-- AVR/USB buffer full (don't send data when true)
-		pwm_out			: out std_logic   -- sorties pwm
+		avr_rx_busy : in  std_logic			-- AVR/USB buffer full (don't send data when true)
+--		pwm_out			: out std_logic   -- sorties pwm
 	);
 end mojo_top;
 
@@ -41,13 +41,6 @@ signal rx_data			: std_logic_vector(7 downto 0);
 signal new_tx_data		: std_logic;
 signal new_rx_data		: std_logic;
 signal tx_busy			: std_logic;
-
--- signals for UART echo test
-signal uart_data		: std_logic_vector(7 downto 0);	-- data buffer for UART (holds last recieved/sent byte)
-signal data_to_send		: std_logic;					-- indicates data to send in uart_data
-
--- signals for sample test
-signal last_sample		: std_logic_vector(9 downto 0);
 
 -- signal de commande des entrées pwm
 type com_pwm_tab is array(0 to 7) of std_logic_vector(9 downto 0);
@@ -72,32 +65,33 @@ analog_inputs: entity work.Analog_in
 			analog_5 => com_pwm(5),
 			analog_6 => com_pwm(6),
 			analog_7 => com_pwm(7)
-		);
+		); 
 
 -- test pwm avec les leds
 gen_led_pwm: for i in 0 to 7 generate
 	pwm_output_leds : entity work.pwm_mgr
 		generic map(
-				cmp_length => 10
+				com_length => 10,
+				cmp_length => 20
 			)
 		port map(
 			clk => clk,
 			rst => rst,
-			cmp => com_pwm(i),
+			com => com_pwm(i),
 			pwm => led(i)
 		);
 end generate;
 -- test pwm avec l'oscilloscope (Pin 58)		
-pwm_output8 : entity work.pwm_mgr
-	generic map(
-				cmp_length => 10
-			)
-	port map(
-		clk => clk,
-		rst => rst,
-		cmp => com_pwm(0),
-		pwm => pwm_out
-		);
+--pwm_output8 : entity work.pwm_mgr
+--	generic map(
+--				com_length => 10
+--			)
+--	port map(
+--		clk => clk,
+--		rst => rst,
+--		com => com_pwm(0),
+--		pwm => pwm_out
+--		);
 		
 rst	<= NOT rst_n;						-- generate non-inverted reset signal from rst_n button
 
@@ -130,6 +124,13 @@ avr_interface : entity work.avr_interface
 		rx_data		=> rx_data			-- received data (only when new_tx_data = '1')
 	);
 
+testUART:process(CLK)
+begin
+	if(CLK='1' and CLK'event) then
+		new_tx_data <= '1';
+		tx_data <= "01010111";
+	end if;
+end process;
 
 
 end RTL;

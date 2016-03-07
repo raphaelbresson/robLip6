@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_diviseur_freq_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_diviseur_freq_beh.prj" "work.tb_diviseur_freq" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_i2c_master_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_i2c_master_beh.prj" "work.tb_i2c_master" 

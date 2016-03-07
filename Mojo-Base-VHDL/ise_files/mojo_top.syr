@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: mojo_top.prj
@@ -142,6 +142,7 @@ Elaborating entity <mojo_top> (architecture <RTL>) from library <work>.
 Elaborating entity <Analog_in> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <pwm_mgr> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/HARDWARE/vhdl/PWM/pwm_mgr.vhd" Line 68: rst should be on the sensitivity list of the process
 
 Elaborating entity <avr_interface> (architecture <RTL>) from library <work>.
 
@@ -154,8 +155,6 @@ INFO:HDLCompiler:679 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_rx.vhd" 
 
 Elaborating entity <serial_tx> (architecture <RTL>) with generics from library <work>.
 INFO:HDLCompiler:679 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:634 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" Line 39: Net <tx_data[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" Line 41: Net <new_tx_data> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -163,11 +162,16 @@ WARNING:HDLCompiler:634 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd
 
 Synthesizing Unit <mojo_top>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd".
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 105: Output port <rx_data> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 105: Output port <tx_busy> of the instance <avr_interface> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 105: Output port <new_rx_data> of the instance <avr_interface> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <tx_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <new_tx_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 99: Output port <rx_data> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 99: Output port <tx_busy> of the instance <avr_interface> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" line 99: Output port <new_rx_data> of the instance <avr_interface> is unconnected or connected to loadless signal.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:1>> (without init value) have a constant value of 0 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:1>> (without init value) have a constant value of 1 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:1>> (without init value) have a constant value of 0 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:1>> (without init value) have a constant value of 1 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:1>> (without init value) have a constant value of 0 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data<1:3>> (without init value) have a constant value of 1 in block <mojo_top>.
+    WARNING:Xst:2404 -  FFs/Latches <new_tx_data<0:0>> (without init value) have a constant value of 1 in block <mojo_top>.
     Summary:
 	no macro.
 Unit <mojo_top> synthesized.
@@ -273,10 +277,23 @@ Unit <Analog_in> synthesized.
 
 Synthesizing Unit <pwm_mgr>.
     Related source file is "/home/raphael/Desktop/HARDWARE/vhdl/PWM/pwm_mgr.vhd".
-        cmp_length = 10
+        com_length = 10
+        cmp_length = 20
+        offset = 165
     Found 1-bit register for signal <pwm_q>.
-    Found 10-bit register for signal <cmp_q>.
-    Found 10-bit adder for signal <cmp_q[9]_GND_90_o_add_0_OUT> created at line 1241.
+    Found 20-bit register for signal <cmp_q>.
+    Found 20-bit adder for signal <cmp_q[19]_GND_90_o_add_0_OUT> created at line 1241.
+    Found 11-bit adder for signal <GND_90_o_GND_90_o_add_1_OUT> created at line 1241.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -287,12 +304,12 @@ WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<2>>. Latches may be genera
 WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <pwm_d>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 10-bit comparator greater for signal <cmp_q[9]_CMP[9]_LessThan_2_o> created at line 49
+WARNING:Xst:737 - Found 1-bit latch for signal <cmp_d<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 13-bit comparator greater for signal <cmp_q[19]_GND_90_o_LessThan_3_o> created at line 55
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  11 D-type flip-flop(s).
-	inferred  11 Latch(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred  21 Latch(s).
 	inferred   1 Comparator(s).
 Unit <pwm_mgr> synthesized.
 
@@ -318,7 +335,7 @@ Synthesizing Unit <cclk_detector>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd".
     Found 13-bit register for signal <ctr_q>.
     Found 1-bit register for signal <ready_q>.
-    Found 13-bit adder for signal <ctr_q[12]_GND_103_o_add_1_OUT> created at line 1241.
+    Found 13-bit adder for signal <ctr_q[12]_GND_113_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  14 D-type flip-flop(s).
@@ -336,7 +353,7 @@ Synthesizing Unit <spi_slave>.
     Found 1-bit register for signal <ss_q>.
     Found 8-bit register for signal <data_q>.
     Found 1-bit register for signal <sck_old_q>.
-    Found 3-bit adder for signal <bit_ct_q[2]_GND_104_o_add_1_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ct_q[2]_GND_114_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
@@ -367,8 +384,8 @@ Synthesizing Unit <serial_rx>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <ctr_q[6]_GND_106_o_add_6_OUT> created at line 1241.
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_106_o_add_8_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_116_o_add_6_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_116_o_add_8_OUT> created at line 1241.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
@@ -380,47 +397,70 @@ Synthesizing Unit <serial_tx>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
-    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <tx_q>.
+    Found 2-bit register for signal <state_q>.
     Found 1-bit register for signal <block_q>.
     Found 8-bit register for signal <data_q>.
     Found 3-bit register for signal <bit_ctr_q>.
     Found 7-bit register for signal <ctr_q>.
+    Found finite state machine <FSM_1> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_117_o_add_12_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_117_o_add_19_OUT> created at line 1241.
+    Found 7-bit 4-to-1 multiplexer for signal <ctr_d> created at line 53.
     Summary:
-	inferred   1 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <serial_tx> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 13
- 10-bit adder                                          : 9
+# Adders/Subtractors                                   : 22
+ 11-bit adder                                          : 8
  13-bit adder                                          : 1
- 3-bit adder                                           : 2
- 7-bit adder                                           : 1
-# Registers                                            : 47
+ 20-bit adder                                          : 8
+ 3-bit adder                                           : 3
+ 7-bit adder                                           : 2
+# Registers                                            : 49
  1-bit register                                        : 21
- 10-bit register                                       : 18
+ 10-bit register                                       : 9
  13-bit register                                       : 1
- 3-bit register                                        : 2
+ 20-bit register                                       : 8
+ 3-bit register                                        : 3
  4-bit register                                        : 1
- 7-bit register                                        : 1
- 8-bit register                                        : 3
-# Latches                                              : 183
- 1-bit latch                                           : 183
-# Comparators                                          : 9
- 10-bit comparator greater                             : 9
-# Multiplexers                                         : 15
- 1-bit 2-to-1 multiplexer                              : 6
+ 7-bit register                                        : 2
+ 8-bit register                                        : 4
+# Latches                                              : 252
+ 1-bit latch                                           : 252
+# Comparators                                          : 8
+ 13-bit comparator greater                             : 8
+# Multiplexers                                         : 22
+ 1-bit 2-to-1 multiplexer                              : 8
  10-bit 2-to-1 multiplexer                             : 1
  13-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 2
- 7-bit 2-to-1 multiplexer                              : 4
- 8-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 6
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -439,6 +479,10 @@ Synthesizing (advanced) Unit <serial_rx>.
 The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
 Unit <serial_rx> synthesized (advanced).
 
+Synthesizing (advanced) Unit <serial_tx>.
+The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
+Unit <serial_tx> synthesized (advanced).
+
 Synthesizing (advanced) Unit <spi_slave>.
 The following registers are absorbed into counter <bit_ct_q>: 1 register on signal <bit_ct_q>.
 Unit <spi_slave> synthesized (advanced).
@@ -447,29 +491,40 @@ Unit <spi_slave> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 10
- 10-bit adder                                          : 9
- 7-bit adder                                           : 1
-# Counters                                             : 3
+# Adders/Subtractors                                   : 18
+ 11-bit adder                                          : 8
+ 20-bit adder                                          : 8
+ 7-bit adder                                           : 2
+# Counters                                             : 4
  13-bit up counter                                     : 1
- 3-bit up counter                                      : 2
-# Registers                                            : 236
- Flip-Flops                                            : 236
-# Comparators                                          : 9
- 10-bit comparator greater                             : 9
-# Multiplexers                                         : 11
- 1-bit 2-to-1 multiplexer                              : 5
+ 3-bit up counter                                      : 3
+# Registers                                            : 321
+ Flip-Flops                                            : 321
+# Comparators                                          : 8
+ 13-bit comparator greater                             : 8
+# Multiplexers                                         : 17
+ 1-bit 2-to-1 multiplexer                              : 7
  10-bit 2-to-1 multiplexer                             : 1
- 7-bit 2-to-1 multiplexer                              : 4
- 8-bit 2-to-1 multiplexer                              : 1
-# FSMs                                                 : 1
+ 7-bit 2-to-1 multiplexer                              : 6
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <mojo_top>: instances <gen_led_pwm[0].pwm_output_leds>, <pwm_output8> of unit <pwm_mgr> are equivalent, second instance is removed
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <avr_interface/serial_tx/FSM_1> on signal <state_q[1:2]> with gray encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 00
+ start_bit | 01
+ data_bits | 11
+ stop_bit  | 10
+-----------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <avr_interface/serial_rx/FSM_0> on signal <state_q[1:2]> with gray encoding.
 -----------------------
@@ -480,7 +535,7 @@ Optimizing FSM <avr_interface/serial_rx/FSM_0> on signal <state_q[1:2]> with gra
  wait_full | 11
  wait_high | 10
 -----------------------
-WARNING:Xst:2677 - Node <avr_interface/serial_tx/block_q> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:1710 - FF/Latch <data_q_7> (without init value) has a constant value of 0 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2973 - All outputs of instance <avr_interface/serial_rx> of block <serial_rx> are unconnected in block <mojo_top>. Underlying logic will be removed.
 
 Optimizing unit <mojo_top> ...
@@ -489,14 +544,15 @@ Optimizing unit <Analog_in> ...
 
 Optimizing unit <pwm_mgr> ...
 
+Optimizing unit <serial_tx> ...
+
 Optimizing unit <spi_slave> ...
 
 Optimizing unit <serial_rx> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 10.
-FlipFlop gen_led_pwm[0].pwm_output_leds/pwm_q has been replicated 1 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 14.
 
 Final Macro Processing ...
 
@@ -504,8 +560,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 224
- Flip-Flops                                            : 224
+# Registers                                            : 324
+ Flip-Flops                                            : 324
 
 =========================================================================
 
@@ -528,33 +584,36 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 292
+# BELS                             : 847
 #      GND                         : 1
-#      INV                         : 11
-#      LUT2                        : 33
-#      LUT3                        : 32
-#      LUT4                        : 103
-#      LUT5                        : 33
-#      LUT6                        : 21
-#      MUXCY                       : 44
+#      INV                         : 19
+#      LUT1                        : 152
+#      LUT2                        : 36
+#      LUT3                        : 35
+#      LUT4                        : 140
+#      LUT5                        : 37
+#      LUT6                        : 44
+#      MUXCY                       : 204
+#      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 13
-# FlipFlops/Latches                : 396
-#      FDC                         : 93
+#      XORCY                       : 173
+# FlipFlops/Latches                : 576
+#      FD                          : 10
+#      FDC                         : 174
 #      FDCE                        : 34
-#      FDE                         : 8
-#      FDP                         : 1
+#      FDE                         : 16
+#      FDP                         : 2
 #      FDR                         : 80
 #      FDSE                        : 8
 #      LD                          : 4
-#      LD_1                        : 88
+#      LD_1                        : 168
 #      LDE                         : 80
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
 # IO Buffers                       : 20
-#      IBUF                        : 5
-#      OBUF                        : 9
+#      IBUF                        : 6
+#      OBUF                        : 8
 #      OBUFT                       : 6
 
 Device utilization summary:
@@ -564,21 +623,21 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             383  out of  11440     3%  
- Number of Slice LUTs:                  233  out of   5720     4%  
-    Number used as Logic:               233  out of   5720     4%  
+ Number of Slice Registers:             564  out of  11440     4%  
+ Number of Slice LUTs:                  463  out of   5720     8%  
+    Number used as Logic:               463  out of   5720     8%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    471
-   Number with an unused Flip Flop:      88  out of    471    18%  
-   Number with an unused LUT:           238  out of    471    50%  
-   Number of fully used LUT-FF pairs:   145  out of    471    30%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:    728
+   Number with an unused Flip Flop:     164  out of    728    22%  
+   Number with an unused LUT:           265  out of    728    36%  
+   Number of fully used LUT-FF pairs:   299  out of    728    41%  
+   Number of unique control sets:        22
 
 IO Utilization: 
- Number of IOs:                          23
+ Number of IOs:                          22
  Number of bonded IOBs:                  21  out of    102    20%  
-    IOB Flip Flops/Latches:              13
+    IOB Flip Flops/Latches:              12
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -604,9 +663,9 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 224   |
+clk                                | BUFGP                  | 324   |
 avr_interface/new_sample_q         | BUFG                   | 84    |
-rst_n                              | IBUF+BUFG              | 88    |
+rst_n                              | IBUF+BUFG              | 168   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -618,7 +677,7 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 4.414ns (Maximum Frequency: 226.552MHz)
-   Minimum input arrival time before clock: 5.658ns
+   Minimum input arrival time before clock: 5.926ns
    Maximum output required time after clock: 6.153ns
    Maximum combinational path delay: 6.045ns
 
@@ -629,7 +688,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.414ns (frequency: 226.552MHz)
-  Total number of paths / destination ports: 528 / 135
+  Total number of paths / destination ports: 789 / 155
 -------------------------------------------------------------------------
 Delay:               4.414ns (Levels of Logic = 2)
   Source:            avr_interface/cclk_detector/ctr_q_2 (FF)
@@ -651,28 +710,27 @@ Delay:               4.414ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 305 / 214
+  Total number of paths / destination ports: 416 / 315
 -------------------------------------------------------------------------
-Offset:              5.658ns (Levels of Logic = 3)
-  Source:            cclk (PAD)
+Offset:              5.926ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
   Destination:       avr_interface/cclk_detector/ctr_q_12 (FF)
   Destination Clock: clk rising
 
-  Data Path: cclk to avr_interface/cclk_detector/ctr_q_12
+  Data Path: rst_n to avr_interface/cclk_detector/ctr_q_12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            16   1.328   1.637  cclk_IBUF (cclk_IBUF)
-     LUT6:I0->O            1   0.254   0.790  avr_interface/cclk_detector/_n0018_inv1 (avr_interface/cclk_detector/_n0018_inv1)
-     LUT4:I2->O           13   0.250   1.097  avr_interface/cclk_detector/_n0018_inv3 (avr_interface/cclk_detector/_n0018_inv)
-     FDCE:CE                   0.302          avr_interface/cclk_detector/ctr_q_0
+     IBUF:I->O            28   1.328   1.452  rst_n_IBUF (avr_interface/serial_tx/rst_inv)
+     INV:I->O            265   0.255   2.432  avr_interface/serial_tx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_tx/rst_inv_BUFG_LUT1)
+     FDC:CLR                   0.459          avr_interface/cclk_detector/ready_q
     ----------------------------------------
-    Total                      5.658ns (2.134ns logic, 3.524ns route)
-                                       (37.7% logic, 62.3% route)
+    Total                      5.926ns (2.042ns logic, 3.884ns route)
+                                       (34.5% logic, 65.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 16 / 15
+  Total number of paths / destination ports: 16 / 14
 -------------------------------------------------------------------------
 Offset:              6.153ns (Levels of Logic = 2)
   Source:            avr_interface/cclk_detector/ready_q (FF)
@@ -748,7 +806,7 @@ Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
 avr_interface/new_sample_q|         |    1.336|         |         |
 clk                       |    4.414|         |         |         |
-rst_n                     |         |    1.380|         |         |
+rst_n                     |         |    1.336|         |         |
 --------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock rst_n
@@ -756,21 +814,21 @@ Clock to Setup on destination clock rst_n
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.538|         |
+clk            |         |         |    5.811|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.73 secs
+Total CPU time to Xst completion: 10.35 secs
  
 --> 
 
 
-Total memory usage is 128396 kilobytes
+Total memory usage is 128636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  103 (   0 filtered)
+Number of warnings :  116 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

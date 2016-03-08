@@ -22,8 +22,9 @@ entity mojo_top is
 		spi_channel : out std_logic_vector(3 downto 0);  -- analog read channel (input to AVR service task)
 		avr_tx		: in  std_logic;		-- serial data transmited from AVR/USB (FPGA recieve)
 		avr_rx		: out std_logic;		-- serial data for AVR/USB to receive (FPGA transmit)
-		avr_rx_busy : in  std_logic			-- AVR/USB buffer full (don't send data when true)
---		pwm_out			: out std_logic   -- sorties pwm
+		avr_rx_busy : in  std_logic;		-- AVR/USB buffer full (don't send data when true)
+		servo 			: out std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
+		fast_pwm			: out std_logic_vector(1 downto 0)   -- sorties pwm des roues
 	);
 end mojo_top;
 
@@ -67,9 +68,9 @@ analog_inputs: entity work.Analog_in
 			analog_7 => com_pwm(7)
 		); 
 
--- test pwm avec les leds
-gen_led_pwm: for i in 0 to 7 generate
-	pwm_output_leds : entity work.pwm_mgr
+-- test pwm avec les leds -> DEBUG -> en mode servo
+gen_pwm_test_leds: for i in 0 to 7 generate
+	pwm_tests_leds : entity work.pwm_mgr
 		generic map(
 				com_length => 10,
 				cmp_length => 20
@@ -81,17 +82,38 @@ gen_led_pwm: for i in 0 to 7 generate
 			pwm => led(i)
 		);
 end generate;
--- test pwm avec l'oscilloscope (Pin 58)		
---pwm_output8 : entity work.pwm_mgr
---	generic map(
---				com_length => 10
---			)
---	port map(
---		clk => clk,
---		rst => rst,
---		com => com_pwm(0),
---		pwm => pwm_out
---		);
+
+-- sorties pwm des servo-moteurs
+-- pins: P57, P58, P66, P67, P74, P75 
+gen_servo: for i in 0 to 5 generate
+	pwm_servo : entity work.pwm_mgr
+		generic map(
+							com_length => 10, -- 10 bits pour la valeur analogique
+							cmp_length => 20  -- 20 bits pour avoir un fréquence de 50Hz
+			)
+		port map(
+						clk => clk,
+						rst => rst,
+						com => com_pwm(i),
+						pwm => servo(i)
+					);
+end generate;
+
+-- sorties pwm pour les roues
+-- pins: P80, P81
+gen_pwms_roues : for i in 6 to 7 generate
+	pwm_base: entity work.pwm_mgr
+		generic map(
+						com_length => 10,  -- 10 bits pour la valeur analogique
+						cmp_length => 16	 -- 20 bits pour avoir une fréquence de 1kHz
+					)
+		port map(
+						clk => clk,
+						rst => rst,
+						com => com_pwm(i),
+						pwm => fast_pwm(i-6)
+					);
+end generate;
 		
 rst	<= NOT rst_n;						-- generate non-inverted reset signal from rst_n button
 
@@ -123,14 +145,6 @@ avr_interface : entity work.avr_interface
 		new_rx_data	=> new_rx_data,		-- set when new data is received
 		rx_data		=> rx_data			-- received data (only when new_tx_data = '1')
 	);
-
-testUART:process(CLK)
-begin
-	if(CLK='1' and CLK'event) then
-		new_tx_data <= '1';
-		tx_data <= "01010111";
-	end if;
-end process;
 
 
 end RTL;

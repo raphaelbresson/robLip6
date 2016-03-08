@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Polytech UPMC
+-- Engineer: Raphaël BRESSON
 -- 
 -- Create Date:    10:54:05 03/05/2016 
--- Design Name: 
+-- Design Name: 	
 -- Module Name:    i2C_master - Behavioral 
--- Project Name: 
--- Target Devices: 
+-- Project Name: 	 robLip6
+-- Target Devices: Spartan 6 (Mojo V3)
 -- Tool versions: 
 -- Description: 
 --
@@ -62,46 +62,47 @@ architecture Behavioral of i2C_master is
 	signal bitNumber           : integer range 0 to 7 := 7;			-- compteur de bits dans la transaction actuelle
 begin
 
-with etat select
-	sda_out <= data_clock_prev when START,
-				  not data_clock_prev when STOP,
-				  sda_interne when others;
+with etat select											-- sda_interne en sortie si:
+	sda_out <= data_clock_prev when START,			-- data_clock_prev = '1' (état START)
+				  not data_clock_prev when STOP,		-- data_clock_prev = '0' (état STOP)
+				  sda_interne when others;				-- sda_interne = '1'     (autres états)
 
 SCL <= '0' when (scl_out='1' and scl_interne='0') else 'Z';
 SDA <= '0' when sda_out = '0' else 'Z';
 
 
 -----------------------------------------------------------------------------------------------------------
---- Génération des signaux d'horloges internes ( scl_interne et data_clock ) ------------------------------
+--- Génération des signaux d'horloges internes ( scl_interne et data_clock ) et prise en charge -----------
+------------------ de la prise de contrôle de l'esclave sur SCL (horloge du bus I2C) ----------------------
 -----------------------------------------------------------------------------------------------------------
 gen_clk: process(CLK,RST)
 	variable compteur : integer range 0 to cycle_scl; -- compteur de cycles de l'horloge d'entree
 begin
 	if(RST = '1') then											-- reset asynchrone
-		slave_scl_control <= '0';								
-		compteur := 0;
+		slave_scl_control <= '0';								-- -> désactivation du contrôle de l'esclave sur l'horloge du bus
+		compteur := 0;												-- -> Réinitialisation du compteur à 0
 	elsif(CLK = '1' and CLK'event) then						-- sur front montant
 		data_clock_prev <= data_clock;						-- on stocke la valeur data_clock precedente
 		if(compteur = cycle_scl - 1) then					-- compteur arrivé en fin de cycle de l'horloge scl
-			compteur := 0;
+			compteur := 0;											-- -> Réinitialisation du compteur à 0 
 		elsif(slave_scl_control = '0') then					-- si l'esclave ne contrôle pas l'horloge
-			compteur := compteur + 1;							-- on incrémente le compteur
+			compteur := compteur + 1;							-- -> on incrémente le compteur
 		else
 		end if;
 		
 		case compteur is									-- case sur chaque quart de cycle de scl
 			when 0 to (quarter - 1) =>					-- 1er quart de cycle
-				scl_interne <= '0';
-				data_clock <= '0';
+				scl_interne <= '0';						
+				data_clock <= '0';						
 			when quarter to ((quarter*2) - 1) =>	-- 2eme quart de cycle
 				scl_interne <= '0';
 				data_clock <= '1';
 			when quarter*2 to ((quarter*3) -1) =>	-- 3eme quart de cycle
 				scl_interne <= '1';
-				if(SCL = '0') then						-- détection du contrôle de l'esclave sur l'horloge
-					slave_scl_control <= '1';
-				else
-					slave_scl_control <= '0';
+				if(SCL = '0') then						-- si détection du contrôle de l'esclave sur l'horloge
+					slave_scl_control <= '1';			-- -> activation du contrôle de l'esclave sur l'horloge du bus
+				else											-- sinon
+					slave_scl_control <= '0';			-- -> désactivation du contrôle de l'esclave sur l'horloge du bus
 				end if;
 				data_clock <= '1';
 			when others =>									-- 4eme quart de cycle
@@ -112,20 +113,21 @@ begin
 end process;
 
 ------------------------------------------------------------------------------------------------------------------
--- Génération des sorties et mise à jour des etats ---------------------------------------------------------------
+-- Génération des sorties et mise à jour des états ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
 exec: process(CLK,RST)
 begin
-	if(RST = '1') then -- reset asynchrone
-		etat <= READY;
-		busy <= '1';
-		scl_out <= '0';
-		sda_interne <= '1';
-		ack_error <= '0';
-		bitNumber <= 7;
-		data_rd <= (others=>'0');
+	if(RST = '1') then 				-- reset asynchrone
+		etat <= READY; 				-- on force l'etat à READY
+		busy <= '1'; 					-- on force busy à 1 (il sera remis à 0 lors du passage à l'etat READY)
+		scl_out <= '0'; 				-- SCL_interne n'est pas en sortie
+		sda_interne <= '1'; 			-- on force SDA à 1
+		ack_error <= '0'; 			-- on réinitialise le bit d'erreur d'ACK à 0
+		bitNumber <= 7; 				-- on réinitialise le compteur de bits à 7
+		data_rd <= (others=>'0'); 	-- on réinitialise les données lues à 0
 	elsif(CLK='1' and CLK'event) then -- sur front montant de l'horloge d'entrée
 		if(data_clock = '1' and data_clock_prev = '0') then -- sur front montant de la data_clock( donc front descendant scl)
+		-- mise à jour des sorties et changement d'état
 			case etat is
 				when READY      => ---------------- Etat READY: attente d'une requete de transaction -------------------
 					if(ENABLE = '1') then 				-- requete de transaction
@@ -219,27 +221,28 @@ begin
 					etat <= READY;
 			end case;
 		elsif(data_clock = '0' and data_clock_prev = '1') then -- sur front descendant de la data_clock( donc front montant scl)
+		-- lecture dur le bus et récupération d'ACK
 			case etat is
-				when START => -- initialisation
+				when START => -- initialisation en vue de l'envoi de l'adresse de l'esclave
 					if(scl_out = '0') then 
-						scl_out <= '1';
-						ack_error <= '0';
+						scl_out <= '1';		-- on force SCL_interne en sortie
+						ack_error <= '0';		-- on réinitialise ack_error à 0
 					else
 					end if;
-				when SLAVE_ACK1 => -- recuperation d'ack
-					if(SDA = '1' or ACK_ERROR = '1') then
-						ack_error <= '1';
+				when SLAVE_ACK1 => -- récuperation de l'ack de l'adresse
+					if(SDA = '1' or ACK_ERROR = '1') then -- si l'ACK n'a pas été envoyé
+						ack_error <= '1';						  -- erreur d'ACK
 					else
 					end if;
 				when RD_DATA =>					-- lecture sur le bus
 					data_rx(bitNumber) <= sda;
-				when SLAVE_ACK2 => -- recuperation d'ack
-					if(sda = '1' or ack_error = '1') then
-						ack_error <= '1';
+				when SLAVE_ACK2 => -- récuperation de l'ack pour une écriture sur le bus
+					if(sda = '1' or ack_error = '1') then -- si l'ACK n'a pas été envoyé
+						ack_error <= '1';						  -- erreur d'ACK
 						else
 					end if;
-				when STOP =>
-					scl_out <= '0';
+				when STOP => -- Arrêt des transaction
+					scl_out <= '0'; -- SCL_interne n'est plus en sortie
 				when others =>
 			end case;
 		else

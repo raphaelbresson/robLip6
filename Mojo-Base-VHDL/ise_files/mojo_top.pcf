@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Mar 22 04:51:31 2016
+// Written by: Map P.20131013 on Tue Mar 22 16:47:00 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -50,8 +50,6 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
         "controle/lidar_i2c/bytes_to_write_q_FSM_FFd1" BEL
         "controle/lidar_i2c/bytes_to_write_q_FSM_FFd2" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd4" BEL
-        "controle/lidar_i2c/bytes_to_read_q_1" BEL
-        "controle/lidar_i2c/bytes_to_read_q_0" BEL
         "controle/lidar_i2c/out_data_q_15" BEL
         "controle/lidar_i2c/out_data_q_14" BEL
         "controle/lidar_i2c/out_data_q_13" BEL
@@ -128,8 +126,8 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
         "controle/lidar_i2c/i2c_interface/bit_counter_q_0" BEL
         "controle/lidar_i2c/i2c_interface/sclp_q" BEL
         "controle/lidar_i2c/i2c_interface/busy_q" BEL
-        "controle/lidar_i2c/i2c_interface/adresse_q_7" BEL
-        "controle/lidar_i2c/i2c_interface/adresse_q_1" BEL
+        "controle/lidar_i2c/i2c_interface/adresse_q_2" BEL
+        "controle/lidar_i2c/i2c_interface/adresse_q_0" BEL
         "avr_interface/cclk_detector/ctr_q_12" BEL
         "avr_interface/cclk_detector/ctr_q_11" BEL
         "avr_interface/cclk_detector/ctr_q_10" BEL
@@ -225,9 +223,9 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
         "avr_interface/serial_rx/data_q_1" BEL
         "avr_interface/serial_rx/data_q_0" BEL "avr_interface/serial_rx/rx_q"
         BEL "controle/lidar_i2c/rw_q" BEL
-        "controle/lidar_i2c/i2c_interface/sda_q" BEL
         "controle/lidar_i2c/i2c_interface/ack_error_q" BEL
         "avr_interface/byte_ct_q" BEL "avr_interface/spi_slave/miso_q" BEL
+        "controle/lidar_i2c/i2c_interface/sda_q" BEL
         "controle/byte_counter_q_31_C_31" BEL
         "controle/byte_counter_q_31_P_31" BEL "controle/byte_counter_q_2_C_2"
         BEL "controle/byte_counter_q_2_P_2" BEL
@@ -249,7 +247,10 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
         "controle/lidar_i2c/count_delay_q_6_C_6" BEL
         "controle/lidar_i2c/count_delay_q_6_P_6" BEL
         "controle/lidar_i2c/i2c_interface/scl_q_C" BEL
-        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL "clk_BUFGP/BUFG";
+        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL
+        "controle/lidar_i2c/bytes_to_read_q_0" BEL
+        "controle/lidar_i2c/bytes_to_read_q_1" BEL
+        "avr_interface/serial_tx/state_q_FSM_FFd1_1" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

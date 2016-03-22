@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/trce -filter
-/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter
 -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mojo_top.twx mojo_top.ncd -o
 mojo_top.twr mojo_top.pcf
 
@@ -30,19 +30,265 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3030 paths analyzed, 831 endpoints analyzed, 0 failing endpoints
+ 3050 paths analyzed, 865 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.905ns.
+ Minimum period is   5.310ns.
 --------------------------------------------------------------------------------
 
-Paths for end point controle/lidar_i2c/bytes_to_read_q_0 (SLICE_X10Y31.CE), 47 paths
+Paths for end point controle/Etat_present_FSM_FFd3 (SLICE_X11Y14.C2), 15 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     14.095ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     14.690ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               avr_interface/serial_tx/state_q_FSM_FFd1 (FF)
+  Destination:          controle/Etat_present_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.269ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.197 - 0.203)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: avr_interface/serial_tx/state_q_FSM_FFd1 to controle/Etat_present_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y11.AQ      Tcko                  0.476   avr_interface/serial_tx/state_q_FSM_FFd2
+                                                       avr_interface/serial_tx/state_q_FSM_FFd1
+    SLICE_X7Y12.B2       net (fanout=16)       1.327   avr_interface/serial_tx/state_q_FSM_FFd1
+    SLICE_X7Y12.BMUX     Tilo                  0.337   avr_interface/serial_tx/ctr_q<6>
+                                                       avr_interface/serial_tx/Mmux_busy_r11
+    SLICE_X11Y14.D5      net (fanout=4)        0.761   controle/Etat_present_FSM_FFd3-In1
+    SLICE_X11Y14.D       Tilo                  0.259   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.C2      net (fanout=1)        1.736   controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.CLK     Tas                   0.373   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In3
+                                                       controle/Etat_present_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.269ns (1.445ns logic, 3.824ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.015ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               avr_interface/serial_tx/state_q_FSM_FFd2 (FF)
+  Destination:          controle/Etat_present_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.944ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.197 - 0.203)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: avr_interface/serial_tx/state_q_FSM_FFd2 to controle/Etat_present_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y11.CQ      Tcko                  0.476   avr_interface/serial_tx/state_q_FSM_FFd2
+                                                       avr_interface/serial_tx/state_q_FSM_FFd2
+    SLICE_X7Y12.B5       net (fanout=10)       1.002   avr_interface/serial_tx/state_q_FSM_FFd2
+    SLICE_X7Y12.BMUX     Tilo                  0.337   avr_interface/serial_tx/ctr_q<6>
+                                                       avr_interface/serial_tx/Mmux_busy_r11
+    SLICE_X11Y14.D5      net (fanout=4)        0.761   controle/Etat_present_FSM_FFd3-In1
+    SLICE_X11Y14.D       Tilo                  0.259   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.C2      net (fanout=1)        1.736   controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.CLK     Tas                   0.373   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In3
+                                                       controle/Etat_present_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.944ns (1.445ns logic, 3.499ns route)
+                                                       (29.2% logic, 70.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               avr_interface/serial_tx/block_q (FF)
+  Destination:          controle/Etat_present_FSM_FFd3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.853ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.017ns (0.325 - 0.342)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: avr_interface/serial_tx/block_q to controle/Etat_present_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y13.AQ       Tcko                  0.525   avr_interface/serial_tx/block_q
+                                                       avr_interface/serial_tx/block_q
+    SLICE_X7Y12.B3       net (fanout=9)        0.862   avr_interface/serial_tx/block_q
+    SLICE_X7Y12.BMUX     Tilo                  0.337   avr_interface/serial_tx/ctr_q<6>
+                                                       avr_interface/serial_tx/Mmux_busy_r11
+    SLICE_X11Y14.D5      net (fanout=4)        0.761   controle/Etat_present_FSM_FFd3-In1
+    SLICE_X11Y14.D       Tilo                  0.259   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.C2      net (fanout=1)        1.736   controle/Etat_present_FSM_FFd3-In2
+    SLICE_X11Y14.CLK     Tas                   0.373   controle/Etat_present_FSM_FFd3
+                                                       controle/Etat_present_FSM_FFd3-In3
+                                                       controle/Etat_present_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.853ns (1.494ns logic, 3.359ns route)
+                                                       (30.8% logic, 69.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point controle/byte_counter_q_0_P_0 (SLICE_X10Y15.CX), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.740ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controle/byte_counter_q_1_C_1 (FF)
+  Destination:          controle/byte_counter_q_0_P_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.266ns (Levels of Logic = 4)
+  Clock Path Skew:      0.041ns (0.693 - 0.652)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: controle/byte_counter_q_1_C_1 to controle/byte_counter_q_0_P_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y16.DQ      Tcko                  0.476   controle/byte_counter_q_1_C_1
+                                                       controle/byte_counter_q_1_C_1
+    SLICE_X9Y16.B4       net (fanout=2)        0.566   controle/byte_counter_q_1_C_1
+    SLICE_X9Y16.B        Tilo                  0.259   controle/byte_counter_q<3>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>_SW0
+    SLICE_X10Y15.A2      net (fanout=1)        0.731   N75
+    SLICE_X10Y15.COUT    Topcya                0.472   controle/byte_counter_q_2_P_2
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CIN     net (fanout=1)        0.003   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CMUX    Tcinc                 0.296   controle/byte_counter_q_1_C_1
+                                                       controle/Mmux_byte_counter_d121_cy
+    SLICE_X11Y15.A4      net (fanout=14)       0.534   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<6>
+    SLICE_X11Y15.A       Tilo                  0.259   controle/byte_counter_q_0_C_0
+                                                       controle/Mmux_byte_counter_d11
+    SLICE_X10Y15.CX      net (fanout=1)        1.556   controle/byte_counter_d<0>
+    SLICE_X10Y15.CLK     Tdick                 0.114   controle/byte_counter_q_2_P_2
+                                                       controle/byte_counter_q_0_P_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.266ns (1.876ns logic, 3.390ns route)
+                                                       (35.6% logic, 64.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.759ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controle/byte_counter_q_0_C_0 (FF)
+  Destination:          controle/byte_counter_q_0_P_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.195ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.011ns (0.198 - 0.209)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: controle/byte_counter_q_0_C_0 to controle/byte_counter_q_0_P_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y15.AQ      Tcko                  0.430   controle/byte_counter_q_0_C_0
+                                                       controle/byte_counter_q_0_C_0
+    SLICE_X9Y16.B6       net (fanout=2)        0.541   controle/byte_counter_q_0_C_0
+    SLICE_X9Y16.B        Tilo                  0.259   controle/byte_counter_q<3>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>_SW0
+    SLICE_X10Y15.A2      net (fanout=1)        0.731   N75
+    SLICE_X10Y15.COUT    Topcya                0.472   controle/byte_counter_q_2_P_2
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CIN     net (fanout=1)        0.003   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CMUX    Tcinc                 0.296   controle/byte_counter_q_1_C_1
+                                                       controle/Mmux_byte_counter_d121_cy
+    SLICE_X11Y15.A4      net (fanout=14)       0.534   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<6>
+    SLICE_X11Y15.A       Tilo                  0.259   controle/byte_counter_q_0_C_0
+                                                       controle/Mmux_byte_counter_d11
+    SLICE_X10Y15.CX      net (fanout=1)        1.556   controle/byte_counter_d<0>
+    SLICE_X10Y15.CLK     Tdick                 0.114   controle/byte_counter_q_2_P_2
+                                                       controle/byte_counter_q_0_P_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.195ns (1.830ns logic, 3.365ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.903ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controle/byte_counter_q_2_C_2 (FF)
+  Destination:          controle/byte_counter_q_0_P_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.103ns (Levels of Logic = 4)
+  Clock Path Skew:      0.041ns (0.693 - 0.652)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: controle/byte_counter_q_2_C_2 to controle/byte_counter_q_0_P_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y16.BQ      Tcko                  0.430   controle/byte_counter_q_2_C_2
+                                                       controle/byte_counter_q_2_C_2
+    SLICE_X9Y16.B5       net (fanout=2)        0.449   controle/byte_counter_q_2_C_2
+    SLICE_X9Y16.B        Tilo                  0.259   controle/byte_counter_q<3>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>_SW0
+    SLICE_X10Y15.A2      net (fanout=1)        0.731   N75
+    SLICE_X10Y15.COUT    Topcya                0.472   controle/byte_counter_q_2_P_2
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_lut<0>
+                                                       controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CIN     net (fanout=1)        0.003   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<3>
+    SLICE_X10Y16.CMUX    Tcinc                 0.296   controle/byte_counter_q_1_C_1
+                                                       controle/Mmux_byte_counter_d121_cy
+    SLICE_X11Y15.A4      net (fanout=14)       0.534   controle/Mcompar_byte_counter_q[31]_GND_5_o_LessThan_44_o_cy<6>
+    SLICE_X11Y15.A       Tilo                  0.259   controle/byte_counter_q_0_C_0
+                                                       controle/Mmux_byte_counter_d11
+    SLICE_X10Y15.CX      net (fanout=1)        1.556   controle/byte_counter_d<0>
+    SLICE_X10Y15.CLK     Tdick                 0.114   controle/byte_counter_q_2_P_2
+                                                       controle/byte_counter_q_0_P_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.103ns (1.830ns logic, 3.273ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point controle/lidar_i2c/bytes_to_read_q_0 (SLICE_X8Y25.D6), 40 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.986ns (requirement - (data path - clock path skew + uncertainty))
   Source:               controle/lidar_i2c/count_delay_q_18_C_18 (FF)
   Destination:          controle/lidar_i2c/bytes_to_read_q_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.869ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
+  Data Path Delay:      4.970ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.009ns (0.707 - 0.716)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -57,35 +303,34 @@ Slack (setup path):     14.095ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y33.AMUX    Tshcko                0.535   controle/lidar_i2c/count_delay_q_19_C_19
+    SLICE_X12Y33.AQ      Tcko                  0.525   controle/lidar_i2c/count_delay_q_18_C_18
                                                        controle/lidar_i2c/count_delay_q_18_C_18
-    SLICE_X17Y33.A3      net (fanout=2)        0.594   controle/lidar_i2c/count_delay_q_18_C_18
-    SLICE_X17Y33.AMUX    Tilo                  0.337   controle/lidar_i2c/count_delay_d_10
+    SLICE_X9Y33.A5       net (fanout=2)        0.751   controle/lidar_i2c/count_delay_q_18_C_18
+    SLICE_X9Y33.AMUX     Tilo                  0.337   controle/lidar_i2c/count_delay_d_10
                                                        controle/lidar_i2c/count_delay_q_181
-    SLICE_X14Y31.D2      net (fanout=1)        0.988   controle/lidar_i2c/count_delay_q<18>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+    SLICE_X10Y29.D5      net (fanout=1)        1.317   controle/lidar_i2c/count_delay_q<18>
+    SLICE_X10Y29.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
                                                        controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
                                                        controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
+    SLICE_X10Y30.CIN     net (fanout=1)        0.003   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+    SLICE_X10Y30.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_9_C_9
                                                        controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.314   controle/lidar_i2c/bytes_to_read_q<1>
+    SLICE_X8Y25.D6       net (fanout=7)        1.002   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
+    SLICE_X8Y25.CLK      Tas                   0.449   controle/lidar_i2c/bytes_to_read_q<0>
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot_F
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot
                                                        controle/lidar_i2c/bytes_to_read_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.869ns (2.031ns logic, 3.838ns route)
-                                                       (34.6% logic, 65.4% route)
+    Total                                      4.970ns (1.897ns logic, 3.073ns route)
+                                                       (38.2% logic, 61.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     14.168ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/lidar_i2c/count_delay_q_19_C_19 (FF)
+Slack (setup path):     15.061ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controle/lidar_i2c/count_delay_q_14_P_14 (FF)
   Destination:          controle/lidar_i2c/bytes_to_read_q_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.796ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
+  Data Path Delay:      4.876ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.028ns (0.315 - 0.343)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -96,39 +341,38 @@ Slack (setup path):     14.168ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_19_C_19 to controle/lidar_i2c/bytes_to_read_q_0
+  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_14_P_14 to controle/lidar_i2c/bytes_to_read_q_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y33.BQ      Tcko                  0.476   controle/lidar_i2c/count_delay_q_19_C_19
-                                                       controle/lidar_i2c/count_delay_q_19_C_19
-    SLICE_X17Y33.A1      net (fanout=2)        0.952   controle/lidar_i2c/count_delay_q_19_C_19
-    SLICE_X17Y33.A       Tilo                  0.259   controle/lidar_i2c/count_delay_d_10
-                                                       controle/lidar_i2c/count_delay_q_191
-    SLICE_X14Y31.D5      net (fanout=1)        0.694   controle/lidar_i2c/count_delay_q<19>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
+    SLICE_X11Y31.AMUX    Tshcko                0.518   controle/lidar_i2c/count_delay_q_16_P_16
+                                                       controle/lidar_i2c/count_delay_q_14_P_14
+    SLICE_X4Y31.B4       net (fanout=2)        1.133   controle/lidar_i2c/count_delay_q_14_P_14
+    SLICE_X4Y31.B        Tilo                  0.254   controle/lidar_i2c/i2c_interface/sclp_q
+                                                       controle/lidar_i2c/count_delay_q_141
+    SLICE_X10Y29.C4      net (fanout=1)        0.896   controle/lidar_i2c/count_delay_q<14>
+    SLICE_X10Y29.COUT    Topcyc                0.325   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<2>
                                                        controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
+    SLICE_X10Y30.CIN     net (fanout=1)        0.003   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+    SLICE_X10Y30.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_9_C_9
                                                        controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.314   controle/lidar_i2c/bytes_to_read_q<1>
+    SLICE_X8Y25.D6       net (fanout=7)        1.002   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
+    SLICE_X8Y25.CLK      Tas                   0.449   controle/lidar_i2c/bytes_to_read_q<0>
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot_F
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot
                                                        controle/lidar_i2c/bytes_to_read_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.796ns (1.894ns logic, 3.902ns route)
-                                                       (32.7% logic, 67.3% route)
+    Total                                      4.876ns (1.842ns logic, 3.034ns route)
+                                                       (37.8% logic, 62.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     14.282ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/lidar_i2c/count_delay_q_18_P_18 (FF)
+Slack (setup path):     15.099ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controle/lidar_i2c/count_delay_q_14_C_14 (FF)
   Destination:          controle/lidar_i2c/bytes_to_read_q_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.682ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
+  Data Path Delay:      4.838ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.028ns (0.315 - 0.343)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -139,372 +383,117 @@ Slack (setup path):     14.282ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_18_P_18 to controle/lidar_i2c/bytes_to_read_q_0
+  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_14_C_14 to controle/lidar_i2c/bytes_to_read_q_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y33.BQ      Tcko                  0.430   controle/lidar_i2c/count_delay_q_18_P_18
-                                                       controle/lidar_i2c/count_delay_q_18_P_18
-    SLICE_X17Y33.A4      net (fanout=2)        0.512   controle/lidar_i2c/count_delay_q_18_P_18
-    SLICE_X17Y33.AMUX    Tilo                  0.337   controle/lidar_i2c/count_delay_d_10
-                                                       controle/lidar_i2c/count_delay_q_181
-    SLICE_X14Y31.D2      net (fanout=1)        0.988   controle/lidar_i2c/count_delay_q<18>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
+    SLICE_X10Y31.BQ      Tcko                  0.476   controle/lidar_i2c/count_delay_q_17_C_17
+                                                       controle/lidar_i2c/count_delay_q_14_C_14
+    SLICE_X4Y31.B1       net (fanout=2)        1.137   controle/lidar_i2c/count_delay_q_14_C_14
+    SLICE_X4Y31.B        Tilo                  0.254   controle/lidar_i2c/i2c_interface/sclp_q
+                                                       controle/lidar_i2c/count_delay_q_141
+    SLICE_X10Y29.C4      net (fanout=1)        0.896   controle/lidar_i2c/count_delay_q<14>
+    SLICE_X10Y29.COUT    Topcyc                0.325   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<2>
                                                        controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
+    SLICE_X10Y30.CIN     net (fanout=1)        0.003   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
+    SLICE_X10Y30.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_9_C_9
                                                        controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.314   controle/lidar_i2c/bytes_to_read_q<1>
+    SLICE_X8Y25.D6       net (fanout=7)        1.002   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
+    SLICE_X8Y25.CLK      Tas                   0.449   controle/lidar_i2c/bytes_to_read_q<0>
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot_F
+                                                       controle/lidar_i2c/bytes_to_read_q_0_rstpot
                                                        controle/lidar_i2c/bytes_to_read_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.682ns (1.926ns logic, 3.756ns route)
-                                                       (33.9% logic, 66.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point controle/lidar_i2c/bytes_to_read_q_1 (SLICE_X10Y31.CE), 47 paths
---------------------------------------------------------------------------------
-Slack (setup path):     14.138ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/lidar_i2c/count_delay_q_18_C_18 (FF)
-  Destination:          controle/lidar_i2c/bytes_to_read_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.826ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_18_C_18 to controle/lidar_i2c/bytes_to_read_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X18Y33.AMUX    Tshcko                0.535   controle/lidar_i2c/count_delay_q_19_C_19
-                                                       controle/lidar_i2c/count_delay_q_18_C_18
-    SLICE_X17Y33.A3      net (fanout=2)        0.594   controle/lidar_i2c/count_delay_q_18_C_18
-    SLICE_X17Y33.AMUX    Tilo                  0.337   controle/lidar_i2c/count_delay_d_10
-                                                       controle/lidar_i2c/count_delay_q_181
-    SLICE_X14Y31.D2      net (fanout=1)        0.988   controle/lidar_i2c/count_delay_q<18>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
-                                                       controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.271   controle/lidar_i2c/bytes_to_read_q<1>
-                                                       controle/lidar_i2c/bytes_to_read_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      5.826ns (1.988ns logic, 3.838ns route)
-                                                       (34.1% logic, 65.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.211ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/lidar_i2c/count_delay_q_19_C_19 (FF)
-  Destination:          controle/lidar_i2c/bytes_to_read_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.753ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_19_C_19 to controle/lidar_i2c/bytes_to_read_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X18Y33.BQ      Tcko                  0.476   controle/lidar_i2c/count_delay_q_19_C_19
-                                                       controle/lidar_i2c/count_delay_q_19_C_19
-    SLICE_X17Y33.A1      net (fanout=2)        0.952   controle/lidar_i2c/count_delay_q_19_C_19
-    SLICE_X17Y33.A       Tilo                  0.259   controle/lidar_i2c/count_delay_d_10
-                                                       controle/lidar_i2c/count_delay_q_191
-    SLICE_X14Y31.D5      net (fanout=1)        0.694   controle/lidar_i2c/count_delay_q<19>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
-                                                       controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.271   controle/lidar_i2c/bytes_to_read_q<1>
-                                                       controle/lidar_i2c/bytes_to_read_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      5.753ns (1.851ns logic, 3.902ns route)
-                                                       (32.2% logic, 67.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.325ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/lidar_i2c/count_delay_q_18_P_18 (FF)
-  Destination:          controle/lidar_i2c/bytes_to_read_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.639ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.717 - 0.718)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: controle/lidar_i2c/count_delay_q_18_P_18 to controle/lidar_i2c/bytes_to_read_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X19Y33.BQ      Tcko                  0.430   controle/lidar_i2c/count_delay_q_18_P_18
-                                                       controle/lidar_i2c/count_delay_q_18_P_18
-    SLICE_X17Y33.A4      net (fanout=2)        0.512   controle/lidar_i2c/count_delay_q_18_P_18
-    SLICE_X17Y33.AMUX    Tilo                  0.337   controle/lidar_i2c/count_delay_d_10
-                                                       controle/lidar_i2c/count_delay_q_181
-    SLICE_X14Y31.D2      net (fanout=1)        0.988   controle/lidar_i2c/count_delay_q<18>
-    SLICE_X14Y31.COUT    Topcyd                0.290   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_lut<3>
-                                                       controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CIN     net (fanout=1)        0.135   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<3>
-    SLICE_X14Y32.CMUX    Tcinc                 0.296   controle/lidar_i2c/count_delay_q_14_C_14
-                                                       controle/lidar_i2c/Mmux_enable_d22_cy
-    SLICE_X9Y31.C1       net (fanout=6)        1.526   controle/lidar_i2c/Mcompar_count_delay_q[31]_GND_91_o_LessThan_50_o_cy<6>
-    SLICE_X9Y31.C        Tilo                  0.259   N14
-                                                       controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CE      net (fanout=1)        0.595   controle/lidar_i2c/_n0351_inv
-    SLICE_X10Y31.CLK     Tceck                 0.271   controle/lidar_i2c/bytes_to_read_q<1>
-                                                       controle/lidar_i2c/bytes_to_read_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      5.639ns (1.883ns logic, 3.756ns route)
-                                                       (33.4% logic, 66.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point controle/tx_data_q_6 (SLICE_X10Y18.A3), 15 paths
---------------------------------------------------------------------------------
-Slack (setup path):     14.345ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/byte_counter_q_0_C_0 (FF)
-  Destination:          controle/tx_data_q_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.602ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.018ns (0.324 - 0.342)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: controle/byte_counter_q_0_C_0 to controle/tx_data_q_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X8Y18.AQ       Tcko                  0.525   controle/byte_counter_q_0_C_0
-                                                       controle/byte_counter_q_0_C_0
-    SLICE_X8Y19.A1       net (fanout=2)        1.168   controle/byte_counter_q_0_C_0
-    SLICE_X8Y19.AMUX     Topaa                 0.456   controle/Msub_n0103_Madd_cy<3>
-                                                       controle/byte_counter_q_01
-                                                       controle/Msub_n0103_Madd_cy<3>
-    SLICE_X11Y18.B4      net (fanout=12)       0.649   controle/n0103<0>
-    SLICE_X11Y18.B       Tilo                  0.259   N8
-                                                       controle/Mmux_tx_data_d18_SW0
-    SLICE_X11Y18.A3      net (fanout=1)        0.564   N8
-    SLICE_X11Y18.A       Tilo                  0.259   N8
-                                                       controle/Mmux_tx_data_d18_SW2
-    SLICE_X10Y18.A3      net (fanout=1)        1.373   N54
-    SLICE_X10Y18.CLK     Tas                   0.349   controle/tx_data_q<7>
-                                                       controle/Mmux_tx_data_d18
-                                                       controle/tx_data_q_6
-    -------------------------------------------------  ---------------------------
-    Total                                      5.602ns (1.848ns logic, 3.754ns route)
-                                                       (33.0% logic, 67.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.372ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               avr_interface/serial_tx/block_q (FF)
-  Destination:          controle/tx_data_q_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.493ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.100ns (0.629 - 0.729)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: avr_interface/serial_tx/block_q to controle/tx_data_q_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X1Y2.AQ        Tcko                  0.430   avr_interface/serial_tx/block_q
-                                                       avr_interface/serial_tx/block_q
-    SLICE_X10Y19.D6      net (fanout=14)       2.388   avr_interface/serial_tx/block_q
-    SLICE_X10Y19.D       Tilo                  0.235   controle/new_tx_data_q
-                                                       controle/TX_BUSY_new_tx_data_q_AND_268_o1
-    SLICE_X11Y18.A5      net (fanout=18)       0.459   controle/TX_BUSY_new_tx_data_q_AND_268_o
-    SLICE_X11Y18.A       Tilo                  0.259   N8
-                                                       controle/Mmux_tx_data_d18_SW2
-    SLICE_X10Y18.A3      net (fanout=1)        1.373   N54
-    SLICE_X10Y18.CLK     Tas                   0.349   controle/tx_data_q<7>
-                                                       controle/Mmux_tx_data_d18
-                                                       controle/tx_data_q_6
-    -------------------------------------------------  ---------------------------
-    Total                                      5.493ns (1.273ns logic, 4.220ns route)
-                                                       (23.2% logic, 76.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.869ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               controle/byte_counter_q_0_P_0 (FF)
-  Destination:          controle/tx_data_q_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.076ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.020ns (0.324 - 0.344)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: controle/byte_counter_q_0_P_0 to controle/tx_data_q_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X9Y17.AQ       Tcko                  0.430   controle/byte_counter_q_0_P_0
-                                                       controle/byte_counter_q_0_P_0
-    SLICE_X8Y19.A3       net (fanout=2)        0.737   controle/byte_counter_q_0_P_0
-    SLICE_X8Y19.AMUX     Topaa                 0.456   controle/Msub_n0103_Madd_cy<3>
-                                                       controle/byte_counter_q_01
-                                                       controle/Msub_n0103_Madd_cy<3>
-    SLICE_X11Y18.B4      net (fanout=12)       0.649   controle/n0103<0>
-    SLICE_X11Y18.B       Tilo                  0.259   N8
-                                                       controle/Mmux_tx_data_d18_SW0
-    SLICE_X11Y18.A3      net (fanout=1)        0.564   N8
-    SLICE_X11Y18.A       Tilo                  0.259   N8
-                                                       controle/Mmux_tx_data_d18_SW2
-    SLICE_X10Y18.A3      net (fanout=1)        1.373   N54
-    SLICE_X10Y18.CLK     Tas                   0.349   controle/tx_data_q<7>
-                                                       controle/Mmux_tx_data_d18
-                                                       controle/tx_data_q_6
-    -------------------------------------------------  ---------------------------
-    Total                                      5.076ns (1.753ns logic, 3.323ns route)
-                                                       (34.5% logic, 65.5% route)
+    Total                                      4.838ns (1.800ns logic, 3.038ns route)
+                                                       (37.2% logic, 62.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point avr_interface/spi_slave/bit_ct_q_2 (SLICE_X10Y4.B5), 1 path
+Paths for end point controle/lidar_i2c/i2c_interface/rx_q_4 (SLICE_X6Y24.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.398ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               avr_interface/spi_slave/bit_ct_q_1 (FF)
-  Destination:          avr_interface/spi_slave/bit_ct_q_2 (FF)
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controle/lidar_i2c/i2c_interface/rx_q_4 (FF)
+  Destination:          controle/lidar_i2c/i2c_interface/rx_q_4 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.398ns (Levels of Logic = 1)
+  Data Path Delay:      0.413ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: avr_interface/spi_slave/bit_ct_q_1 to avr_interface/spi_slave/bit_ct_q_2
+  Minimum Data Path at Fast Process Corner: controle/lidar_i2c/i2c_interface/rx_q_4 to controle/lidar_i2c/i2c_interface/rx_q_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y4.BQ       Tcko                  0.200   avr_interface/spi_slave/bit_ct_q<1>
-                                                       avr_interface/spi_slave/bit_ct_q_1
-    SLICE_X10Y4.B5       net (fanout=6)        0.077   avr_interface/spi_slave/bit_ct_q<1>
-    SLICE_X10Y4.CLK      Tah         (-Th)    -0.121   avr_interface/spi_slave/bit_ct_q<1>
-                                                       avr_interface/spi_slave/Mcount_bit_ct_q_xor<2>11
-                                                       avr_interface/spi_slave/bit_ct_q_2
+    SLICE_X6Y24.AQ       Tcko                  0.200   controle/lidar_i2c/i2c_interface/rx_q<7>
+                                                       controle/lidar_i2c/i2c_interface/rx_q_4
+    SLICE_X6Y24.A6       net (fanout=2)        0.023   controle/lidar_i2c/i2c_interface/rx_q<4>
+    SLICE_X6Y24.CLK      Tah         (-Th)    -0.190   controle/lidar_i2c/i2c_interface/rx_q<7>
+                                                       controle/lidar_i2c/i2c_interface/Mmux_rx_q[4]_SDA_MUX_204_o11
+                                                       controle/lidar_i2c/i2c_interface/rx_q_4
     -------------------------------------------------  ---------------------------
-    Total                                      0.398ns (0.321ns logic, 0.077ns route)
-                                                       (80.7% logic, 19.3% route)
+    Total                                      0.413ns (0.390ns logic, 0.023ns route)
+                                                       (94.4% logic, 5.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point avr_interface/spi_slave/data_q_3 (SLICE_X10Y5.B5), 1 path
+Paths for end point controle/lidar_i2c/i2c_interface/rx_q_7 (SLICE_X6Y24.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.399ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               avr_interface/spi_slave/data_q_2 (FF)
-  Destination:          avr_interface/spi_slave/data_q_3 (FF)
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controle/lidar_i2c/i2c_interface/rx_q_7 (FF)
+  Destination:          controle/lidar_i2c/i2c_interface/rx_q_7 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.399ns (Levels of Logic = 1)
+  Data Path Delay:      0.413ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: avr_interface/spi_slave/data_q_2 to avr_interface/spi_slave/data_q_3
+  Minimum Data Path at Fast Process Corner: controle/lidar_i2c/i2c_interface/rx_q_7 to controle/lidar_i2c/i2c_interface/rx_q_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y5.BQ       Tcko                  0.200   avr_interface/spi_slave/data_q<7>
-                                                       avr_interface/spi_slave/data_q_2
-    SLICE_X10Y5.B5       net (fanout=2)        0.078   avr_interface/spi_slave/data_q<2>
-    SLICE_X10Y5.CLK      Tah         (-Th)    -0.121   avr_interface/spi_slave/data_q<7>
-                                                       avr_interface/spi_slave/Mmux_data_q[6]_din[7]_mux_4_OUT41
-                                                       avr_interface/spi_slave/data_q_3
+    SLICE_X6Y24.DQ       Tcko                  0.200   controle/lidar_i2c/i2c_interface/rx_q<7>
+                                                       controle/lidar_i2c/i2c_interface/rx_q_7
+    SLICE_X6Y24.D6       net (fanout=2)        0.023   controle/lidar_i2c/i2c_interface/rx_q<7>
+    SLICE_X6Y24.CLK      Tah         (-Th)    -0.190   controle/lidar_i2c/i2c_interface/rx_q<7>
+                                                       controle/lidar_i2c/i2c_interface/Mmux_rx_q[7]_SDA_MUX_201_o11
+                                                       controle/lidar_i2c/i2c_interface/rx_q_7
     -------------------------------------------------  ---------------------------
-    Total                                      0.399ns (0.321ns logic, 0.078ns route)
-                                                       (80.5% logic, 19.5% route)
+    Total                                      0.413ns (0.390ns logic, 0.023ns route)
+                                                       (94.4% logic, 5.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point avr_interface/serial_tx/bit_ctr_q_2 (SLICE_X8Y15.B5), 1 path
+Paths for end point controle/lidar_i2c/i2c_interface/rx_q_0 (SLICE_X6Y25.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.431ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               avr_interface/serial_tx/bit_ctr_q_1 (FF)
-  Destination:          avr_interface/serial_tx/bit_ctr_q_2 (FF)
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controle/lidar_i2c/i2c_interface/rx_q_0 (FF)
+  Destination:          controle/lidar_i2c/i2c_interface/rx_q_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.431ns (Levels of Logic = 1)
+  Data Path Delay:      0.413ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: avr_interface/serial_tx/bit_ctr_q_1 to avr_interface/serial_tx/bit_ctr_q_2
+  Minimum Data Path at Fast Process Corner: controle/lidar_i2c/i2c_interface/rx_q_0 to controle/lidar_i2c/i2c_interface/rx_q_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X8Y15.BQ       Tcko                  0.234   avr_interface/serial_tx/bit_ctr_q<1>
-                                                       avr_interface/serial_tx/bit_ctr_q_1
-    SLICE_X8Y15.B5       net (fanout=2)        0.066   avr_interface/serial_tx/bit_ctr_q<1>
-    SLICE_X8Y15.CLK      Tah         (-Th)    -0.131   avr_interface/serial_tx/bit_ctr_q<1>
-                                                       avr_interface/serial_tx/Mcount_bit_ctr_q_xor<2>11
-                                                       avr_interface/serial_tx/bit_ctr_q_2
+    SLICE_X6Y25.AQ       Tcko                  0.200   controle/lidar_i2c/i2c_interface/rx_q<3>
+                                                       controle/lidar_i2c/i2c_interface/rx_q_0
+    SLICE_X6Y25.A6       net (fanout=2)        0.023   controle/lidar_i2c/i2c_interface/rx_q<0>
+    SLICE_X6Y25.CLK      Tah         (-Th)    -0.190   controle/lidar_i2c/i2c_interface/rx_q<3>
+                                                       controle/lidar_i2c/i2c_interface/Mmux_rx_q[0]_SDA_MUX_208_o11
+                                                       controle/lidar_i2c/i2c_interface/rx_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.431ns (0.365ns logic, 0.066ns route)
-                                                       (84.7% logic, 15.3% route)
+    Total                                      0.413ns (0.390ns logic, 0.023ns route)
+                                                       (94.4% logic, 5.6% route)
 
 --------------------------------------------------------------------------------
 
@@ -523,7 +512,7 @@ Slack: 19.520ns (period - min period limit)
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: controle/lidar_i2c/i2c_interface/count_gen_scl_q<3>/CLK
   Logical resource: controle/lidar_i2c/i2c_interface/count_gen_scl_q_0/CK
-  Location pin: SLICE_X0Y31.CLK
+  Location pin: SLICE_X0Y24.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
@@ -531,7 +520,7 @@ Slack: 19.520ns (period - min period limit)
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: controle/lidar_i2c/i2c_interface/count_gen_scl_q<3>/CLK
   Logical resource: controle/lidar_i2c/i2c_interface/count_gen_scl_q_1/CK
-  Location pin: SLICE_X0Y31.CLK
+  Location pin: SLICE_X0Y24.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -548,7 +537,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.905|         |         |         |
+clk            |    5.310|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -557,23 +546,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3030 paths, 0 nets, and 1298 connections
+Constraints cover 3050 paths, 0 nets, and 1239 connections
 
 Design statistics:
-   Minimum period:   5.905ns{1}   (Maximum frequency: 169.348MHz)
+   Minimum period:   5.310ns{1}   (Maximum frequency: 188.324MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Mar 22 04:51:53 2016 
+Analysis completed Tue Mar 22 16:47:13 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 140 MB
+Peak Memory Usage: 224 MB
 
 
 

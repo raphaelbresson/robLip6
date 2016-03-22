@@ -1,24 +1,20 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe -prj /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_lidar_beh.prj work.tb_lidar 
-ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/tb_i2c_master_isim_beh.exe" -prj "C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/tb_i2c_master_beh.prj" "work.tb_i2c_master" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_lidar.vhd" into library work
+Parsing VHDL file "C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
+Parsing VHDL file "C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/tb_i2c_master.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 37368 KB
-Fuse CPU Usage: 1560 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture behavioral of entity I2C [i2c_default]
-Compiling architecture behavioral of entity Lidar [\Lidar(16,1000000)\]
-Compiling architecture behavior of entity tb_lidar
+Compiling architecture behavioral of entity I2C [\I2C(125)\]
+Compiling architecture behavior of entity tb_i2c_master
 Time Resolution for simulation is 1ps.
-Compiled 8 VHDL Units
-Built simulation executable /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe
-Fuse Memory Usage: 83772 KB
-Fuse CPU Usage: 1730 ms
-GCC CPU Usage: 560 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/tb_i2c_master_isim_beh.exe
+Fuse Memory Usage: 34872 KB
+Fuse CPU Usage: 530 ms

@@ -122,7 +122,7 @@ begin
 				ack_error_d <= '0';
 				busy_d <='1';
 				sda_d <= '0';
-				adresse_d <= RW_CMD & ADDR;
+				adresse_d <= ADDR & RW_CMD;
 				bit_counter_d <= 7;
 				etat_futur <= COMMAND1;
 			else

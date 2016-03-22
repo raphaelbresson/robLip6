@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.43 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.43 secs
  
---> 
-Reading design: mojo_top.prj
+--> Reading design: mojo_top.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -108,34 +105,34 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" into library work
 Parsing entity <I2C>.
 Parsing architecture <Behavioral> of entity <i2c>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/spi_slave.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\spi_slave.vhd" into library work
 Parsing entity <spi_slave>.
 Parsing architecture <RTL> of entity <spi_slave>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_tx.vhd" into library work
 Parsing entity <serial_tx>.
 Parsing architecture <RTL> of entity <serial_tx>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_rx.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_rx.vhd" into library work
 Parsing entity <serial_rx>.
 Parsing architecture <RTL> of entity <serial_rx>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\cclk_detector.vhd" into library work
 Parsing entity <cclk_detector>.
 Parsing architecture <RTL> of entity <cclk_detector>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" into library work
 Parsing entity <Lidar>.
 Parsing architecture <Behavioral> of entity <lidar>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Analog_in.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Analog_in.vhd" into library work
 Parsing entity <Analog_in>.
 Parsing architecture <Behavioral> of entity <analog_in>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/avr_interface.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\avr_interface.vhd" into library work
 Parsing entity <avr_interface>.
 Parsing architecture <RTL> of entity <avr_interface>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" into library work
 Parsing entity <Controller>.
 Parsing architecture <Behavioral> of entity <controller>.
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd" into library work
+Parsing VHDL file "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\mojo_top.vhd" into library work
 Parsing entity <mojo_top>.
 Parsing architecture <RTL> of entity <mojo_top>.
 
@@ -152,65 +149,65 @@ Elaborating entity <Analog_in> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Lidar> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <I2C> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 114: scl_out_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 115: rx_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 116: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 137: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 143: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 145: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 176: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 181: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 183: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 197: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 199: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 200: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 91: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 92: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 100: data_rd_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 101: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 103: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 104: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 105: rw_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 106: out_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 107: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 108: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 117: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 118: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 123: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 136: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 141: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 153: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 154: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 159: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 172: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 177: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 189: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 190: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 201: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 206: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 220: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 224: out_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 225: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 226: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 228: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 237: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 200: rx_data_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 203: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 213: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 239: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 253: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 257: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 272: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 277: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 293: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 297: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 304: new_rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 305: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 306: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 307: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 310: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 313: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 197: Assignment to frame_read ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 114: scl_out_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 115: rx_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 116: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 137: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 143: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 145: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 176: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 181: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 183: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 197: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 199: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 200: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 91: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 92: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 100: data_rd_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 101: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 103: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 104: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 105: rw_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 106: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 107: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 108: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 117: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 118: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 123: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 136: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 141: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 153: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 154: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 159: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 172: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 177: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 189: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 190: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 201: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 206: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 220: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 224: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 225: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 226: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 228: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 237: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 200: rx_data_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 203: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 213: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 239: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 253: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 257: buffer_init_actionneurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 272: buffer_init_actionneurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 277: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 293: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 297: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 304: new_rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 305: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 306: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 307: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 310: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 313: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 197: Assignment to frame_read ignored, since the identifier is never used
 
 Elaborating entity <avr_interface> (architecture <RTL>) from library <work>.
 
@@ -219,34 +216,34 @@ Elaborating entity <cclk_detector> (architecture <RTL>) from library <work>.
 Elaborating entity <spi_slave> (architecture <RTL>) from library <work>.
 
 Elaborating entity <serial_rx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_rx.vhd" Line 80. Case statement is complete. others clause is never selected
 
 Elaborating entity <serial_tx> (architecture <RTL>) with generics from library <work>.
-INFO:HDLCompiler:679 - "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_tx.vhd" Line 96. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/mojo_top.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\mojo_top.vhd".
     Summary:
 	no macro.
 Unit <mojo_top> synthesized.
 
 Synthesizing Unit <Controller>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd".
         Num_Capteurs_Analog = 1
         Num_Capteurs_I2C = 1
         Num_Servos = 6
         Num_FastPwm = 2
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_1> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_2> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_3> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_4> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_5> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_6> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_7> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_1> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_2> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_3> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_4> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_5> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_6> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" line 130: Output port <analog_7> of the instance <analogValues> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <new_tx_data_q>.
     Found 3-bit register for signal <Etat_present>.
     Found 8-bit register for signal <rx_data_q>.
@@ -282,7 +279,7 @@ INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd"
 Unit <Controller> synthesized.
 
 Synthesizing Unit <Analog_in>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Analog_in.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Analog_in.vhd".
     Found 10-bit register for signal <samples_q<0>>.
     Found 10-bit register for signal <samples_q<1>>.
     Found 10-bit register for signal <samples_q<2>>.
@@ -381,7 +378,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <samples_d<0><9>>. Latches may be
 Unit <Analog_in> synthesized.
 
 Synthesizing Unit <Lidar>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd".
         data_length = 16
         delay = 1000000
     Found 1-bit register for signal <enable_q>.
@@ -501,7 +498,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<31>>. Latches may 
 Unit <Lidar> synthesized.
 
 Synthesizing Unit <I2C>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd".
         DIVIDE_FACTOR_CLK = 125
     Found 1-bit register for signal <scl_out_q>.
     Found 1-bit register for signal <sda_q>.
@@ -546,7 +543,7 @@ Synthesizing Unit <I2C>.
 Unit <I2C> synthesized.
 
 Synthesizing Unit <avr_interface>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/avr_interface.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\avr_interface.vhd".
     Found 10-bit register for signal <sample_q>.
     Found 1-bit register for signal <new_sample_q>.
     Found 1-bit register for signal <byte_ct_q>.
@@ -564,7 +561,7 @@ Synthesizing Unit <avr_interface>.
 Unit <avr_interface> synthesized.
 
 Synthesizing Unit <cclk_detector>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\cclk_detector.vhd".
     Found 13-bit register for signal <ctr_q>.
     Found 1-bit register for signal <ready_q>.
     Found 13-bit adder for signal <ctr_q[12]_GND_197_o_add_1_OUT> created at line 1241.
@@ -575,7 +572,7 @@ Synthesizing Unit <cclk_detector>.
 Unit <cclk_detector> synthesized.
 
 Synthesizing Unit <spi_slave>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/spi_slave.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\spi_slave.vhd".
     Found 1-bit register for signal <miso_q>.
     Found 3-bit register for signal <bit_ct_q>.
     Found 8-bit register for signal <dout_q>.
@@ -593,7 +590,7 @@ Synthesizing Unit <spi_slave>.
 Unit <spi_slave> synthesized.
 
 Synthesizing Unit <serial_rx>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_rx.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_rx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
     Found 3-bit register for signal <bit_ctr_q>.
@@ -626,7 +623,7 @@ Synthesizing Unit <serial_rx>.
 Unit <serial_rx> synthesized.
 
 Synthesizing Unit <serial_tx>.
-    Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/serial_tx.vhd".
+    Related source file is "C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\src\serial_tx.vhd".
         CLK_PER_BIT = 100
         CTR_SIZE = 7
     Found 1-bit register for signal <tx_q>.
@@ -708,9 +705,9 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <i2c_interface> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_5> <adresse_q_6> 
-INFO:Xst:2261 - The FF/Latch <adresse_q_0> in Unit <i2c_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <adresse_q_2> <adresse_q_3> <adresse_q_4> 
-WARNING:Xst:1710 - FF/Latch <adresse_q_0> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <adresse_q_2> in Unit <i2c_interface> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_6> <adresse_q_7> 
+INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <i2c_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <adresse_q_3> <adresse_q_4> <adresse_q_5> 
+WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <samples_d<0>_1> of sequential type is unconnected in block <analogValues>.
 WARNING:Xst:2677 - Node <samples_d<0>_0> of sequential type is unconnected in block <analogValues>.
 WARNING:Xst:2677 - Node <samples_q_0_0> of sequential type is unconnected in block <analogValues>.
@@ -775,11 +772,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <adresse_q_0> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_2> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_3> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_4> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <I2C> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_5> <adresse_q_6> 
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_5> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <adresse_q_2> in Unit <I2C> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_6> <adresse_q_7> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controle/FSM_0> on signal <Etat_present[1:3]> with gray encoding.
 ----------------------------------------
@@ -1171,6 +1168,7 @@ WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_2_LD h
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_31_LD hinder the constant cleaning in the block mojo_top.
    You should achieve better results by setting this init to 0.
+FlipFlop avr_interface/serial_tx/state_q_FSM_FFd1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1178,8 +1176,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 267
- Flip-Flops                                            : 267
+# Registers                                            : 268
+ Flip-Flops                                            : 268
 
 =========================================================================
 
@@ -1202,23 +1200,23 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 576
+# BELS                             : 570
 #      GND                         : 1
 #      INV                         : 36
 #      LUT1                        : 11
-#      LUT2                        : 32
-#      LUT3                        : 73
-#      LUT4                        : 78
-#      LUT5                        : 63
-#      LUT6                        : 83
-#      MUXCY                       : 133
-#      MUXF7                       : 1
+#      LUT2                        : 35
+#      LUT3                        : 64
+#      LUT4                        : 80
+#      LUT5                        : 59
+#      LUT6                        : 79
+#      MUXCY                       : 134
+#      MUXF7                       : 6
 #      VCC                         : 1
 #      XORCY                       : 64
-# FlipFlops/Latches                : 345
+# FlipFlops/Latches                : 346
 #      FD                          : 8
-#      FDC                         : 75
-#      FDCE                        : 84
+#      FDC                         : 78
+#      FDCE                        : 82
 #      FDE                         : 66
 #      FDP                         : 3
 #      FDPE                        : 7
@@ -1243,16 +1241,16 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             341  out of  11440     2%  
- Number of Slice LUTs:                  376  out of   5720     6%  
-    Number used as Logic:               376  out of   5720     6%  
+ Number of Slice Registers:             342  out of  11440     2%  
+ Number of Slice LUTs:                  364  out of   5720     6%  
+    Number used as Logic:               364  out of   5720     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    485
-   Number with an unused Flip Flop:     144  out of    485    29%  
-   Number with an unused LUT:           109  out of    485    22%  
-   Number of fully used LUT-FF pairs:   232  out of    485    47%  
-   Number of unique control sets:        33
+ Number of LUT Flip Flop pairs used:    475
+   Number with an unused Flip Flop:     133  out of    475    28%  
+   Number with an unused LUT:           111  out of    475    23%  
+   Number of fully used LUT-FF pairs:   231  out of    475    48%  
+   Number of unique control sets:        32
 
 IO Utilization: 
  Number of IOs:                          16
@@ -1283,7 +1281,7 @@ Clock Information:
 -------------------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
 Clock Signal                                                                                                       | Clock buffer(FF name)                       | Load  |
 -------------------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
-clk                                                                                                                | BUFGP                                       | 267   |
+clk                                                                                                                | BUFGP                                       | 268   |
 controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o(controle/lidar_i2c/Mmux_etat_present[3]_PWR_94_o_Mux_84_o12:O)| BUFG(*)(controle/lidar_i2c/count_delay_d_0) | 32    |
 controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o(controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o1:O)                      | BUFG(*)(controle/lidar_i2c/count_delay_t_31)| 32    |
 avr_interface/new_sample_q                                                                                         | NONE(controle/analogValues/samples_d<0>_9)  | 12    |
@@ -1302,8 +1300,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 6.309ns (Maximum Frequency: 158.504MHz)
-   Minimum input arrival time before clock: 6.236ns
+   Minimum period: 6.276ns (Maximum Frequency: 159.337MHz)
+   Minimum input arrival time before clock: 6.237ns
    Maximum output required time after clock: 6.119ns
    Maximum combinational path delay: 6.045ns
 
@@ -1313,10 +1311,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.309ns (frequency: 158.504MHz)
-  Total number of paths / destination ports: 3030 / 383
+  Clock period: 6.276ns (frequency: 159.337MHz)
+  Total number of paths / destination ports: 3050 / 382
 -------------------------------------------------------------------------
-Delay:               6.309ns (Levels of Logic = 7)
+Delay:               6.276ns (Levels of Logic = 6)
   Source:            controle/byte_counter_q_0_C_0 (FF)
   Destination:       controle/tx_data_q_0 (FF)
   Source Clock:      clk rising
@@ -1329,21 +1327,20 @@ Delay:               6.309ns (Levels of Logic = 7)
      FDE:C->Q              2   0.525   0.834  controle/byte_counter_q_0_C_0 (controle/byte_counter_q_0_C_0)
      LUT3:I1->O            1   0.250   0.682  controle/byte_counter_q_01 (controle/byte_counter_q_0)
      LUT1:I0->O            1   0.254   0.000  controle/Msub_n0103_Madd_cy<0>_rt (controle/Msub_n0103_Madd_cy<0>_rt)
-     MUXCY:S->O            1   0.215   0.000  controle/Msub_n0103_Madd_cy<0> (controle/Msub_n0103_Madd_cy<0>)
-     XORCY:CI->O          11   0.206   1.039  controle/Msub_n0103_Madd_xor<1> (controle/n0103<1>)
-     LUT6:I5->O            1   0.254   0.790  controle/Mmux_tx_data_d43_SW0 (N75)
-     LUT6:I4->O            1   0.250   0.682  controle/Mmux_tx_data_d45_SW1 (N62)
+     XORCY:LI->O          12   0.149   1.297  controle/Msub_n0103_Madd_xor<0> (controle/n0103<0>)
+     LUT6:I3->O            1   0.235   0.790  controle/Mmux_tx_data_d45_SW1_SW2 (N88)
+     LUT6:I4->O            1   0.250   0.682  controle/Mmux_tx_data_d45_SW1 (N103)
      LUT6:I5->O            1   0.254   0.000  controle/Mmux_tx_data_d45 (controle/tx_data_d<0>)
      FDC:D                     0.074          controle/tx_data_q_0
     ----------------------------------------
-    Total                      6.309ns (2.282ns logic, 4.027ns route)
-                                       (36.2% logic, 63.8% route)
+    Total                      6.276ns (1.991ns logic, 4.285ns route)
+                                       (31.7% logic, 68.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 370 / 276
+  Total number of paths / destination ports: 370 / 277
 -------------------------------------------------------------------------
-Offset:              6.236ns (Levels of Logic = 2)
+Offset:              6.237ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
   Destination:       controle/Etat_present_FSM_FFd1 (FF)
   Destination Clock: clk rising
@@ -1353,10 +1350,10 @@ Offset:              6.236ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            51   1.328   1.828  rst_n_IBUF (avr_interface/serial_rx/rst_inv)
-     INV:I->O            154   0.255   2.366  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
+     INV:I->O            155   0.255   2.367  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
      FDCE:CLR                  0.459          controle/rx_data_q_0
     ----------------------------------------
-    Total                      6.236ns (2.042ns logic, 4.194ns route)
+    Total                      6.237ns (2.042ns logic, 4.195ns route)
                                        (32.7% logic, 67.3% route)
 
 =========================================================================
@@ -1436,9 +1433,9 @@ Clock to Setup on destination clock clk
 Source Clock                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------+---------+---------+---------+---------+
 avr_interface/new_sample_q                          |         |    1.336|         |         |
-clk                                                 |    6.309|         |         |         |
+clk                                                 |    6.276|         |         |         |
 controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o|         |    1.380|         |         |
-rst_n                                               |    6.620|         |         |         |
+rst_n                                               |    6.515|         |         |         |
 ----------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o
@@ -1447,7 +1444,7 @@ Clock to Setup on destination clock controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk            |         |         |    2.660|         |
-rst_n          |         |         |    3.369|         |
+rst_n          |         |         |    3.393|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o
@@ -1455,20 +1452,19 @@ Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_
                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------+---------+---------+---------+---------+
-clk                                         |         |         |    2.951|         |
+clk                                         |         |         |    2.959|         |
 controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o|         |         |    1.829|         |
 --------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.09 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.42 secs
  
 --> 
 
-
-Total memory usage is 132064 kilobytes
+Total memory usage is 306708 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  477 (   0 filtered)

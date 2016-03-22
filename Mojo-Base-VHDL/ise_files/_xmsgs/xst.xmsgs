@@ -5,202 +5,202 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 114: <arg fmt="%s" index="1">scl_out_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 114: <arg fmt="%s" index="1">scl_out_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 115: <arg fmt="%s" index="1">rx_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 115: <arg fmt="%s" index="1">rx_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 116: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 116: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 137: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 137: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 143: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 143: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 145: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 145: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 176: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 176: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 181: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 181: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 183: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 183: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 197: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 197: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 199: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 199: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 200: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\I2C.vhd" Line 200: <arg fmt="%s" index="1">bit_counter_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 91: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 91: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 92: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 92: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 100: <arg fmt="%s" index="1">data_rd_t</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 100: <arg fmt="%s" index="1">data_rd_t</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 101: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 101: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 103: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 103: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 104: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 104: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 105: <arg fmt="%s" index="1">rw_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 105: <arg fmt="%s" index="1">rw_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 106: <arg fmt="%s" index="1">out_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 106: <arg fmt="%s" index="1">out_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 107: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 107: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 108: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 108: <arg fmt="%s" index="1">etat_present</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 117: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 117: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 118: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 118: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 123: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 123: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 136: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 136: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 141: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 141: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 153: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 153: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 154: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 154: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 159: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 159: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 172: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 172: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 177: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 177: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 189: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 189: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 190: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 190: <arg fmt="%s" index="1">bytes_to_write_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 201: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 201: <arg fmt="%s" index="1">data_wr_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 206: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 206: <arg fmt="%s" index="1">count_delay_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 220: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 220: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 224: <arg fmt="%s" index="1">out_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 224: <arg fmt="%s" index="1">out_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 225: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 225: <arg fmt="%s" index="1">ack_error_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 226: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 226: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 228: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 228: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 237: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Lidar.vhd" Line 237: <arg fmt="%s" index="1">bytes_to_read_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 200: <arg fmt="%s" index="1">rx_data_t</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 200: <arg fmt="%s" index="1">rx_data_t</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 203: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 203: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 213: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 213: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 239: <arg fmt="%s" index="1">buffer_init_capteurs</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 239: <arg fmt="%s" index="1">buffer_init_capteurs</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 253: <arg fmt="%s" index="1">buffer_init_capteurs</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 253: <arg fmt="%s" index="1">buffer_init_capteurs</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 257: <arg fmt="%s" index="1">buffer_init_actionneurs</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 257: <arg fmt="%s" index="1">buffer_init_actionneurs</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 272: <arg fmt="%s" index="1">buffer_init_actionneurs</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 272: <arg fmt="%s" index="1">buffer_init_actionneurs</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 277: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 277: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 293: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 293: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 297: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 297: <arg fmt="%s" index="1">frame_write</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 304: <arg fmt="%s" index="1">new_rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 304: <arg fmt="%s" index="1">new_rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 305: <arg fmt="%s" index="1">byte_counter2_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 305: <arg fmt="%s" index="1">byte_counter2_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 306: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 306: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 307: <arg fmt="%s" index="1">byte_counter2_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 307: <arg fmt="%s" index="1">byte_counter2_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 310: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 310: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 313: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 313: <arg fmt="%s" index="1">rx_data_q</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 197: Assignment to <arg fmt="%s" index="1">frame_read</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd" Line 197: Assignment to <arg fmt="%s" index="1">frame_read</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\roger\Desktop\ftyf\toto\Mojo-Base-VHDL\ise_files\Controlleur.vhd</arg>&quot; line <arg fmt="%s" index="2">130</arg>: Output port &lt;<arg fmt="%s" index="3">analog_7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">analogValues</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">samples_d&lt;0&gt;&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -647,13 +647,13 @@
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count_delay_t&lt;31&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_5&gt; &lt;adresse_q_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_6&gt; &lt;adresse_q_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_2&gt; &lt;adresse_q_3&gt; &lt;adresse_q_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">i2c_interface</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_3&gt; &lt;adresse_q_4&gt; &lt;adresse_q_5&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_interface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">samples_d&lt;0&gt;_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">analogValues</arg>&gt;.
@@ -668,10 +668,7 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">samples_q_0_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">analogValues</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -680,7 +677,10 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">I2C</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_5&gt; &lt;adresse_q_6&gt; </arg>
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">I2C</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_q_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">I2C</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;adresse_q_6&gt; &lt;adresse_q_7&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_wr_q_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Lidar</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

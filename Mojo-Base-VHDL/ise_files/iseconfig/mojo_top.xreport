@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-03-18T00:12:57</DateModified>
+  <DateModified>2016-03-22T15:06:02</DateModified>
   <ModuleName>mojo_top</ModuleName>
   <SummaryTimeStamp>2016-03-01T23:02:04</SummaryTimeStamp>
-  <SavedFilePath>/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/iseconfig/mojo_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files/iseconfig/mojo_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/roger/Desktop/ftyf/toto/Mojo-Base-VHDL/ise_files\</ImplementationReportsDirectory>
   <DateInitialized>2016-01-30T14:09:54</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>

@@ -1,0 +1,3 @@
+vhdl work "I2C.vhd"
+vhdl work "Lidar.vhd"
+vhdl work "tb_lidar.vhd"

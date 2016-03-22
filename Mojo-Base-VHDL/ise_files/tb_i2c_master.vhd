@@ -39,16 +39,16 @@ ARCHITECTURE behavior OF tb_i2c_master IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT i2C_master
+    COMPONENT i2C
     PORT(
          CLK : IN  std_logic;
          RST : IN  std_logic;
          ENABLE : IN  std_logic;
          ADDR : IN  std_logic_vector(6 downto 0);
-         RW : IN  std_logic;
-         Data_wr : IN  std_logic_vector(7 downto 0);
-         Data_rd : OUT  std_logic_vector(7 downto 0);
-         ack_error : BUFFER  std_logic;
+         RW_CMD : IN  std_logic;
+         Data_TX : IN  std_logic_vector(7 downto 0);
+         Data_RX : OUT  std_logic_vector(7 downto 0);
+         error_ack : OUT  std_logic;
          busy : OUT  std_logic;
          SCL : INOUT  std_logic;
          SDA : INOUT  std_logic
@@ -77,17 +77,18 @@ ARCHITECTURE behavior OF tb_i2c_master IS
    constant CLK_period : time := 10 ns;
  
 BEGIN
- 
+ SDA <= 'H';
+ SCL <= 'H';
 	-- Instantiate the Unit Under Test (UUT)
-   uut: i2C_master PORT MAP (
+   uut: i2C PORT MAP (
           CLK => CLK,
           RST => RST,
           ENABLE => ENABLE,
           ADDR => ADDR,
-          RW => RW,
-          Data_wr => Data_wr,
-          Data_rd => Data_rd,
-          ack_error => ack_error,
+          RW_CMD => RW,
+          Data_TX => Data_wr,
+          Data_RX => Data_rd,
+          error_ack => ack_error,
           busy => busy,
           SCL => SCL,
           SDA => SDA
@@ -101,7 +102,7 @@ BEGIN
 		CLK <= '1';
 		wait for CLK_period/2;
    end process;
-	ENABLE <= '1';
+	
 
    -- Stimulus process
    stim_proc: process
@@ -110,7 +111,13 @@ BEGIN
       wait for 100 ns;	
 
       wait for CLK_period*10;
-
+		ENABLE <= '1';
+		rw<='1';
+		ADDR <= "0111000";
+		wait for 100 us;
+		ENABLE <= '1';
+		rw<='0';
+		ADDR <= "0111000";
       -- insert stimulus here 
 
       wait;

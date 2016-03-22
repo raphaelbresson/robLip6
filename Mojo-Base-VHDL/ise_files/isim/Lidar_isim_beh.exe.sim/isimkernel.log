@@ -1,0 +1,29 @@
+Command line:
+   Lidar_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  37578
+
+Tue Mar 22 04:21:22 2016
+
+
+ Elaboration Time: 0.09 sec
+
+ Current Memory Usage: 135.643 Meg
+
+ Total Signals          : 63
+ Total Nets             : 166
+ Total Signal Drivers   : 49
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 13
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 684
+Total Line Count : 271
+
+ Total Simulation Time: 0.12 sec
+
+ Current Memory Usage: 144.036 Meg
+
+Tue Mar 22 04:21:25 2016
+

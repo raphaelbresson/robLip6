@@ -1,0 +1,68 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: Lidar.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" into library work
+Parsing entity <i2C_master>.
+INFO:HDLCompiler:1676 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 38. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <i2c_master>.
+WARNING:HDLCompiler:957 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 94: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 97: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/i2C_master.vhd" Line 100: Case choice must be a locally static expression
+Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
+Parsing entity <Lidar>.
+Parsing architecture <Behavioral> of entity <lidar>.
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.38 secs
+ 
+--> 
+
+
+Total memory usage is 98640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

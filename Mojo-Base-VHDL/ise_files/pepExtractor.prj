@@ -1,1 +1,2 @@
-work	"i2C_master.vhd"
+work	"I2C.vhd"
+work	"Lidar.vhd"

@@ -11,109 +11,95 @@ use IEEE.NUMERIC_STD.all;
 
 entity mojo_top is
 	port (
-		clk			: in  std_logic;		-- 50Mhz clock
-		rst_n		: in  std_logic;		-- "reset" button input (negative logic)
-		cclk		: in  std_logic;		-- configuration clock (?) from AVR (to detect when AVR ready)
-		led			: out std_logic_vector(7 downto 0);	 -- 8 LEDs on Mojo board
-		spi_sck		: in  std_logic;		-- SPI clock to from AVR
-		spi_ss		: in  std_logic;		-- SPI slave select from AVR
-		spi_mosi	: in  std_logic;		-- SPI serial data master out, slave in (AVR -> FPGA)
-		spi_miso	: out std_logic;		-- SPI serial data master in, slave out (AVR <- FPGA)
-		spi_channel : out std_logic_vector(3 downto 0);  -- analog read channel (input to AVR service task)
-		avr_tx		: in  std_logic;		-- serial data transmited from AVR/USB (FPGA recieve)
-		avr_rx		: out std_logic;		-- serial data for AVR/USB to receive (FPGA transmit)
-		avr_rx_busy : in  std_logic;		-- AVR/USB buffer full (don't send data when true)
-		servo 			: out std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
-		fast_pwm			: out std_logic_vector(1 downto 0)   -- sorties pwm des roues
+		clk			: in  	std_logic;							-- 50Mhz clock
+		rst_n			: in  	std_logic;							-- "reset" button input (negative logic)
+		cclk			: in  	std_logic;							-- configuration clock (?) from AVR (to detect when AVR ready)
+--		led			: out 	std_logic_vector(7 downto 0);	-- 8 LEDs on Mojo board
+		spi_sck		: in  	std_logic;							-- SPI clock to from AVR
+		spi_ss		: in  	std_logic;							-- SPI slave select from AVR
+		spi_mosi		: in  	std_logic;							-- SPI serial data master out, slave in (AVR -> FPGA)
+		spi_miso		: out 	std_logic;							-- SPI serial data master in, slave out (AVR <- FPGA)
+		spi_channel : out 	std_logic_vector(3 downto 0); -- analog read channel (input to AVR service task)
+		avr_tx		: in  	std_logic;							-- serial data transmited from AVR/USB (FPGA recieve)
+		avr_rx		: out 	std_logic;							-- serial data for AVR/USB to receive (FPGA transmit)
+		avr_rx_busy : in  	std_logic;							-- AVR/USB buffer full (don't send data when true)
+		scl			: inout 	std_logic_vector(0 downto 0);	-- horloges i2c
+		sda			: inout	std_logic_vector(0 downto 0)	-- datas i2c
+--		servo 		: out 	std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
+--		fast_pwm		: out 	std_logic_vector(1 downto 0)  -- sorties pwm des roues
 	);
 end mojo_top;
 
 architecture RTL of mojo_top is
 
-signal rst	: std_logic;		-- reset signal (rst_n inverted for postive logic)
+signal rst	: std_logic;										-- reset signal (rst_n inverted for postive logic)
 
 -- signals for avr_interface
-signal channel			: std_logic_vector(3 downto 0);
-signal sample			: std_logic_vector(9 downto 0);
+signal channel				: std_logic_vector(3 downto 0);
+signal sample				: std_logic_vector(9 downto 0);
 signal sample_channel	: std_logic_vector(3 downto 0);
-signal new_sample		: std_logic;
-signal tx_data			: std_logic_vector(7 downto 0);
-signal rx_data			: std_logic_vector(7 downto 0);
+signal new_sample			: std_logic;
+signal tx_data				: std_logic_vector(7 downto 0);
+signal rx_data				: std_logic_vector(7 downto 0);
 signal new_tx_data		: std_logic;
 signal new_rx_data		: std_logic;
-signal tx_busy			: std_logic;
-
+signal tx_busy				: std_logic;
 -- signal de commande des entrées pwm
 type com_pwm_tab is array(0 to 7) of std_logic_vector(9 downto 0);
 signal com_pwm : com_pwm_tab; 
 
 begin
 
--- entrees analogiques
-analog_inputs: entity work.Analog_in
+controle: entity work.controller
 	port map(
-			clk => clk,
-			rst => rst,
-			new_sample => new_sample,
-			sample => sample,
-			sample_channel => sample_channel,
-			channel => channel,
-			analog_0 => com_pwm(0),
-			analog_1 => com_pwm(1),
-			analog_2 => com_pwm(2),
-			analog_3 => com_pwm(3),
-			analog_4 => com_pwm(4),
-			analog_5 => com_pwm(5),
-			analog_6 => com_pwm(6),
-			analog_7 => com_pwm(7)
-		); 
-
--- test pwm avec les leds -> DEBUG -> en mode servo
-gen_pwm_test_leds: for i in 0 to 7 generate
-	pwm_tests_leds : entity work.pwm_mgr
-		generic map(
-				com_length => 10,
-				cmp_length => 20
-			)
-		port map(
-			clk => clk,
-			rst => rst,
-			com => com_pwm(i),
-			pwm => led(i)
-		);
-end generate;
+					clk => clk,
+					rst => rst,
+					new_rx_data => new_rx_data,
+					rx_data => rx_data,
+					tx_data => tx_data,
+					tx_busy => tx_busy,
+					new_tx_data => new_tx_data,
+					new_sample => new_sample,
+					sample => sample,
+					sample_channel => sample_channel,
+					channel => channel,
+					scl => scl,
+					sda => sda
+				);
 
 -- sorties pwm des servo-moteurs
 -- pins: P57, P58, P66, P67, P74, P75 
-gen_servo: for i in 0 to 5 generate
-	pwm_servo : entity work.pwm_mgr
-		generic map(
-							com_length => 10, -- 10 bits pour la valeur analogique
-							cmp_length => 20  -- 20 bits pour avoir un fréquence de 50Hz
-			)
-		port map(
-						clk => clk,
-						rst => rst,
-						com => com_pwm(i),
-						pwm => servo(i)
-					);
-end generate;
+--gen_servo: for i in 0 to 5 generate
+--	pwm_servo : entity work.pwm_mgr
+--		generic map(
+--							com_length => 10, -- 10 bits pour la valeur commande
+--							cmp_length => 20,  -- 20 bits pour avoir un fréquence de 50Hz
+--							offset => 165
+--			)
+--		port map(
+--						clk => clk,
+--						rst => rst,
+--						com => com_pwm(i)(9 downto 2) & "11",
+--						pwm => servo(i)
+--		);
+--end generate;
 
 -- sorties pwm pour les roues
 -- pins: P80, P81
-gen_pwms_roues : for i in 6 to 7 generate
-	pwm_base: entity work.pwm_mgr
-		generic map(
-						com_length => 10,  -- 10 bits pour la valeur analogique
-						cmp_length => 16	 -- 20 bits pour avoir une fréquence de 1kHz
-					)
-		port map(
-						clk => clk,
-						rst => rst,
-						com => com_pwm(i),
-						pwm => fast_pwm(i-6)
-					);
-end generate;
+--gen_pwms_roues : for i in 6 to 7 generate
+--	pwm_base: entity work.pwm_mgr
+--		generic map(
+--						com_length => 8,  -- 8 bits pour la valeur commande
+--						cmp_length => 16,	 -- 16 bits pour avoir une fréquence de 1kHz
+--						offset => 0
+--					)
+--		port map(
+--						clk => clk,
+--						rst => rst,
+--						com => com_pwm(i)(9 downto 2),
+--						pwm => fast_pwm(i-6)
+--					);
+--end generate;
 		
 rst	<= NOT rst_n;						-- generate non-inverted reset signal from rst_n button
 

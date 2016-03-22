@@ -1,11 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Mar 07 19:13:11 2016
+// Written by: Map P.20131013 on Tue Mar 22 04:51:31 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "P56" LEVEL 1;
-COMP "fast_pwm<0>" LOCATE = SITE "P80" LEVEL 1;
-COMP "fast_pwm<1>" LOCATE = SITE "P81" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 PIN rst_n_pin<0> = BEL "rst_n" PINNAME PAD;
@@ -16,26 +14,123 @@ COMP "spi_channel<1>" LOCATE = SITE "P61" LEVEL 1;
 COMP "spi_channel<2>" LOCATE = SITE "P62" LEVEL 1;
 COMP "spi_channel<3>" LOCATE = SITE "P65" LEVEL 1;
 COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
-COMP "led<0>" LOCATE = SITE "P134" LEVEL 1;
-COMP "led<1>" LOCATE = SITE "P133" LEVEL 1;
-COMP "led<2>" LOCATE = SITE "P132" LEVEL 1;
-COMP "led<3>" LOCATE = SITE "P131" LEVEL 1;
-COMP "led<4>" LOCATE = SITE "P127" LEVEL 1;
-COMP "led<5>" LOCATE = SITE "P126" LEVEL 1;
-COMP "led<6>" LOCATE = SITE "P124" LEVEL 1;
-COMP "led<7>" LOCATE = SITE "P123" LEVEL 1;
+COMP "sda<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "scl<0>" LOCATE = SITE "P12" LEVEL 1;
 COMP "avr_rx" LOCATE = SITE "P59" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
-COMP "servo<0>" LOCATE = SITE "P57" LEVEL 1;
-COMP "servo<1>" LOCATE = SITE "P58" LEVEL 1;
-COMP "servo<2>" LOCATE = SITE "P66" LEVEL 1;
-COMP "servo<3>" LOCATE = SITE "P67" LEVEL 1;
-COMP "servo<4>" LOCATE = SITE "P74" LEVEL 1;
-COMP "servo<5>" LOCATE = SITE "P75" LEVEL 1;
 COMP "spi_miso" LOCATE = SITE "P45" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
+TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
+        "controle/Etat_present_FSM_FFd2" BEL "controle/Etat_present_FSM_FFd3"
+        BEL "controle/tx_data_q_7" BEL "controle/tx_data_q_6" BEL
+        "controle/tx_data_q_5" BEL "controle/tx_data_q_4" BEL
+        "controle/tx_data_q_3" BEL "controle/tx_data_q_2" BEL
+        "controle/tx_data_q_1" BEL "controle/tx_data_q_0" BEL
+        "controle/byte_counter_q_3" BEL "controle/frame_write_0_7" BEL
+        "controle/frame_write_0_6" BEL "controle/frame_write_0_5" BEL
+        "controle/frame_write_0_4" BEL "controle/frame_write_0_3" BEL
+        "controle/frame_write_0_2" BEL "controle/frame_write_0_1" BEL
+        "controle/frame_write_0_0" BEL "controle/frame_write_1_7" BEL
+        "controle/frame_write_1_6" BEL "controle/frame_write_1_5" BEL
+        "controle/frame_write_1_4" BEL "controle/frame_write_1_3" BEL
+        "controle/frame_write_1_2" BEL "controle/frame_write_1_1" BEL
+        "controle/frame_write_1_0" BEL "controle/frame_write_2_7" BEL
+        "controle/frame_write_2_6" BEL "controle/frame_write_2_5" BEL
+        "controle/frame_write_2_4" BEL "controle/frame_write_2_3" BEL
+        "controle/frame_write_2_2" BEL "controle/frame_write_2_1" BEL
+        "controle/frame_write_2_0" BEL "controle/new_tx_data_q" BEL
+        "controle/rx_data_q_7" BEL "controle/rx_data_q_6" BEL
+        "controle/rx_data_q_5" BEL "controle/rx_data_q_4" BEL
+        "controle/rx_data_q_3" BEL "controle/rx_data_q_2" BEL
+        "controle/rx_data_q_1" BEL "controle/rx_data_q_0" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd2" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd3" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd1" BEL
+        "controle/lidar_i2c/bytes_to_write_q_FSM_FFd1" BEL
+        "controle/lidar_i2c/bytes_to_write_q_FSM_FFd2" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd4" BEL
+        "controle/lidar_i2c/bytes_to_read_q_1" BEL
+        "controle/lidar_i2c/bytes_to_read_q_0" BEL
+        "controle/lidar_i2c/out_data_q_15" BEL
+        "controle/lidar_i2c/out_data_q_14" BEL
+        "controle/lidar_i2c/out_data_q_13" BEL
+        "controle/lidar_i2c/out_data_q_12" BEL
+        "controle/lidar_i2c/out_data_q_11" BEL
+        "controle/lidar_i2c/out_data_q_10" BEL
+        "controle/lidar_i2c/out_data_q_9" BEL
+        "controle/lidar_i2c/out_data_q_8" BEL
+        "controle/lidar_i2c/out_data_q_7" BEL
+        "controle/lidar_i2c/out_data_q_6" BEL
+        "controle/lidar_i2c/out_data_q_5" BEL
+        "controle/lidar_i2c/out_data_q_4" BEL
+        "controle/lidar_i2c/out_data_q_3" BEL
+        "controle/lidar_i2c/out_data_q_2" BEL
+        "controle/lidar_i2c/out_data_q_1" BEL
+        "controle/lidar_i2c/out_data_q_0" BEL "controle/lidar_i2c/data_rd_q_7"
+        BEL "controle/lidar_i2c/data_rd_q_6" BEL
+        "controle/lidar_i2c/data_rd_q_5" BEL "controle/lidar_i2c/data_rd_q_4"
+        BEL "controle/lidar_i2c/data_rd_q_3" BEL
+        "controle/lidar_i2c/data_rd_q_2" BEL "controle/lidar_i2c/data_rd_q_1"
+        BEL "controle/lidar_i2c/data_rd_q_0" BEL "controle/lidar_i2c/enable_q"
+        BEL "controle/lidar_i2c/data_wr_q_2" BEL
+        "controle/lidar_i2c/data_wr_q_0" BEL
+        "controle/lidar_i2c/count_delay_q_31" BEL
+        "controle/lidar_i2c/count_delay_q_30" BEL
+        "controle/lidar_i2c/count_delay_q_29" BEL
+        "controle/lidar_i2c/count_delay_q_28" BEL
+        "controle/lidar_i2c/count_delay_q_27" BEL
+        "controle/lidar_i2c/count_delay_q_26" BEL
+        "controle/lidar_i2c/count_delay_q_25" BEL
+        "controle/lidar_i2c/count_delay_q_24" BEL
+        "controle/lidar_i2c/count_delay_q_23" BEL
+        "controle/lidar_i2c/count_delay_q_22" BEL
+        "controle/lidar_i2c/count_delay_q_21" BEL
+        "controle/lidar_i2c/count_delay_q_20" BEL
+        "controle/lidar_i2c/count_delay_q_15" BEL
+        "controle/lidar_i2c/count_delay_q_13" BEL
+        "controle/lidar_i2c/count_delay_q_12" BEL
+        "controle/lidar_i2c/count_delay_q_11" BEL
+        "controle/lidar_i2c/count_delay_q_10" BEL
+        "controle/lidar_i2c/count_delay_q_8" BEL
+        "controle/lidar_i2c/count_delay_q_7" BEL
+        "controle/lidar_i2c/count_delay_q_5" BEL
+        "controle/lidar_i2c/count_delay_q_4" BEL
+        "controle/lidar_i2c/count_delay_q_3" BEL
+        "controle/lidar_i2c/count_delay_q_2" BEL
+        "controle/lidar_i2c/count_delay_q_1" BEL
+        "controle/lidar_i2c/count_delay_q_0" BEL
+        "controle/lidar_i2c/ack_error_q" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_7" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_6" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_5" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_4" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_3" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_2" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_1" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_0" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd2" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd3" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd1" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd4" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_7" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_6" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_5" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_4" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_3" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_2" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_1" BEL
+        "controle/lidar_i2c/i2c_interface/rx_q_0" BEL
+        "controle/lidar_i2c/i2c_interface/scl_out_q" BEL
+        "controle/lidar_i2c/i2c_interface/bit_counter_q_3" BEL
+        "controle/lidar_i2c/i2c_interface/bit_counter_q_2" BEL
+        "controle/lidar_i2c/i2c_interface/bit_counter_q_1" BEL
+        "controle/lidar_i2c/i2c_interface/bit_counter_q_0" BEL
+        "controle/lidar_i2c/i2c_interface/sclp_q" BEL
+        "controle/lidar_i2c/i2c_interface/busy_q" BEL
+        "controle/lidar_i2c/i2c_interface/adresse_q_7" BEL
+        "controle/lidar_i2c/i2c_interface/adresse_q_1" BEL
+        "avr_interface/cclk_detector/ctr_q_12" BEL
         "avr_interface/cclk_detector/ctr_q_11" BEL
         "avr_interface/cclk_detector/ctr_q_10" BEL
         "avr_interface/cclk_detector/ctr_q_9" BEL
@@ -52,254 +147,40 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         BEL "avr_interface/sample_q_8" BEL "avr_interface/sample_q_7" BEL
         "avr_interface/sample_q_6" BEL "avr_interface/sample_q_5" BEL
         "avr_interface/sample_q_4" BEL "avr_interface/sample_q_3" BEL
-        "avr_interface/sample_q_2" BEL "avr_interface/sample_q_1" BEL
-        "avr_interface/sample_q_0" BEL "avr_interface/sample_channel_q_3" BEL
+        "avr_interface/sample_q_2" BEL "avr_interface/sample_channel_q_3" BEL
         "avr_interface/sample_channel_q_2" BEL
         "avr_interface/sample_channel_q_1" BEL
         "avr_interface/sample_channel_q_0" BEL "avr_interface/new_sample_q"
-        BEL "analog_inputs/samples_q_7_9" BEL "analog_inputs/samples_q_7_8"
-        BEL "analog_inputs/samples_q_7_7" BEL "analog_inputs/samples_q_7_6"
-        BEL "analog_inputs/samples_q_7_5" BEL "analog_inputs/samples_q_7_4"
-        BEL "analog_inputs/samples_q_7_3" BEL "analog_inputs/samples_q_7_2"
-        BEL "analog_inputs/samples_q_7_1" BEL "analog_inputs/samples_q_7_0"
-        BEL "analog_inputs/samples_q_6_9" BEL "analog_inputs/samples_q_6_8"
-        BEL "analog_inputs/samples_q_6_7" BEL "analog_inputs/samples_q_6_6"
-        BEL "analog_inputs/samples_q_6_5" BEL "analog_inputs/samples_q_6_4"
-        BEL "analog_inputs/samples_q_6_3" BEL "analog_inputs/samples_q_6_2"
-        BEL "analog_inputs/samples_q_6_1" BEL "analog_inputs/samples_q_6_0"
-        BEL "analog_inputs/samples_q_4_9" BEL "analog_inputs/samples_q_4_8"
-        BEL "analog_inputs/samples_q_4_7" BEL "analog_inputs/samples_q_4_6"
-        BEL "analog_inputs/samples_q_4_5" BEL "analog_inputs/samples_q_4_4"
-        BEL "analog_inputs/samples_q_4_3" BEL "analog_inputs/samples_q_4_2"
-        BEL "analog_inputs/samples_q_4_1" BEL "analog_inputs/samples_q_4_0"
-        BEL "analog_inputs/samples_q_3_9" BEL "analog_inputs/samples_q_3_8"
-        BEL "analog_inputs/samples_q_3_7" BEL "analog_inputs/samples_q_3_6"
-        BEL "analog_inputs/samples_q_3_5" BEL "analog_inputs/samples_q_3_4"
-        BEL "analog_inputs/samples_q_3_3" BEL "analog_inputs/samples_q_3_2"
-        BEL "analog_inputs/samples_q_3_1" BEL "analog_inputs/samples_q_3_0"
-        BEL "analog_inputs/samples_q_5_9" BEL "analog_inputs/samples_q_5_8"
-        BEL "analog_inputs/samples_q_5_7" BEL "analog_inputs/samples_q_5_6"
-        BEL "analog_inputs/samples_q_5_5" BEL "analog_inputs/samples_q_5_4"
-        BEL "analog_inputs/samples_q_5_3" BEL "analog_inputs/samples_q_5_2"
-        BEL "analog_inputs/samples_q_5_1" BEL "analog_inputs/samples_q_5_0"
-        BEL "analog_inputs/samples_q_1_9" BEL "analog_inputs/samples_q_1_8"
-        BEL "analog_inputs/samples_q_1_7" BEL "analog_inputs/samples_q_1_6"
-        BEL "analog_inputs/samples_q_1_5" BEL "analog_inputs/samples_q_1_4"
-        BEL "analog_inputs/samples_q_1_3" BEL "analog_inputs/samples_q_1_2"
-        BEL "analog_inputs/samples_q_1_1" BEL "analog_inputs/samples_q_1_0"
-        BEL "analog_inputs/samples_q_0_9" BEL "analog_inputs/samples_q_0_8"
-        BEL "analog_inputs/samples_q_0_7" BEL "analog_inputs/samples_q_0_6"
-        BEL "analog_inputs/samples_q_0_5" BEL "analog_inputs/samples_q_0_4"
-        BEL "analog_inputs/samples_q_0_3" BEL "analog_inputs/samples_q_0_2"
-        BEL "analog_inputs/samples_q_0_1" BEL "analog_inputs/samples_q_0_0"
-        BEL "analog_inputs/samples_q_2_9" BEL "analog_inputs/samples_q_2_8"
-        BEL "analog_inputs/samples_q_2_7" BEL "analog_inputs/samples_q_2_6"
-        BEL "analog_inputs/samples_q_2_5" BEL "analog_inputs/samples_q_2_4"
-        BEL "analog_inputs/samples_q_2_3" BEL "analog_inputs/samples_q_2_2"
-        BEL "analog_inputs/samples_q_2_1" BEL "analog_inputs/samples_q_2_0"
-        BEL "gen_pwm_test_leds[7].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[7].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[6].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/pwm_q" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_19" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_18" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_17" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_16" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_15" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_14" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_13" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_12" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_11" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_10" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_9" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_8" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_7" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_6" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_5" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_4" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_3" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_2" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_1" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/cmp_q_0" BEL
-        "gen_pwms_roues[7].pwm_base/pwm_q" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_15" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_14" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_13" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_12" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_11" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_10" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_9" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_8" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_7" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_6" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_5" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_4" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_3" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_2" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_1" BEL
-        "gen_pwms_roues[7].pwm_base/cmp_q_0" BEL
-        "gen_pwms_roues[6].pwm_base/pwm_q" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_15" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_14" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_13" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_12" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_11" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_10" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_9" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_8" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_7" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_6" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_5" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_4" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_3" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_2" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_1" BEL
-        "gen_pwms_roues[6].pwm_base/cmp_q_0" BEL
-        "avr_interface/spi_slave/bit_ct_q_2" BEL
+        BEL "controle/analogValues/samples_q_0_9" BEL
+        "controle/analogValues/samples_q_0_8" BEL
+        "controle/analogValues/samples_q_0_7" BEL
+        "controle/analogValues/samples_q_0_6" BEL
+        "controle/analogValues/samples_q_0_5" BEL
+        "controle/analogValues/samples_q_0_4" BEL
+        "controle/analogValues/samples_q_0_3" BEL
+        "controle/analogValues/samples_q_0_2" BEL
+        "avr_interface/serial_tx/bit_ctr_q_2" BEL
+        "avr_interface/serial_tx/bit_ctr_q_1" BEL
+        "avr_interface/serial_tx/bit_ctr_q_0" BEL
+        "avr_interface/serial_tx/state_q_FSM_FFd1" BEL
+        "avr_interface/serial_tx/state_q_FSM_FFd2" BEL
+        "avr_interface/serial_tx/ctr_q_6" BEL
+        "avr_interface/serial_tx/ctr_q_5" BEL
+        "avr_interface/serial_tx/ctr_q_4" BEL
+        "avr_interface/serial_tx/ctr_q_3" BEL
+        "avr_interface/serial_tx/ctr_q_2" BEL
+        "avr_interface/serial_tx/ctr_q_1" BEL
+        "avr_interface/serial_tx/ctr_q_0" BEL
+        "avr_interface/serial_tx/data_q_7" BEL
+        "avr_interface/serial_tx/data_q_6" BEL
+        "avr_interface/serial_tx/data_q_5" BEL
+        "avr_interface/serial_tx/data_q_4" BEL
+        "avr_interface/serial_tx/data_q_3" BEL
+        "avr_interface/serial_tx/data_q_2" BEL
+        "avr_interface/serial_tx/data_q_1" BEL
+        "avr_interface/serial_tx/data_q_0" BEL
+        "avr_interface/serial_tx/block_q" BEL "avr_interface/serial_tx/tx_q"
+        BEL "avr_interface/spi_slave/bit_ct_q_2" BEL
         "avr_interface/spi_slave/bit_ct_q_1" BEL
         "avr_interface/spi_slave/bit_ct_q_0" BEL
         "avr_interface/spi_slave/dout_q_7" BEL
@@ -321,14 +202,54 @@ TIMEGRP clk = BEL "avr_interface/cclk_detector/ctr_q_12" BEL
         "avr_interface/spi_slave/done_q" BEL
         "avr_interface/spi_slave/sck_old_q" BEL
         "avr_interface/spi_slave/mosi_q" BEL "avr_interface/spi_slave/sck_q"
-        BEL "avr_interface/spi_slave/ss_q" BEL "avr_interface/byte_ct_q" BEL
-        "avr_interface/spi_slave/miso_q" BEL "clk_BUFGP/BUFG" BEL
-        "gen_pwm_test_leds[5].pwm_tests_leds/pwm_q_1" BEL
-        "gen_pwm_test_leds[4].pwm_tests_leds/pwm_q_1" BEL
-        "gen_pwm_test_leds[3].pwm_tests_leds/pwm_q_1" BEL
-        "gen_pwm_test_leds[2].pwm_tests_leds/pwm_q_1" BEL
-        "gen_pwm_test_leds[1].pwm_tests_leds/pwm_q_1" BEL
-        "gen_pwm_test_leds[0].pwm_tests_leds/pwm_q_1";
+        BEL "avr_interface/spi_slave/ss_q" BEL
+        "avr_interface/serial_rx/bit_ctr_q_2" BEL
+        "avr_interface/serial_rx/bit_ctr_q_1" BEL
+        "avr_interface/serial_rx/bit_ctr_q_0" BEL
+        "avr_interface/serial_rx/state_q_FSM_FFd1" BEL
+        "avr_interface/serial_rx/state_q_FSM_FFd2" BEL
+        "avr_interface/serial_rx/ctr_q_6" BEL
+        "avr_interface/serial_rx/ctr_q_5" BEL
+        "avr_interface/serial_rx/ctr_q_4" BEL
+        "avr_interface/serial_rx/ctr_q_3" BEL
+        "avr_interface/serial_rx/ctr_q_2" BEL
+        "avr_interface/serial_rx/ctr_q_1" BEL
+        "avr_interface/serial_rx/ctr_q_0" BEL
+        "avr_interface/serial_rx/new_data_q" BEL
+        "avr_interface/serial_rx/data_q_7" BEL
+        "avr_interface/serial_rx/data_q_6" BEL
+        "avr_interface/serial_rx/data_q_5" BEL
+        "avr_interface/serial_rx/data_q_4" BEL
+        "avr_interface/serial_rx/data_q_3" BEL
+        "avr_interface/serial_rx/data_q_2" BEL
+        "avr_interface/serial_rx/data_q_1" BEL
+        "avr_interface/serial_rx/data_q_0" BEL "avr_interface/serial_rx/rx_q"
+        BEL "controle/lidar_i2c/rw_q" BEL
+        "controle/lidar_i2c/i2c_interface/sda_q" BEL
+        "controle/lidar_i2c/i2c_interface/ack_error_q" BEL
+        "avr_interface/byte_ct_q" BEL "avr_interface/spi_slave/miso_q" BEL
+        "controle/byte_counter_q_31_C_31" BEL
+        "controle/byte_counter_q_31_P_31" BEL "controle/byte_counter_q_2_C_2"
+        BEL "controle/byte_counter_q_2_P_2" BEL
+        "controle/byte_counter_q_1_C_1" BEL "controle/byte_counter_q_1_P_1"
+        BEL "controle/byte_counter_q_0_C_0" BEL
+        "controle/byte_counter_q_0_P_0" BEL
+        "controle/lidar_i2c/count_delay_q_19_C_19" BEL
+        "controle/lidar_i2c/count_delay_q_19_P_19" BEL
+        "controle/lidar_i2c/count_delay_q_18_C_18" BEL
+        "controle/lidar_i2c/count_delay_q_18_P_18" BEL
+        "controle/lidar_i2c/count_delay_q_17_C_17" BEL
+        "controle/lidar_i2c/count_delay_q_17_P_17" BEL
+        "controle/lidar_i2c/count_delay_q_16_C_16" BEL
+        "controle/lidar_i2c/count_delay_q_16_P_16" BEL
+        "controle/lidar_i2c/count_delay_q_14_C_14" BEL
+        "controle/lidar_i2c/count_delay_q_14_P_14" BEL
+        "controle/lidar_i2c/count_delay_q_9_C_9" BEL
+        "controle/lidar_i2c/count_delay_q_9_P_9" BEL
+        "controle/lidar_i2c/count_delay_q_6_C_6" BEL
+        "controle/lidar_i2c/count_delay_q_6_P_6" BEL
+        "controle/lidar_i2c/i2c_interface/scl_q_C" BEL
+        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

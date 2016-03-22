@@ -67,8 +67,8 @@ with etat select											-- sda_interne en sortie si:
 				  not data_clock_prev when STOP,		-- data_clock_prev = '0' (état STOP)
 				  sda_interne when others;				-- sda_interne = '1'     (autres états)
 
-SCL <= '0' when (scl_out='1' and scl_interne='0') else 'Z';
-SDA <= '0' when sda_out = '0' else 'Z';
+SCL <= scl_interne when (scl_out='1') else 'Z';
+SDA <= sda_interne when (sda_out='1' and sda_interne='0') else 'Z';
 
 
 -----------------------------------------------------------------------------------------------------------
@@ -111,6 +111,10 @@ begin
 		end case;
 	end if;
 end process;
+
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------
 -- Génération des sorties et mise à jour des états ---------------------------------------------------------------
@@ -203,14 +207,14 @@ begin
 				when MASTER_ACK => ------------------ Etat MASTER_ACK : Accusé de réception d'ecriture sur le bus -----------------
 					if(ENABLE='1') then								-- nouvelle transaction
 						busy <= '0';									-- la transaction peut continuer
-						adresse_esclave <= ADDR & RW;				-- adresse = concaténation de l'adresse de l'esclave et de l'instruction I/O
-						data_tx <= Data_wr;							-- on collecte les données à écrire
 						if(adresse_esclave = ADDR & RW) then	-- la transaction est une ecriture à la meme adresse
 							sda_interne <= '1';						-- on ecrit 1 sur le bus
 							etat <= RD_DATA;							-- on passe à l'etat RD_DATA
 						else												-- la transaction est une lecture 
 							etat <= START;								-- on passe à l'etat START
 						end if;
+						adresse_esclave <= ADDR & RW;				-- adresse = concaténation de l'adresse de l'esclave et de l'instruction I/O
+						data_tx <= Data_wr;							-- on collecte les données à écrire
 					else													-- plus de transaction à effectuer
 						etat <= STOP;									-- on passe à l'état STOP
 					end if;

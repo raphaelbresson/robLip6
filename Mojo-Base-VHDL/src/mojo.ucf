@@ -28,6 +28,9 @@ NET "cclk" LOC = P70;
 #NET "fast_pwm<0>" LOC = P80;
 #NET "fast_pwm<1>" LOC = P81;
 
+#NET "uart_tx" LOC = P14;
+#NET "uart_rx" LOC = P15;
+
 NET "scl<0>" LOC = p12;
 NET "sda<0>" LOC = p11;
 

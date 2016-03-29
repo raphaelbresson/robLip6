@@ -79,7 +79,8 @@ architecture Behavioral of Controller is
 							INIT_SEND_INFO_CAPTEURS,			-- envoi des infos de chaque capteur
 							INIT_SEND_INFO_ACTIONNEURS,		-- envoi des infos de chaque actionneur
 				-- ETAT DE LECTURE/ECRITURE
-							EXEC_READ_WRITE
+							EXEC_READ_WRITE,
+							EXEC_PAUSE
 							);
 	signal Etat_present, Etat_futur : Etat_control := INIT_START;
 	-- caractères à gérer
@@ -113,7 +114,12 @@ architecture Behavioral of Controller is
 	
 	-- I2C
 	type I2C_inputs_type is array(Num_Capteurs_I2C - 1 downto 0) of std_logic_vector(15 downto 0);
-	signal i2c_datas_i, i2c_datas_t: I2C_inputs_type;
+	signal i2c_datas_i, i2c_datas_t,i2c_datas_q,i2c_datas_d: I2C_inputs_type:=(others=>(others=>'0'));
+	signal new_data_lidar : std_logic;
+	
+	-- pause
+	constant delay_pause : integer:=0;
+	signal count_delay_d, count_delay_q : integer := delay_pause;
 begin
 -- entrée/sortie UART
 rx_data_t <= RX_DATA;
@@ -153,8 +159,10 @@ lidar_i2c: entity work.lidar
 			rst => rst,
 			scl => scl(0),
 			sda => sda(0),
-			data => i2c_datas_t(0)
+			data => i2c_datas_t(0),
+			new_data => new_data_lidar
 		);
+
 
 ---------------------------------------------------------------
 ---						BUFFERS D'INITIALISATION					---
@@ -194,15 +202,23 @@ lidar_i2c: entity work.lidar
 ------------------------------------------------------------------
 --- 	Fonction de transition (sur front descendant de CLK)		 --								---
 ------------------------------------------------------------------	
-transition:process(CLK,RST,new_tx_data_q, byte_counter_q, tx_data_q, etat_present,NEW_RX_DATA,RX_DATA, TX_BUSY)
+transition:process(CLK,RST,new_tx_data_q, byte_counter_q, tx_data_q, etat_present,NEW_RX_DATA,RX_DATA, TX_BUSY,NEW_DATA_LIDAR)
 begin
+i2c_datas_d <= i2c_datas_q;
+if(new_data_lidar = '1') then
+		i2c_datas_d <= i2c_datas_t;
+	else
+		i2c_datas_d <= i2c_datas_q;
+	end if;
+
 if(NEW_RX_DATA = '1') then
 	rx_data_d <= rx_data_t;
-	new_rx_data_d <= '1';
+	new_rx_data_q <= '1';
 else
 	rx_data_d <= rx_data_q;
 	new_rx_data_d <= '0';
 end if;
+count_delay_d <= count_delay_q;
 new_tx_data_d <= new_tx_data_q;
 byte_counter_d <= byte_counter_q;
 tx_data_d <= tx_data_q;
@@ -291,14 +307,16 @@ etat_futur <= etat_Present;
 					new_tx_data_d <= '1';							-- on envoie l'octet suivant
 					byte_counter_d <=  byte_counter_q - 1;
 					tx_data_d <= frame_write(byte_counter_q - 1);
+					etat_futur <= EXEC_READ_WRITE;
 				else														-- sinon c'est le dernier : on revient au début
-					new_tx_data_d <= '1';							-- de la trame d'écriture
-					byte_counter_d <= frame_write_size;
-					tx_data_d <= frame_write(frame_write_size);
+					new_tx_data_d <= '0';							-- de la trame d'écriture
+					count_delay_d <= delay_pause;
+					etat_futur <= EXEC_PAUSE;
 				end if;
 			else															-- écriture d'un octet en cours
 				new_tx_data_d <= '0';
 				tx_data_d <= tx_data_q;
+				etat_futur <= EXEC_READ_WRITE;
 			end if;
 			--LECTURE
 			if(new_rx_data_q = '1') then 			-- 1 nouvel octet à lire
@@ -314,7 +332,29 @@ etat_futur <= etat_Present;
 			end if;
 			if(RST = '1') then
 				etat_futur <= INIT_START;
+			end if;
+		when EXEC_PAUSE =>
+			--LECTURE asynchrone
+			if(new_rx_data_q = '1') then 			-- 1 nouvel octet à lire
+				if(byte_counter2_q > 0) then 	-- si ce n'est pas le dernier octet, on passe au suivant
+					frame_read(byte_counter2_q -1) <= rx_data_q;
+					byte_counter2_d <= byte_counter2_q - 1;
+				else										-- si c'est le dernier on passe à l'ecriture
+					byte_counter2_d <= frame_read_size;
+					frame_read(frame_read_size) <= rx_data_q;
+				end if;
+			else											-- sinon lecture en cours
+				frame_read(byte_counter2_q) <= rx_data_q;
+			end if;
+			--delai d'écriture
+			if(count_delay_q > 0) then
+				new_tx_data_d <= '0';
+				count_delay_d <= count_delay_q - 1;
+				etat_futur <= EXEC_PAUSE;
 			else
+				new_tx_data_d <= '1';
+				byte_counter_d <= frame_write_size;
+				tx_data_d <= frame_write(frame_write_size);
 				etat_futur <= EXEC_READ_WRITE;
 			end if;
 	end case;
@@ -329,9 +369,7 @@ if(RST='1') then
 	etat_present <= INIT_START;
 	new_tx_data_q <= '0';
 	byte_counter_q <= 7;
-	rx_data_q <= (others=>'0');
 	tx_data_q <= (others=>'0');
-	new_rx_data_q <= '0';
 elsif(CLK='1' and CLK'event) then
 	new_tx_data_q <= new_tx_data_d;
 	new_rx_data_q <= new_rx_data_d;
@@ -340,10 +378,13 @@ elsif(CLK='1' and CLK'event) then
 	byte_counter_q <= byte_counter_d;
 	byte_counter2_q <= byte_counter2_d;
 	etat_present <= Etat_futur;
+	i2c_datas_q <= i2c_datas_d;
+	count_delay_q <= count_delay_d;
 	-- sorties UART
-	frame_write(frame_write_size) <= potentiometre;
-	frame_write(frame_write_size - 1) <= i2c_datas_i(0)(15 downto 8);
-	frame_write(frame_write_size - 2) <= i2c_datas_i(0)(7 downto 0);
+	frame_write(frame_write_size) <= (others=>'0');
+	--frame_write(frame_write_size) <= potentiometre;
+	frame_write(frame_write_size - 1) <= i2c_datas_d(0)(15 downto 8);
+	frame_write(frame_write_size - 2) <= i2c_datas_d(0)(7 downto 0);
 end if;
 
 end process;

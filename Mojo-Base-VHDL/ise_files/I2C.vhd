@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity I2C is
-	Generic( DIVIDE_FACTOR_CLK : INTEGER := 125); -- 125 -> fast-mode, 500 -> slow-mode
+	Generic( DIVIDE_FACTOR_CLK : INTEGER := 500); -- 125 -> fast-mode, 500 -> slow-mode
     Port ( 
 				CLK : in  STD_LOGIC;
 				RST : in  STD_LOGIC;
@@ -41,22 +41,23 @@ entity I2C is
 end I2C;
 
 architecture Behavioral of I2C is
-type i2c_states is (	IDLE,
-							COMMAND1,
-							COMMAND2,
-							SLV_ACK1_1,
-							SLV_ACK1_2,							
-							WR_DATA1,
-							WR_DATA2,
-							RD_DATA1,
-							RD_DATA2,
-							SLV_ACK2_1,
-							SLV_ACK2_2,
-							MASTER_ACK1,
-							MASTER_ACK2,
-							STOP1,
-							STOP2,
-							STOP3
+type i2c_states is (	
+								IDLE,
+								COMMAND1,
+								COMMAND2,
+								SLV_ACK1_1,
+								SLV_ACK1_2,							
+								WR_DATA1,
+								WR_DATA2,
+								RD_DATA1,
+								RD_DATA2,
+								SLV_ACK2_1,
+								SLV_ACK2_2,
+								MASTER_ACK1,
+								MASTER_ACK2,
+								STOP1,
+								STOP2,
+								STOP3
 							);
 signal Etat_present, etat_futur : i2c_states;
 signal sda_d,sda_q : STD_LOGIC:='1';
@@ -66,7 +67,7 @@ signal ack_error_d,ack_error_q : STD_LOGIC;
 signal count_gen_scl_d, count_gen_scl_q: INTEGER := 0;
 signal bit_counter_d, bit_counter_q: INTEGER := 7;
 signal adresse_d,adresse_q : STD_LOGIC_VECTOR(7 downto 0);
-signal busy_d, busy_q: STD_LOGIC;
+signal busy_d, busy_q: STD_LOGIC:='0';
 signal rx_d,rx_q: STD_LOGIC_VECTOR(7 downto 0);
 begin
 
@@ -80,9 +81,9 @@ gen_scl_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,SCL,count_gen_scl_q,
 begin
 	scl_d <= scl_q;
 	sclp_d <= scl_q;
-	if(count_gen_scl_q < DIVIDE_FACTOR_CLK*2) then
+	if(count_gen_scl_q < DIVIDE_FACTOR_CLK) then
 		count_gen_scl_d <= count_gen_scl_q + 1;
-		if(count_gen_scl_q < DIVIDE_FACTOR_CLK) then
+		if(count_gen_scl_q < DIVIDE_FACTOR_CLK/2) then
 			scl_d <= '1';
 		else
 			scl_d <= '0';
@@ -121,10 +122,10 @@ begin
 			if(Enable='1') then
 				ack_error_d <= '0';
 				busy_d <='1';
-				sda_d <= '0';
-				adresse_d <= RW_CMD & ADDR;
+				sda_d <= '0'; -- start condition
 				bit_counter_d <= 7;
 				etat_futur <= COMMAND1;
+				adresse_d <= ADDR & RW_CMD;
 			else
 				sda_d <= '1';
 				busy_d <= '0';
@@ -165,7 +166,7 @@ begin
 					etat_futur <= WR_DATA1;
 				else
 					bit_counter_d <= 8;
-					sda_d <= '1';
+					--sda_d <= '1';
 					etat_futur <= RD_DATA1;
 				end if;
 			end if;
@@ -182,7 +183,6 @@ begin
 				etat_futur <= WR_DATA1;
 				bit_counter_d <= bit_counter_q - 1;
 			else
-				sda_d <= '1';
 				etat_futur <= SLV_ACK2_1;
 			end if;
 		--------------------------------- RD_DATA LECTURE D'UN OCTET	

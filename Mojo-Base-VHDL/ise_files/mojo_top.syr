@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Reading design: mojo_top.prj
@@ -146,71 +146,87 @@ Parsing architecture <RTL> of entity <mojo_top>.
 Elaborating entity <mojo_top> (architecture <RTL>) from library <work>.
 
 Elaborating entity <Controller> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 129: Assignment to potentiometre ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 131: Assignment to i2c_datas_i ignored, since the identifier is never used
 
 Elaborating entity <Analog_in> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Lidar> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <I2C> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 114: scl_out_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 115: rx_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 116: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 137: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 143: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 145: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 176: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 181: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 183: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 115: scl_out_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 116: rx_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 117: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 138: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 144: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 146: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 177: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 182: bit_counter_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 184: bit_counter_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 197: bit_counter_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 199: bit_counter_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" Line 200: bit_counter_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 91: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 92: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 100: data_rd_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 101: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 103: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 104: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 105: rw_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 106: out_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 107: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 108: etat_present should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 117: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 118: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 123: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 136: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 141: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 153: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 154: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 159: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 172: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 177: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 189: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 190: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 201: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 206: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 220: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 224: out_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 225: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 226: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 228: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 237: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 200: rx_data_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 203: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 213: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 239: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 253: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 257: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 272: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 277: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 95: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 96: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 104: data_rd_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 105: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 107: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 108: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 109: rw_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 110: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 111: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 112: new_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 113: etat_present should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 124: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 125: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 130: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 143: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 149: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 162: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 163: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 168: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 181: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 187: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 200: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 201: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 212: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 219: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 234: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 238: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 239: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 240: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 243: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 255: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 260: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 207: i2c_datas_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 209: i2c_datas_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 211: i2c_datas_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 215: rx_data_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 218: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 221: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 229: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 255: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 269: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 273: buffer_init_actionneurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 288: buffer_init_actionneurs should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 293: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 297: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 304: new_rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 305: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 306: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 307: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 310: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 313: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 197: Assignment to frame_read ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 309: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 322: new_rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 323: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 324: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 325: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 328: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 331: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 338: new_rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 339: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 340: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 341: byte_counter2_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 344: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 347: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 350: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 352: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 357: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 205: Assignment to frame_read ignored, since the identifier is never used
 
 Elaborating entity <avr_interface> (architecture <RTL>) from library <work>.
 
@@ -240,26 +256,29 @@ Synthesizing Unit <Controller>.
         Num_Capteurs_I2C = 1
         Num_Servos = 6
         Num_FastPwm = 2
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_1> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_2> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_3> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_4> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_5> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_6> of the instance <analogValues> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 130: Output port <analog_7> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_0> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_1> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_2> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_3> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_4> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_5> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_6> of the instance <analogValues> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_7> of the instance <analogValues> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <new_tx_data_q>.
     Found 3-bit register for signal <Etat_present>.
-    Found 8-bit register for signal <rx_data_q>.
-    Found 8-bit register for signal <tx_data_q>.
     Found 32-bit register for signal <byte_counter_q>.
+    Found 8-bit register for signal <tx_data_q>.
+    Found 8-bit register for signal <rx_data_q>.
+    Found 16-bit register for signal <i2c_datas_q<0>>.
+    Found 32-bit register for signal <count_delay_q>.
     Found 8-bit register for signal <frame_write<2>>.
     Found 8-bit register for signal <frame_write<1>>.
     Found 8-bit register for signal <frame_write<0>>.
     Found finite state machine <FSM_0> for signal <Etat_present>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 18                                             |
-    | Inputs             | 5                                              |
+    | States             | 7                                              |
+    | Transitions        | 23                                             |
+    | Inputs             | 6                                              |
     | Outputs            | 3                                              |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | RST (positive)                                 |
@@ -269,15 +288,17 @@ INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd"
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 33-bit subtractor for signal <n0103> created at line 293.
-    Found 8-bit 3-to-1 multiplexer for signal <byte_counter_q[31]_X_5_o_wide_mux_56_OUT> created at line 293.
-    Found 8-bit 6-to-1 multiplexer for signal <tx_data_d> created at line 210.
-    Found 32-bit comparator greater for signal <byte_counter_q[31]_GND_5_o_LessThan_44_o> created at line 270
+    Found 32-bit subtractor for signal <byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>> created at line 308.
+    Found 32-bit subtractor for signal <count_delay_q[31]_GND_5_o_sub_147_OUT<31:0>> created at line 352.
+    Found 8-bit 3-to-1 multiplexer for signal <byte_counter_q[31]_X_5_o_wide_mux_57_OUT> created at line 309.
+    Found 8-bit 7-to-1 multiplexer for signal <tx_data_d> created at line 226.
+    Found 32-bit comparator greater for signal <byte_counter_q[31]_GND_5_o_LessThan_55_o> created at line 306
+    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_5_o_LessThan_146_o> created at line 350
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  73 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred  16 Multiplexer(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 121 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  26 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <Controller> synthesized.
 
@@ -386,6 +407,7 @@ Synthesizing Unit <Lidar>.
         delay = 1000000
     Found 1-bit register for signal <enable_q>.
     Found 1-bit register for signal <rw_q>.
+    Found 1-bit register for signal <new_data_q>.
     Found 4-bit register for signal <etat_present>.
     Found 8-bit register for signal <data_rd_q>.
     Found 8-bit register for signal <data_wr_q>.
@@ -396,8 +418,8 @@ Synthesizing Unit <Lidar>.
     Found 1-bit register for signal <ack_error_q>.
     Found finite state machine <FSM_1> for signal <etat_present>.
     -----------------------------------------------------------------------
-    | States             | 9                                              |
-    | Transitions        | 30                                             |
+    | States             | 10                                             |
+    | Transitions        | 32                                             |
     | Inputs             | 8                                              |
     | Outputs            | 9                                              |
     | Clock              | CLK (rising_edge)                              |
@@ -422,9 +444,9 @@ Synthesizing Unit <Lidar>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit subtractor for signal <count_delay_q[31]_GND_91_o_sub_5_OUT<31:0>> created at line 92.
-    Found 32-bit subtractor for signal <bytes_to_read_q[31]_GND_91_o_sub_62_OUT<31:0>> created at line 228.
-    Found 5-bit subtractor for signal <bytes_to_read_q[28]_GND_91_o_sub_65_OUT<4:0>> created at line 237.
+    Found 32-bit subtractor for signal <count_delay_q[31]_GND_91_o_sub_6_OUT<31:0>> created at line 96.
+    Found 32-bit subtractor for signal <bytes_to_read_q[31]_GND_91_o_sub_63_OUT<31:0>> created at line 243.
+    Found 5-bit subtractor for signal <bytes_to_read_q[28]_GND_91_o_sub_67_OUT<4:0>> created at line 255.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -489,20 +511,20 @@ WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<2>>. Latches may b
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_91_o_LessThan_50_o> created at line 206
-    Found 32-bit comparator greater for signal <bytes_to_read_q[31]_GND_91_o_LessThan_61_o> created at line 226
+    Found 32-bit comparator greater for signal <bytes_to_read_q[31]_GND_91_o_LessThan_62_o> created at line 240
+    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_91_o_LessThan_78_o> created at line 260
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  99 D-type flip-flop(s).
+	inferred 100 D-type flip-flop(s).
 	inferred  64 Latch(s).
 	inferred   2 Comparator(s).
-	inferred 183 Multiplexer(s).
+	inferred 451 Multiplexer(s).
 	inferred   2 Finite State Machine(s).
 Unit <Lidar> synthesized.
 
 Synthesizing Unit <I2C>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd".
-        DIVIDE_FACTOR_CLK = 125
+        DIVIDE_FACTOR_CLK = 500
     Found 1-bit register for signal <scl_out_q>.
     Found 1-bit register for signal <sda_q>.
     Found 1-bit register for signal <ack_error_q>.
@@ -528,19 +550,19 @@ Synthesizing Unit <I2C>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 33-bit subtractor for signal <n0120> created at line 200.
-    Found 32-bit adder for signal <count_gen_scl_q[31]_GND_92_o_add_2_OUT> created at line 84.
-    Found 1-bit 8-to-1 multiplexer for signal <bit_counter_q[2]_adresse_q[7]_Mux_10_o> created at line 137.
-    Found 1-bit 8-to-1 multiplexer for signal <bit_counter_q[2]_data_tx[7]_Mux_19_o> created at line 176.
-    Found 1-bit tristate buffer for signal <SDA> created at line 73
-    Found 32-bit comparator greater for signal <GND_92_o_count_gen_scl_q[31]_LessThan_2_o> created at line 83
-    Found 32-bit comparator greater for signal <GND_92_o_count_gen_scl_q[31]_LessThan_4_o> created at line 85
+    Found 33-bit subtractor for signal <n0117> created at line 200.
+    Found 32-bit adder for signal <count_gen_scl_q[31]_GND_92_o_add_2_OUT> created at line 85.
+    Found 1-bit 8-to-1 multiplexer for signal <bit_counter_q[2]_adresse_q[7]_Mux_10_o> created at line 138.
+    Found 1-bit 8-to-1 multiplexer for signal <bit_counter_q[2]_data_tx[7]_Mux_19_o> created at line 177.
+    Found 1-bit tristate buffer for signal <SDA> created at line 74
+    Found 32-bit comparator greater for signal <GND_92_o_count_gen_scl_q[31]_LessThan_2_o> created at line 84
+    Found 32-bit comparator greater for signal <GND_92_o_count_gen_scl_q[31]_LessThan_4_o> created at line 86
     Found 32-bit comparator greater for signal <bit_counter_q[31]_GND_92_o_LessThan_25_o> created at line 197
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  86 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred  43 Multiplexer(s).
+	inferred  41 Multiplexer(s).
 	inferred   1 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <I2C> synthesized.
@@ -567,7 +589,7 @@ Synthesizing Unit <cclk_detector>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd".
     Found 13-bit register for signal <ctr_q>.
     Found 1-bit register for signal <ready_q>.
-    Found 13-bit adder for signal <ctr_q[12]_GND_197_o_add_1_OUT> created at line 1241.
+    Found 13-bit adder for signal <ctr_q[12]_GND_199_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  14 D-type flip-flop(s).
@@ -585,7 +607,7 @@ Synthesizing Unit <spi_slave>.
     Found 1-bit register for signal <ss_q>.
     Found 8-bit register for signal <data_q>.
     Found 1-bit register for signal <sck_old_q>.
-    Found 3-bit adder for signal <bit_ct_q[2]_GND_198_o_add_1_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ct_q[2]_GND_200_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
@@ -616,8 +638,8 @@ Synthesizing Unit <serial_rx>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <ctr_q[6]_GND_200_o_add_6_OUT> created at line 1241.
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_200_o_add_8_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_202_o_add_6_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_202_o_add_8_OUT> created at line 1241.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
@@ -649,8 +671,8 @@ Synthesizing Unit <serial_tx>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_201_o_add_12_OUT> created at line 1241.
-    Found 7-bit adder for signal <ctr_q[6]_GND_201_o_add_19_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_203_o_add_12_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_203_o_add_19_OUT> created at line 1241.
     Found 7-bit 4-to-1 multiplexer for signal <ctr_d> created at line 53.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -663,41 +685,41 @@ Unit <serial_tx> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 12
+# Adders/Subtractors                                   : 13
  13-bit adder                                          : 1
  3-bit adder                                           : 3
  32-bit adder                                          : 1
- 32-bit subtractor                                     : 2
- 33-bit subtractor                                     : 2
+ 32-bit subtractor                                     : 4
+ 33-bit subtractor                                     : 1
  5-bit subtractor                                      : 1
  7-bit adder                                           : 2
-# Registers                                            : 58
- 1-bit register                                        : 23
+# Registers                                            : 61
+ 1-bit register                                        : 24
  10-bit register                                       : 9
  13-bit register                                       : 1
- 16-bit register                                       : 1
+ 16-bit register                                       : 2
  3-bit register                                        : 3
- 32-bit register                                       : 5
+ 32-bit register                                       : 6
  4-bit register                                        : 1
  7-bit register                                        : 2
  8-bit register                                        : 13
 # Latches                                              : 148
  1-bit latch                                           : 148
-# Comparators                                          : 6
- 32-bit comparator greater                             : 6
-# Multiplexers                                         : 264
- 1-bit 2-to-1 multiplexer                              : 216
+# Comparators                                          : 7
+ 32-bit comparator greater                             : 7
+# Multiplexers                                         : 540
+ 1-bit 2-to-1 multiplexer                              : 486
  1-bit 8-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 1
  13-bit 2-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 3
- 32-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 22
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 14
  8-bit 3-to-1 multiplexer                              : 1
- 8-bit 6-to-1 multiplexer                              : 1
+ 8-bit 7-to-1 multiplexer                              : 1
 # Tristates                                            : 7
  1-bit tristate buffer                                 : 7
 # FSMs                                                 : 6
@@ -708,21 +730,45 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <i2c_interface> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_5> <adresse_q_6> 
-INFO:Xst:2261 - The FF/Latch <adresse_q_0> in Unit <i2c_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <adresse_q_2> <adresse_q_3> <adresse_q_4> 
-WARNING:Xst:1710 - FF/Latch <adresse_q_0> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <samples_d<0>_1> of sequential type is unconnected in block <analogValues>.
-WARNING:Xst:2677 - Node <samples_d<0>_0> of sequential type is unconnected in block <analogValues>.
-WARNING:Xst:2677 - Node <samples_q_0_0> of sequential type is unconnected in block <analogValues>.
-WARNING:Xst:2677 - Node <samples_q_0_1> of sequential type is unconnected in block <analogValues>.
+INFO:Xst:2261 - The FF/Latch <adresse_q_2> in Unit <i2c_interface> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_6> <adresse_q_7> 
+INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <i2c_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <adresse_q_3> <adresse_q_4> <adresse_q_5> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_14> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_6> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_0> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_0> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_15> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_7> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_1> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_1> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_2> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_2> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_3> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_3> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_4> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_4> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_5> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_5> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_6> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_6> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_7> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_7> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_8> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_0> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_9> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_1> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_10> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_2> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_11> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_3> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_12> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_4> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_13> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_5> 
+WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_0> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_1> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_2> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_3> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_4> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_5> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_6> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_7> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dout_q_0> of sequential type is unconnected in block <spi_slave>.
+WARNING:Xst:2677 - Node <dout_q_1> of sequential type is unconnected in block <spi_slave>.
+WARNING:Xst:2677 - Node <dout_q_2> of sequential type is unconnected in block <spi_slave>.
+WARNING:Xst:2677 - Node <dout_q_3> of sequential type is unconnected in block <spi_slave>.
+
+Synthesizing (advanced) Unit <Controller>.
+The following registers are absorbed into counter <count_delay_q>: 1 register on signal <count_delay_q>.
+Unit <Controller> synthesized (advanced).
 
 Synthesizing (advanced) Unit <I2C>.
 The following registers are absorbed into counter <count_gen_scl_q>: 1 register on signal <count_gen_scl_q>.
 Unit <I2C> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Lidar>.
-The following registers are absorbed into counter <bytes_to_read_q>: 1 register on signal <bytes_to_read_q>.
-Unit <Lidar> synthesized (advanced).
 
 Synthesizing (advanced) Unit <cclk_detector>.
 The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
@@ -744,8 +790,8 @@ Unit <spi_slave> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 6
- 32-bit subtractor                                     : 3
+# Adders/Subtractors                                   : 7
+ 32-bit subtractor                                     : 4
  5-bit subtractor                                      : 1
  7-bit adder                                           : 2
 # Counters                                             : 6
@@ -753,21 +799,21 @@ Macro Statistics
  3-bit up counter                                      : 3
  32-bit down counter                                   : 1
  32-bit up counter                                     : 1
-# Registers                                            : 347
- Flip-Flops                                            : 347
-# Comparators                                          : 6
- 32-bit comparator greater                             : 6
-# Multiplexers                                         : 258
- 1-bit 2-to-1 multiplexer                              : 215
+# Registers                                            : 396
+ Flip-Flops                                            : 396
+# Comparators                                          : 7
+ 32-bit comparator greater                             : 7
+# Multiplexers                                         : 534
+ 1-bit 2-to-1 multiplexer                              : 485
  1-bit 8-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 17
+ 16-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 21
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 14
  8-bit 3-to-1 multiplexer                              : 1
- 8-bit 6-to-1 multiplexer                              : 1
+ 8-bit 7-to-1 multiplexer                              : 1
 # FSMs                                                 : 6
 
 =========================================================================
@@ -775,11 +821,35 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <adresse_q_0> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_2> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_0> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_1> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_2> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_3> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_5> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_6> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_7> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_3> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_4> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <adresse_q_1> in Unit <I2C> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_5> <adresse_q_6> 
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_5> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_14> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_6> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_0> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_0> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_15> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_7> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_1> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_1> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_2> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_2> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_3> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_3> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_4> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_4> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_5> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_5> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_6> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_6> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_7> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_7> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_8> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_0> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_9> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_1> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_10> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_2> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_11> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_3> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_12> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_4> 
+INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_13> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_5> 
+INFO:Xst:2261 - The FF/Latch <adresse_q_2> in Unit <I2C> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_6> <adresse_q_7> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controle/FSM_0> on signal <Etat_present[1:3]> with gray encoding.
 ----------------------------------------
@@ -791,6 +861,7 @@ Optimizing FSM <controle/FSM_0> on signal <Etat_present[1:3]> with gray encoding
  init_send_info_capteurs    | 010
  init_send_info_actionneurs | 110
  exec_read_write            | 111
+ exec_pause                 | 101
 ----------------------------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controle/lidar_i2c/FSM_2> on signal <bytes_to_write_q[1:2]> with sequential encoding.
@@ -802,19 +873,20 @@ Optimizing FSM <controle/lidar_i2c/FSM_2> on signal <bytes_to_write_q[1:2]> with
  00000000000000000000000000000001 | 10
 ----------------------------------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <controle/lidar_i2c/FSM_1> on signal <etat_present[1:4]> with user encoding.
+Optimizing FSM <controle/lidar_i2c/FSM_1> on signal <etat_present[1:4]> with gray encoding.
 ----------------------------
  State          | Encoding
 ----------------------------
  init1          | 0000
  init2          | 0001
- pause_init     | 0010
- start          | 0011
- pause_1        | 0100
- high_low_bytes | 0101
- pause_2        | 0110
- request1       | 0111
- request2       | 1000
+ pause_init     | 0011
+ start          | 0010
+ pause_1        | 0110
+ high_low_bytes | 0111
+ pause_2        | 0101
+ request1       | 0100
+ request2       | 1100
+ pause_3        | 1101
 ----------------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controle/lidar_i2c/i2c_interface/FSM_3> on signal <Etat_present[1:4]> with user encoding.
@@ -858,9 +930,9 @@ Optimizing FSM <avr_interface/serial_rx/FSM_4> on signal <state_q[1:2]> with gra
  wait_full | 11
  wait_high | 10
 -----------------------
-WARNING:Xst:1710 - FF/Latch <data_wr_q_4> (without init value) has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_wr_q_5> (without init value) has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_wr_q_6> (without init value) has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_wr_q_4> has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_wr_q_5> has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_wr_q_6> has a constant value of 0 in block <Lidar>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <data_wr_q_0> in Unit <Lidar> is equivalent to the following 3 FFs/Latches, which will be removed : <data_wr_q_1> <data_wr_q_3> <data_wr_q_7> 
 WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
    incompatible with the Spartan6 architecture. The two primary causes of this is
@@ -908,6 +980,14 @@ Optimizing unit <serial_tx> ...
 Optimizing unit <spi_slave> ...
 
 Optimizing unit <serial_rx> ...
+WARNING:Xst:2677 - Node <avr_interface/sample_q_9> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_8> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_7> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_6> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_4> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/sample_q_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <avr_interface/sample_q_0> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_7_9> of sequential type is unconnected in block <mojo_top>.
@@ -970,6 +1050,14 @@ WARNING:Xst:2677 - Node <controle/analogValues/samples_q_1_3> of sequential type
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_1_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_1_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_1_0> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_9> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_8> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_7> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_6> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_4> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_0_0> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_2_9> of sequential type is unconnected in block <mojo_top>.
@@ -982,6 +1070,7 @@ WARNING:Xst:2677 - Node <controle/analogValues/samples_q_2_3> of sequential type
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_2_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_2_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_q_2_0> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_9> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<7>_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<7>_2> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<7>_0> of sequential type is unconnected in block <mojo_top>.
@@ -1054,123 +1143,166 @@ WARNING:Xst:2677 - Node <controle/analogValues/samples_d<1>_6> of sequential typ
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_0> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_1> of sequential type is unconnected in block <mojo_top>.
 WARNING:Xst:2677 - Node <controle/analogValues/samples_d<1>_9> of sequential type is unconnected in block <mojo_top>.
-WARNING:Xst:1293 - FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_4> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_2> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_6> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_7> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_5> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <controle/analogValues/samples_d<0>_8> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_3> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_2> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_1> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:2677 - Node <avr_interface/spi_slave/dout_q_0> of sequential type is unconnected in block <mojo_top>.
+WARNING:Xst:1293 - FF/Latch <controle/lidar_i2c/bytes_to_read_q_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/count_gen_scl_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/i2c_interface/bit_counter_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_3> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_2> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_1> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_0> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/count_delay_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_9> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_8> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_7> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_6> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_5> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_4> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_31> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_30> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_29> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_28> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/lidar_i2c/bytes_to_read_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_27> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_26> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_25> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_24> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_23> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_22> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_21> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_20> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_19> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_18> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_17> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_16> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_15> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_14> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_13> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 10.
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 9.
 WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_2_LD hinder the constant cleaning in the block mojo_top.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_31_LD hinder the constant cleaning in the block mojo_top.
    You should achieve better results by setting this init to 0.
+FlipFlop avr_interface/serial_tx/state_q_FSM_FFd1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1178,8 +1310,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 267
- Flip-Flops                                            : 267
+# Registers                                            : 242
+ Flip-Flops                                            : 242
 
 =========================================================================
 
@@ -1202,31 +1334,29 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 576
+# BELS                             : 585
 #      GND                         : 1
-#      INV                         : 36
-#      LUT1                        : 11
-#      LUT2                        : 32
+#      INV                         : 35
+#      LUT1                        : 13
+#      LUT2                        : 29
 #      LUT3                        : 73
-#      LUT4                        : 78
-#      LUT5                        : 63
+#      LUT4                        : 63
+#      LUT5                        : 89
 #      LUT6                        : 83
-#      MUXCY                       : 133
-#      MUXF7                       : 1
+#      MUXCY                       : 131
+#      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 64
-# FlipFlops/Latches                : 345
+#      XORCY                       : 65
+# FlipFlops/Latches                : 312
 #      FD                          : 8
-#      FDC                         : 75
-#      FDCE                        : 84
+#      FDC                         : 79
+#      FDCE                        : 62
 #      FDE                         : 66
 #      FDP                         : 3
 #      FDPE                        : 7
-#      FDR                         : 8
-#      FDRE                        : 8
+#      FDRE                        : 9
 #      FDSE                        : 8
 #      LD                          : 70
-#      LDE                         : 8
 # Clock Buffers                    : 4
 #      BUFG                        : 3
 #      BUFGP                       : 1
@@ -1243,16 +1373,16 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             341  out of  11440     2%  
- Number of Slice LUTs:                  376  out of   5720     6%  
-    Number used as Logic:               376  out of   5720     6%  
+ Number of Slice Registers:             308  out of  11440     2%  
+ Number of Slice LUTs:                  385  out of   5720     6%  
+    Number used as Logic:               385  out of   5720     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    485
-   Number with an unused Flip Flop:     144  out of    485    29%  
-   Number with an unused LUT:           109  out of    485    22%  
-   Number of fully used LUT-FF pairs:   232  out of    485    47%  
-   Number of unique control sets:        33
+ Number of LUT Flip Flop pairs used:    452
+   Number with an unused Flip Flop:     144  out of    452    31%  
+   Number with an unused LUT:            67  out of    452    14%  
+   Number of fully used LUT-FF pairs:   241  out of    452    53%  
+   Number of unique control sets:        29
 
 IO Utilization: 
  Number of IOs:                          16
@@ -1280,15 +1410,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
-Clock Signal                                                                                                       | Clock buffer(FF name)                       | Load  |
--------------------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
-clk                                                                                                                | BUFGP                                       | 267   |
-controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o(controle/lidar_i2c/Mmux_etat_present[3]_PWR_94_o_Mux_84_o12:O)| BUFG(*)(controle/lidar_i2c/count_delay_d_0) | 32    |
-controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o(controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o1:O)                      | BUFG(*)(controle/lidar_i2c/count_delay_t_31)| 32    |
-avr_interface/new_sample_q                                                                                         | NONE(controle/analogValues/samples_d<0>_9)  | 12    |
-rst_n                                                                                                              | IBUF+BUFG                                   | 2     |
--------------------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+-------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
+Clock Signal                                                                                                       | Clock buffer(FF name)                        | Load  |
+-------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
+clk                                                                                                                | BUFGP                                        | 242   |
+controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o(controle/lidar_i2c/Mmux_etat_present[3]_PWR_94_o_Mux_92_o13:O)| BUFG(*)(controle/lidar_i2c/count_delay_d_1)  | 32    |
+controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o(controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o1:O)                      | BUFG(*)(controle/lidar_i2c/count_delay_t_31) | 32    |
+avr_interface/new_sample_q                                                                                         | NONE(controle/analogValues/current_channel_0)| 4     |
+rst_n                                                                                                              | IBUF+BUFG                                    | 2     |
+-------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1302,9 +1432,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 6.309ns (Maximum Frequency: 158.504MHz)
-   Minimum input arrival time before clock: 6.236ns
-   Maximum output required time after clock: 6.119ns
+   Minimum period: 6.067ns (Maximum Frequency: 164.826MHz)
+   Minimum input arrival time before clock: 6.110ns
+   Maximum output required time after clock: 5.848ns
    Maximum combinational path delay: 6.045ns
 
 Timing Details:
@@ -1313,37 +1443,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.309ns (frequency: 158.504MHz)
-  Total number of paths / destination ports: 3030 / 383
+  Clock period: 6.067ns (frequency: 164.826MHz)
+  Total number of paths / destination ports: 3385 / 341
 -------------------------------------------------------------------------
-Delay:               6.309ns (Levels of Logic = 7)
+Delay:               6.067ns (Levels of Logic = 6)
   Source:            controle/byte_counter_q_0_C_0 (FF)
-  Destination:       controle/tx_data_q_0 (FF)
+  Destination:       controle/tx_data_q_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: controle/byte_counter_q_0_C_0 to controle/tx_data_q_0
+  Data Path: controle/byte_counter_q_0_C_0 to controle/tx_data_q_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              2   0.525   0.834  controle/byte_counter_q_0_C_0 (controle/byte_counter_q_0_C_0)
      LUT3:I1->O            1   0.250   0.682  controle/byte_counter_q_01 (controle/byte_counter_q_0)
-     LUT1:I0->O            1   0.254   0.000  controle/Msub_n0103_Madd_cy<0>_rt (controle/Msub_n0103_Madd_cy<0>_rt)
-     MUXCY:S->O            1   0.215   0.000  controle/Msub_n0103_Madd_cy<0> (controle/Msub_n0103_Madd_cy<0>)
-     XORCY:CI->O          11   0.206   1.039  controle/Msub_n0103_Madd_xor<1> (controle/n0103<1>)
-     LUT6:I5->O            1   0.254   0.790  controle/Mmux_tx_data_d43_SW0 (N75)
-     LUT6:I4->O            1   0.250   0.682  controle/Mmux_tx_data_d45_SW1 (N62)
-     LUT6:I5->O            1   0.254   0.000  controle/Mmux_tx_data_d45 (controle/tx_data_d<0>)
-     FDC:D                     0.074          controle/tx_data_q_0
+     LUT1:I0->O            1   0.254   0.000  controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_cy<0>_rt (controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_cy<0>_rt)
+     XORCY:LI->O          12   0.149   1.069  controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_xor<0> (controle/byte_counter_q[31]_GND_5_o_sub_56_OUT<0>)
+     LUT4:I3->O            1   0.254   0.790  controle/Mmux_tx_data_d104_SW1_SW0 (N118)
+     LUT6:I4->O            1   0.250   0.682  controle/Mmux_tx_data_d104_SW1 (N99)
+     LUT5:I4->O            1   0.254   0.000  controle/Mmux_tx_data_d104 (controle/tx_data_d<2>)
+     FDC:D                     0.074          controle/tx_data_q_2
     ----------------------------------------
-    Total                      6.309ns (2.282ns logic, 4.027ns route)
-                                       (36.2% logic, 63.8% route)
+    Total                      6.067ns (2.010ns logic, 4.057ns route)
+                                       (33.1% logic, 66.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 370 / 276
+  Total number of paths / destination ports: 355 / 263
 -------------------------------------------------------------------------
-Offset:              6.236ns (Levels of Logic = 2)
+Offset:              6.110ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
   Destination:       controle/Etat_present_FSM_FFd1 (FF)
   Destination Clock: clk rising
@@ -1352,12 +1481,12 @@ Offset:              6.236ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            51   1.328   1.828  rst_n_IBUF (avr_interface/serial_rx/rst_inv)
-     INV:I->O            154   0.255   2.366  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
-     FDCE:CLR                  0.459          controle/rx_data_q_0
+     IBUF:I->O            45   1.328   1.736  rst_n_IBUF (avr_interface/serial_rx/rst_inv)
+     INV:I->O            140   0.255   2.331  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
+     FDCE:CLR                  0.459          controle/byte_counter_q_3
     ----------------------------------------
-    Total                      6.236ns (2.042ns logic, 4.194ns route)
-                                       (32.7% logic, 67.3% route)
+    Total                      6.110ns (2.042ns logic, 4.068ns route)
+                                       (33.4% logic, 66.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'avr_interface/new_sample_q'
@@ -1382,7 +1511,7 @@ Offset:              4.174ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 10 / 8
 -------------------------------------------------------------------------
-Offset:              6.119ns (Levels of Logic = 2)
+Offset:              5.848ns (Levels of Logic = 2)
   Source:            avr_interface/cclk_detector/ready_q (FF)
   Destination:       spi_channel<3> (PAD)
   Source Clock:      clk rising
@@ -1392,11 +1521,11 @@ Offset:              6.119ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              9   0.525   0.975  avr_interface/cclk_detector/ready_q (avr_interface/cclk_detector/ready_q)
-     INV:I->O             28   0.255   1.452  avr_interface/n_rdy1_INV_0 (avr_interface/n_rdy)
+     INV:I->O             16   0.255   1.181  avr_interface/n_rdy1_INV_0 (avr_interface/n_rdy)
      OBUFT:T->O                2.912          spi_channel_3_OBUFT (spi_channel<3>)
     ----------------------------------------
-    Total                      6.119ns (3.692ns logic, 2.427ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      5.848ns (3.692ns logic, 2.156ns route)
+                                       (63.1% logic, 36.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1411,7 +1540,7 @@ Delay:               6.045ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   1.328   0.874  spi_ss_IBUF (spi_ss_IBUF)
-     LUT2:I0->O            1   0.250   0.681  avr_interface/ready_spi_miso_en_m_AND_276_o_inv1 (avr_interface/ready_spi_miso_en_m_AND_276_o_inv)
+     LUT2:I0->O            1   0.250   0.681  avr_interface/ready_spi_miso_en_m_AND_308_o_inv1 (avr_interface/ready_spi_miso_en_m_AND_308_o_inv)
      OBUFT:T->O                2.912          spi_miso_OBUFT (spi_miso)
     ----------------------------------------
     Total                      6.045ns (4.490ns logic, 1.555ns route)
@@ -1427,7 +1556,7 @@ Clock to Setup on destination clock avr_interface/new_sample_q
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.141|         |
+clk            |         |         |    1.895|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1435,13 +1564,12 @@ Clock to Setup on destination clock clk
                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------+---------+---------+---------+---------+
-avr_interface/new_sample_q                          |         |    1.336|         |         |
-clk                                                 |    6.309|         |         |         |
-controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o|         |    1.380|         |         |
-rst_n                                               |    6.620|         |         |         |
+clk                                                 |    6.067|         |         |         |
+controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o|         |    1.380|         |         |
+rst_n                                               |    6.306|         |         |         |
 ----------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o
+Clock to Setup on destination clock controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1450,27 +1578,27 @@ clk            |         |         |    2.660|         |
 rst_n          |         |         |    3.369|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_84_o
+Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o
 --------------------------------------------+---------+---------+---------+---------+
                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------+---------+---------+---------+---------+
-clk                                         |         |         |    2.951|         |
-controle/lidar_i2c/GND_91_o_GND_91_o_OR_13_o|         |         |    1.829|         |
+clk                                         |         |         |    2.997|         |
+controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o|         |         |    1.983|         |
 --------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.09 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.71 secs
  
 --> 
 
 
-Total memory usage is 132064 kilobytes
+Total memory usage is 132656 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  477 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :  568 (   0 filtered)
+Number of infos    :   45 (   0 filtered)
 

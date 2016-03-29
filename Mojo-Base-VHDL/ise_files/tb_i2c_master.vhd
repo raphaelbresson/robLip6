@@ -114,12 +114,12 @@ BEGIN
 		ENABLE <= '1';
 		rw<='1';
 		ADDR <= "0111000";
-		wait for 100 us;
+		wait for 500 us;
 		ENABLE <= '1';
 		rw<='0';
 		ADDR <= "0111000";
       -- insert stimulus here 
-
+	wait for 500 us;
       wait;
    end process;
 

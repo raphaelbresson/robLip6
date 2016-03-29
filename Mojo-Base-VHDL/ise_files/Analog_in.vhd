@@ -52,10 +52,10 @@ architecture Behavioral of Analog_in is
 
 -- registres pour les valeurs de tension du signal analogique voulu
 type sample_tab is array(0 to 7) of std_logic_vector(9 downto 0);
-signal samples_d, samples_q : sample_tab;
+signal samples_d, samples_q : sample_tab:=(others=>(others=>'0'));
 
 -- registre pour sauvegarder le pin sur lequel la valeur est lue
-signal current_channel : std_logic_vector(3 downto 0);
+signal current_channel : std_logic_vector(3 downto 0):="0000";
 
 begin
 	channel <= current_channel;
@@ -99,13 +99,9 @@ begin
 	begin
 		if(CLK = '1' and CLK'event) then
 			if(RST = '1') then
-				for i in 0 to 7 loop
-					samples_q(i) <= (others=>'0');
-				end loop;
+				samples_q <= (others=>(others=>'0'));
 			else
-				for i in 0 to 7 loop
-					samples_q(i) <= samples_d(i);
-				end loop;
+				samples_q <= samples_d;
 			end if;
 		else
 		end if;

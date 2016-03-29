@@ -1,2 +1,5 @@
+work	"../src/mojo_top.vhd"
+work	"Analog_in.vhd"
+work	"Controlleur.vhd"
 work	"I2C.vhd"
 work	"Lidar.vhd"

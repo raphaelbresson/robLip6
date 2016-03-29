@@ -16,6 +16,9 @@ public class UART_Communicator {
 	
 	private Integer tailleTrameRecv;
 	
+	public Integer getTailleTrameRecv() { return this.tailleTrameRecv; }
+	public Integer getTailleTrameSend() { return this.tailleTrameSend; }
+	
 	
     public UART_Communicator(String com)
 	{
@@ -36,15 +39,15 @@ public class UART_Communicator {
 		if( comPortID.isCurrentlyOwned() ) 
 		{
 		      System.out.println( "Erreur: le port \""+ com + "\" est actuellement utilisé par une autre application" );
-		} 
+		}
 		else 
 		{
-			int timeout = 0;
+			int timeout = 1;
 			port = comPortID.open(this.getClass().getName(), timeout);
 			if(port instanceof SerialPort)
 			{
 				SerialPort serial = (SerialPort)port;
-				serial.setSerialPortParams(	19200, 					//BAUDS
+				serial.setSerialPortParams(	115200, 					//BAUDS
 											SerialPort.DATABITS_8,  // TAILLE DONNÉES
 											SerialPort.STOPBITS_1,
 											SerialPort.PARITY_NONE  
@@ -89,7 +92,7 @@ public class UART_Communicator {
     	Vector<Integer> result = new Vector<Integer>();
     	try
     	{
-    		for(int i = this.receiver.getTailleTrame() - 1 ; i > -1 ; i--)
+    		for(int i = 0  ; i < this.getTailleTrameRecv() ; i++)
     		{
     			result.add(this.receiver.getElement(i));
     		}
@@ -120,7 +123,7 @@ public class UART_Communicator {
     	System.out.println("Nombre d'actionneurs:" + nbActionneurs);
     	Integer tailleTrame_reception = nbCapteurs;
     	for(int i=0; i < nbCapteurs ; i++)
-    	{	
+    	{		
     		Integer numero = this.in.read();
     		vectCapteurs.add(numero);
     		Integer type = this.in.read();
@@ -149,5 +152,6 @@ public class UART_Communicator {
     	}
     	this.tailleTrameRecv = tailleTrame_reception;
     	this.tailleTrameSend = nbActionneurs;
+    //	System.exit(1);
     }
 }

@@ -71,7 +71,7 @@ public class FenetreDebug extends JFrame
 		this.setVisible(true);
 		try
 		{
-			this.readProcess();
+			this.process();
 		}catch(Exception e)
 		{
 			e.printStackTrace();
@@ -95,15 +95,17 @@ public class FenetreDebug extends JFrame
 		return trame;
 	}
 	
-	public void readProcess() throws Exception
+	public void process() throws Exception
 	{
 		while(!terminer)
 		{
 			Vector<Integer> temp = this.uart.readData();
 			this.area_recv.setText("");
-			for(int i=0;i<temp.size();i++)
-				this.area_recv.append(temp.elementAt(i).toString() + ";");
+			Integer i2c = (temp.elementAt(1) << 8 ) | (temp.elementAt(2));
+			this.area_recv.append(temp.elementAt(0).toString() + ";");
+			this.area_recv.append(i2c.toString() + ";");
 			this.area_recv.append("\n");
+			System.out.println("lidar="+i2c);
 		}
 	}
 	

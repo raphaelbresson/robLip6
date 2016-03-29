@@ -7,7 +7,6 @@ public class UART_Receiver implements Runnable {
 	private Integer trame[];
 	private Integer tailleTrame;
 	private Integer curseur;  
-	
 	public UART_Receiver(InputStream in,Integer tailleTrame)
 	{
 		this.trame = new Integer[tailleTrame];
@@ -25,13 +24,12 @@ public class UART_Receiver implements Runnable {
 	
 	public void run()
 	{
-		Integer result = -1;
+		
 		try
 		{
 			while(terminer == false)
 			{
-				result = in.read();
-				System.out.println("capteur numero "+ this.curseur +": data=" + result);
+				Integer result = in.read();
 				this.mutexes_trame[this.curseur].acquire();
 					this.trame[this.curseur] = new Integer(result) ;
 				this.mutexes_trame[this.curseur].release();

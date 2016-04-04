@@ -1,0 +1,51 @@
+diff --git a/avr_interface.v b/avr_interface.v
+index ff17a3c..71a8612 100644
+--- a/avr_interface.v
++++ b/avr_interface.v
+@@ -33,6 +33,7 @@ wire [7:0] spi_dout;
+ 
+ wire tx_m;
+ wire spi_miso_m;
++wire spi_miso_enable_m;
+ 
+ reg byte_ct_d, byte_ct_q;
+ reg [9:0] sample_d, sample_q;
+@@ -52,6 +53,7 @@ spi_slave spi_slave (
+    .ss(spi_ss),
+    .mosi(spi_mosi),
+    .miso(spi_miso_m),
++   .miso_enable(spi_miso_enable_m),
+    .sck(spi_sck),
+    .done(spi_done),
+    .din(8'hff),
+@@ -81,7 +83,7 @@ assign sample = sample_q;
+ assign sample_channel = sample_channel_q;
+ 
+ assign spi_channel = ready ? channel : 4'bZZZZ;
+-assign spi_miso = ready ? spi_miso_m : 1'bZ;
++assign spi_miso = (ready & spi_miso_enable_m) ? spi_miso_m : 1'bZ;
+ assign tx = ready ? tx_m : 1'bZ;
+ 
+ always @(*) begin
+diff --git a/spi_slave.v b/spi_slave.v
+index d62b226..cc4b356 100644
+--- a/spi_slave.v
++++ b/spi_slave.v
+@@ -4,6 +4,7 @@ module spi_slave(
+    input ss,
+    input mosi,
+    output miso,
++   output miso_enable,
+    input sck,
+    output done,
+    input [7:0] din,
+@@ -20,7 +21,8 @@ reg [2:0] bit_ct_d, bit_ct_q;
+ reg [7:0] dout_d, dout_q;
+ reg miso_d, miso_q;
+ 
+-assign miso = ss ? 1'bZ : miso_q;
++assign miso_enable = ~ss;
++assign miso = miso_q;
+ assign done = done_q;
+ assign dout = dout_q;
+ 

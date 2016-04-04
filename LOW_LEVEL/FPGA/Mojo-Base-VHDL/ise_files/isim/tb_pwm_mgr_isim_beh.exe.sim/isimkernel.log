@@ -1,0 +1,29 @@
+Command line:
+   tb_pwm_mgr_isim_beh.exe
+     -simmode  gui
+     -simrunnum  6
+     -socket  39564
+
+Fri Mar  4 16:04:18 2016
+
+
+ Elaboration Time: 0.11 sec
+
+ Current Memory Usage: 135.639 Meg
+
+ Total Signals          : 12
+ Total Nets             : 53
+ Total Signal Drivers   : 8
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 5
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 540
+Total Line Count : 25
+
+ Total Simulation Time: 175.82 sec
+
+ Current Memory Usage: 144.032 Meg
+
+Fri Mar  4 16:40:31 2016
+

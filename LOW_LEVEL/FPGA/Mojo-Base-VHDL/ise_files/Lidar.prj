@@ -1,0 +1,2 @@
+vhdl work "i2C_master.vhd"
+vhdl work "Lidar.vhd"

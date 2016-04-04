@@ -1,0 +1,2 @@
+vhdl work "pwm_mgr.vhd"
+vhdl work "tb_pwm_mgr.vhd"

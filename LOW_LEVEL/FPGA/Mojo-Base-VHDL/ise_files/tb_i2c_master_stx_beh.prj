@@ -1,0 +1,2 @@
+vhdl isim_temp "I2C.vhd"
+vhdl isim_temp "tb_i2c_master.vhd"

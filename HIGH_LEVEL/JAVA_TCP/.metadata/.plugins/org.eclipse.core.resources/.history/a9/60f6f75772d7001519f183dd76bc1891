@@ -1,0 +1,20 @@
+package robLip6.core.tcp;
+
+import java.util.Vector;
+import java.util.concurrent.locks.Lock;
+
+public class Capteur {
+	private Vector<Integer> m_bufferCapteur;
+	private Vector<Lock> m_mutexes;
+	void setData(Integer i, Integer data)
+	{
+		this.m_mutexes.elementAt(i).lock();
+			this.m_bufferCapteur.setElementAt(i, data);
+		this.m_mutexes.elementAt(i).unlock();
+	}
+	
+	Integer getData(Integer i)
+	{
+		
+	}
+}

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/mojo_top.ncd
-OUTFILE=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/mojo_top.bit
-FAMILY=Spartan6
-PART=xc6slx9-2tqg144
-WORKINGDIR=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files
-LICENSE=WebPack
-USER_INFO=211112930_0_0_255

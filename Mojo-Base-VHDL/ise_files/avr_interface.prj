@@ -1,5 +1,0 @@
-vhdl work "../src/spi_slave.vhd"
-vhdl work "../src/serial_tx.vhd"
-vhdl work "../src/serial_rx.vhd"
-vhdl work "../src/cclk_detector.vhd"
-vhdl work "../src/avr_interface.vhd"

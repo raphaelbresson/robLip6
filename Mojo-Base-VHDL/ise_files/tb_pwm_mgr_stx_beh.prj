@@ -1,2 +1,0 @@
-vhdl isim_temp "../../HARDWARE/vhdl/PWM/pwm_mgr.vhd"
-vhdl isim_temp "../../HARDWARE/vhdl/PWM/tb_pwm_mgr.vhd"

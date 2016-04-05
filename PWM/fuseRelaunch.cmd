@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/HARDWARE/vhdl/PWM/tb_pwm_mgr_isim_beh.exe" -prj "/home/raphael/Desktop/HARDWARE/vhdl/PWM/tb_pwm_mgr_beh.prj" "work.tb_pwm_mgr" 

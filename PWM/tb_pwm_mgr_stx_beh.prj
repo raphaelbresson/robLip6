@@ -1,2 +1,0 @@
-vhdl isim_temp "pwm_mgr.vhd"
-vhdl isim_temp "tb_pwm_mgr.vhd"

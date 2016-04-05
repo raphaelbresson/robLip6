@@ -1,3 +1,0 @@
-vhdl isim_temp "I2C.vhd"
-vhdl isim_temp "Lidar.vhd"
-vhdl isim_temp "tb_lidar.vhd"

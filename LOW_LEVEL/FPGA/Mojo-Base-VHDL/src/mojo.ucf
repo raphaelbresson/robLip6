@@ -2,7 +2,7 @@
 NET "clk" TNM_NET = clk;
 TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
 NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE;
-
+NET "cclk" CLOCK_DEDICATED_ROUTE = FALSE;
 # PlanAhead Generated physical constraints 
 NET "clk" LOC = P56;
 NET "rst_n" LOC = P38;

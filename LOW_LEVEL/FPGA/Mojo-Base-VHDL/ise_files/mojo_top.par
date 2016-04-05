@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-raphael-bresson::  Tue Mar 29 03:40:13 2016
+raphael-bresson::  Sun Apr 03 17:54:37 2016
 
 par -filter
 /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter -w
@@ -28,11 +28,11 @@ Slice Logic Utilization:
     Number used as Latches:                     66
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        383 out of   5,720    6%
-    Number used as logic:                      373 out of   5,720    6%
-      Number using O6 output only:             240
+  Number of Slice LUTs:                        378 out of   5,720    6%
+    Number used as logic:                      368 out of   5,720    6%
+      Number using O6 output only:             226
       Number using O5 output only:              11
-      Number using O5 and O6:                  122
+      Number using O5 and O6:                  131
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
     Number used exclusively as route-thrus:     10
@@ -41,12 +41,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   152 out of   1,430   10%
-  Number of MUXCYs used:                       152 out of   2,860    5%
-  Number of LUT Flip Flop pairs used:          440
-    Number with an unused Flip Flop:           171 out of     440   38%
-    Number with an unused LUT:                  57 out of     440   12%
-    Number of fully used LUT-FF pairs:         212 out of     440   48%
+  Number of occupied Slices:                   148 out of   1,430   10%
+  Number of MUXCYs used:                       156 out of   2,860    5%
+  Number of LUT Flip Flop pairs used:          430
+    Number with an unused Flip Flop:           162 out of     430   37%
+    Number with an unused LUT:                  52 out of     430   12%
+    Number of fully used LUT-FF pairs:         216 out of     430   50%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -92,19 +92,19 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 5 secs 
-Finished initial Timing Analysis.  REAL time: 5 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
 Starting Router
 
 
-Phase  1  : 1870 unrouted;      REAL time: 6 secs 
+Phase  1  : 1849 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 1621 unrouted;      REAL time: 6 secs 
+Phase  2  : 1593 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 627 unrouted;      REAL time: 7 secs 
+Phase  3  : 621 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 627 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 621 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: mojo_top.ncd with current fully routed design.
 
@@ -138,18 +138,18 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   92 |  0.112     |  1.508      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   89 |  0.109     |  1.508      |
 +---------------------+--------------+------+------+------------+-------------+
 |controle/lidar_i2c/e |              |      |      |            |             |
 |tat_present[3]_PWR_9 |              |      |      |            |             |
-|   4_o_Mux_92_o_BUFG | BUFGMUX_X2Y10| No   |    9 |  0.009     |  1.405      |
+|   4_o_Mux_85_o_BUFG | BUFGMUX_X2Y10| No   |    9 |  0.005     |  1.404      |
 +---------------------+--------------+------+------+------------+-------------+
 |controle/lidar_i2c/G |              |      |      |            |             |
 |ND_91_o_PWR_87_o_OR_ |              |      |      |            |             |
-|           14_o_BUFG |  BUFGMUX_X3Y8| No   |    8 |  0.011     |  1.405      |
+|           14_o_BUFG |  BUFGMUX_X3Y8| No   |    8 |  0.008     |  1.405      |
 +---------------------+--------------+------+------+------------+-------------+
 |avr_interface/serial |              |      |      |            |             |
-|    _rx/rst_inv_BUFG | BUFGMUX_X3Y16| No   |    2 |  0.029     |  1.431      |
+|    _rx/rst_inv_BUFG | BUFGMUX_X3Y16| No   |    2 |  0.007     |  1.402      |
 +---------------------+--------------+------+------+------------+-------------+
 |avr_interface/new_sa |              |      |      |            |             |
 |              mple_q |         Local|      |    4 |  0.640     |  2.155      |
@@ -172,8 +172,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    13.574ns|     6.426ns|       0|           0
-   50%                                      | HOLD        |     0.412ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    13.457ns|     6.543ns|       0|           0
+   50%                                      | HOLD        |     0.388ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -184,7 +184,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 9 secs 
+Total REAL time to PAR completion: 10 secs 
 Total CPU time to PAR completion: 9 secs 
 
 Peak Memory Usage:  195 MB

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: mojo_top.prj
@@ -146,8 +146,8 @@ Parsing architecture <RTL> of entity <mojo_top>.
 Elaborating entity <mojo_top> (architecture <RTL>) from library <work>.
 
 Elaborating entity <Controller> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 129: Assignment to potentiometre ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 131: Assignment to i2c_datas_i ignored, since the identifier is never used
+WARNING:HDLCompiler:871 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 109: Using initial value -2147483648 for byte_counter2_d since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 131: Assignment to potentiometre ignored, since the identifier is never used
 
 Elaborating entity <Analog_in> (architecture <Behavioral>) from library <work>.
 
@@ -180,53 +180,41 @@ WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.v
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 124: ack_error_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 125: bytes_to_write_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 130: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 143: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 149: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 162: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 163: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 142: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 147: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 154: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 167: ack_error_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 168: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 181: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 187: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 200: ack_error_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 201: bytes_to_write_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 212: data_wr_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 219: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 234: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 238: out_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 239: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 173: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 186: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 192: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 205: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 206: bytes_to_write_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 218: data_wr_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 225: count_delay_q should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 240: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 243: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 255: bytes_to_read_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 260: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 207: i2c_datas_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 209: i2c_datas_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 211: i2c_datas_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 215: rx_data_t should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 218: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 221: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 229: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 255: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 269: buffer_init_capteurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 273: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 288: buffer_init_actionneurs should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 293: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 309: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 322: new_rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 323: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 324: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 325: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 328: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 331: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 338: new_rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 339: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 340: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 341: byte_counter2_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 344: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 347: rx_data_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 350: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 352: count_delay_q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 357: frame_write should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 205: Assignment to frame_read ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 244: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 245: ack_error_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 246: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 249: bytes_to_read_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 261: out_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" Line 266: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 208: i2c_datas_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 210: i2c_datas_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 214: rx_data_t should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 217: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 220: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 228: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 254: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 268: buffer_init_capteurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 272: buffer_init_actionneurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 287: buffer_init_actionneurs should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 300: rx_data_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 303: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 316: frame_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 343: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 344: count_delay_q should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" Line 355: Assignment to new_rx_data_q ignored, since the identifier is never used
 
 Elaborating entity <avr_interface> (architecture <RTL>) from library <work>.
 
@@ -256,6 +244,7 @@ Synthesizing Unit <Controller>.
         Num_Capteurs_I2C = 1
         Num_Servos = 6
         Num_FastPwm = 2
+WARNING:Xst:647 - Input <TX_BLOCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_0> of the instance <analogValues> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_1> of the instance <analogValues> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_2> of the instance <analogValues> is unconnected or connected to loadless signal.
@@ -265,21 +254,24 @@ INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd"
 INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_6> of the instance <analogValues> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" line 136: Output port <analog_7> of the instance <analogValues> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <new_tx_data_q>.
+    Found 8-bit register for signal <tx_data_q>.
     Found 3-bit register for signal <Etat_present>.
     Found 32-bit register for signal <byte_counter_q>.
-    Found 8-bit register for signal <tx_data_q>.
     Found 8-bit register for signal <rx_data_q>.
     Found 16-bit register for signal <i2c_datas_q<0>>.
     Found 32-bit register for signal <count_delay_q>.
+    Found 8-bit register for signal <frame_write<5>>.
+    Found 8-bit register for signal <frame_write<4>>.
+    Found 8-bit register for signal <frame_write<3>>.
     Found 8-bit register for signal <frame_write<2>>.
     Found 8-bit register for signal <frame_write<1>>.
     Found 8-bit register for signal <frame_write<0>>.
     Found finite state machine <FSM_0> for signal <Etat_present>.
     -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 23                                             |
+    | States             | 8                                              |
+    | Transitions        | 24                                             |
     | Inputs             | 6                                              |
-    | Outputs            | 3                                              |
+    | Outputs            | 5                                              |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | RST (positive)                                 |
     | Reset type         | asynchronous                                   |
@@ -288,17 +280,17 @@ INFO:Xst:3210 - "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd"
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit subtractor for signal <byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>> created at line 308.
-    Found 32-bit subtractor for signal <count_delay_q[31]_GND_5_o_sub_147_OUT<31:0>> created at line 352.
-    Found 8-bit 3-to-1 multiplexer for signal <byte_counter_q[31]_X_5_o_wide_mux_57_OUT> created at line 309.
-    Found 8-bit 7-to-1 multiplexer for signal <tx_data_d> created at line 226.
-    Found 32-bit comparator greater for signal <byte_counter_q[31]_GND_5_o_LessThan_55_o> created at line 306
-    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_5_o_LessThan_146_o> created at line 350
+    Found 33-bit subtractor for signal <n0132> created at line 316.
+    Found 32-bit subtractor for signal <count_delay_q[31]_GND_5_o_sub_71_OUT<31:0>> created at line 344.
+    Found 8-bit 6-to-1 multiplexer for signal <byte_counter_q[31]_X_5_o_wide_mux_60_OUT> created at line 316.
+    Found 1-bit 7-to-1 multiplexer for signal <new_tx_data_d> created at line 225.
+    Found 32-bit comparator greater for signal <byte_counter_q[31]_GND_5_o_LessThan_58_o> created at line 313
+    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_5_o_LessThan_70_o> created at line 343
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 121 D-type flip-flop(s).
+	inferred 145 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred  26 Multiplexer(s).
+	inferred  16 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <Controller> synthesized.
 
@@ -445,8 +437,8 @@ Synthesizing Unit <Lidar>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 32-bit subtractor for signal <count_delay_q[31]_GND_91_o_sub_6_OUT<31:0>> created at line 96.
-    Found 32-bit subtractor for signal <bytes_to_read_q[31]_GND_91_o_sub_63_OUT<31:0>> created at line 243.
-    Found 5-bit subtractor for signal <bytes_to_read_q[28]_GND_91_o_sub_67_OUT<4:0>> created at line 255.
+    Found 5-bit subtractor for signal <bytes_to_read_q[28]_GND_91_o_sub_56_OUT<4:0>> created at line 240.
+    Found 32-bit subtractor for signal <bytes_to_read_q[31]_GND_91_o_sub_64_OUT<31:0>> created at line 249.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -511,14 +503,14 @@ WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<2>>. Latches may b
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_d<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <count_delay_t<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator greater for signal <bytes_to_read_q[31]_GND_91_o_LessThan_62_o> created at line 240
-    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_91_o_LessThan_78_o> created at line 260
+    Found 32-bit comparator greater for signal <bytes_to_read_q[31]_GND_91_o_LessThan_63_o> created at line 246
+    Found 32-bit comparator greater for signal <count_delay_q[31]_GND_91_o_LessThan_71_o> created at line 266
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred 100 D-type flip-flop(s).
 	inferred  64 Latch(s).
 	inferred   2 Comparator(s).
-	inferred 451 Multiplexer(s).
+	inferred 453 Multiplexer(s).
 	inferred   2 Finite State Machine(s).
 Unit <Lidar> synthesized.
 
@@ -589,7 +581,7 @@ Synthesizing Unit <cclk_detector>.
     Related source file is "/home/raphael/Desktop/Mojo-Base-VHDL/src/cclk_detector.vhd".
     Found 13-bit register for signal <ctr_q>.
     Found 1-bit register for signal <ready_q>.
-    Found 13-bit adder for signal <ctr_q[12]_GND_199_o_add_1_OUT> created at line 1241.
+    Found 13-bit adder for signal <ctr_q[12]_GND_165_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  14 D-type flip-flop(s).
@@ -607,7 +599,7 @@ Synthesizing Unit <spi_slave>.
     Found 1-bit register for signal <ss_q>.
     Found 8-bit register for signal <data_q>.
     Found 1-bit register for signal <sck_old_q>.
-    Found 3-bit adder for signal <bit_ct_q[2]_GND_200_o_add_1_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ct_q[2]_GND_166_o_add_1_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
@@ -638,8 +630,8 @@ Synthesizing Unit <serial_rx>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <ctr_q[6]_GND_202_o_add_6_OUT> created at line 1241.
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_202_o_add_8_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_168_o_add_6_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_168_o_add_8_OUT> created at line 1241.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
@@ -671,8 +663,8 @@ Synthesizing Unit <serial_tx>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_ctr_q[2]_GND_203_o_add_12_OUT> created at line 1241.
-    Found 7-bit adder for signal <ctr_q[6]_GND_203_o_add_19_OUT> created at line 1241.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_169_o_add_12_OUT> created at line 1241.
+    Found 7-bit adder for signal <ctr_q[6]_GND_169_o_add_19_OUT> created at line 1241.
     Found 7-bit 4-to-1 multiplexer for signal <ctr_d> created at line 53.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -689,11 +681,11 @@ Macro Statistics
  13-bit adder                                          : 1
  3-bit adder                                           : 3
  32-bit adder                                          : 1
- 32-bit subtractor                                     : 4
- 33-bit subtractor                                     : 1
+ 32-bit subtractor                                     : 3
+ 33-bit subtractor                                     : 2
  5-bit subtractor                                      : 1
  7-bit adder                                           : 2
-# Registers                                            : 61
+# Registers                                            : 64
  1-bit register                                        : 24
  10-bit register                                       : 9
  13-bit register                                       : 1
@@ -702,24 +694,24 @@ Macro Statistics
  32-bit register                                       : 6
  4-bit register                                        : 1
  7-bit register                                        : 2
- 8-bit register                                        : 13
+ 8-bit register                                        : 16
 # Latches                                              : 148
  1-bit latch                                           : 148
 # Comparators                                          : 7
  32-bit comparator greater                             : 7
-# Multiplexers                                         : 540
- 1-bit 2-to-1 multiplexer                              : 486
+# Multiplexers                                         : 532
+ 1-bit 2-to-1 multiplexer                              : 483
+ 1-bit 7-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 1
  13-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 3
- 32-bit 2-to-1 multiplexer                             : 22
+ 32-bit 2-to-1 multiplexer                             : 21
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 14
- 8-bit 3-to-1 multiplexer                              : 1
- 8-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 10
+ 8-bit 6-to-1 multiplexer                              : 1
 # Tristates                                            : 7
  1-bit tristate buffer                                 : 7
 # FSMs                                                 : 6
@@ -744,19 +736,31 @@ INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_6> in Unit <controle> is equivalent 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_7> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_0_7> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_8> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_0> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_9> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_1> 
+INFO:Xst:2261 - The FF/Latch <frame_write_2_1> in Unit <controle> is equivalent to the following 6 FFs/Latches, which will be removed : <frame_write_2_2> <frame_write_2_3> <frame_write_2_4> <frame_write_2_5> <frame_write_2_6> <frame_write_2_7> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_10> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_2> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_11> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_3> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_12> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_4> 
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_13> in Unit <controle> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_5> 
-WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_0> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch frame_write_2_0 hinder the constant cleaning in the block controle.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <frame_write_2_1> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_2> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_3> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_4> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_5> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_6> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <frame_write_2_7> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_7> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_6> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_5> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_4> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_3> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_2> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_1> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_4_0> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_7> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_6> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_5> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_4> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_3> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_2> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_1> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frame_write_5_0> has a constant value of 0 in block <controle>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <i2c_interface>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <dout_q_0> of sequential type is unconnected in block <spi_slave>.
 WARNING:Xst:2677 - Node <dout_q_1> of sequential type is unconnected in block <spi_slave>.
 WARNING:Xst:2677 - Node <dout_q_2> of sequential type is unconnected in block <spi_slave>.
@@ -799,21 +803,21 @@ Macro Statistics
  3-bit up counter                                      : 3
  32-bit down counter                                   : 1
  32-bit up counter                                     : 1
-# Registers                                            : 396
- Flip-Flops                                            : 396
+# Registers                                            : 420
+ Flip-Flops                                            : 420
 # Comparators                                          : 7
  32-bit comparator greater                             : 7
-# Multiplexers                                         : 534
- 1-bit 2-to-1 multiplexer                              : 485
+# Multiplexers                                         : 533
+ 1-bit 2-to-1 multiplexer                              : 482
+ 1-bit 6-to-1 multiplexer                              : 8
+ 1-bit 7-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 1
  16-bit 2-to-1 multiplexer                             : 2
- 32-bit 2-to-1 multiplexer                             : 21
+ 32-bit 2-to-1 multiplexer                             : 20
  7-bit 2-to-1 multiplexer                              : 6
  7-bit 4-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 14
- 8-bit 3-to-1 multiplexer                              : 1
- 8-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 10
 # FSMs                                                 : 6
 
 =========================================================================
@@ -821,14 +825,31 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <frame_write_2_0> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_1> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_2> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_3> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_5> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch frame_write_2_0 hinder the constant cleaning in the block Controller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <frame_write_2_7> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_6> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_7> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_5> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_3> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_2> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_2_1> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_7> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_6> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_5> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_3> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_2> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_1> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_4_0> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_7> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_6> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_5> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_3> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_2> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_1> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frame_write_5_0> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <adresse_q_1> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_3> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adresse_q_4> (without init value) has a constant value of 0 in block <I2C>. This FF/Latch will be trimmed during the optimization process.
@@ -851,17 +872,18 @@ INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_12> in Unit <Controller> is equivale
 INFO:Xst:2261 - The FF/Latch <i2c_datas_q_0_13> in Unit <Controller> is equivalent to the following FF/Latch, which will be removed : <frame_write_1_5> 
 INFO:Xst:2261 - The FF/Latch <adresse_q_2> in Unit <I2C> is equivalent to the following 2 FFs/Latches, which will be removed : <adresse_q_6> <adresse_q_7> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <controle/FSM_0> on signal <Etat_present[1:3]> with gray encoding.
+Optimizing FSM <controle/FSM_0> on signal <Etat_present[1:3]> with user encoding.
 ----------------------------------------
  State                      | Encoding
 ----------------------------------------
  init_start                 | 000
  init_send_num_capteurs     | 001
- init_send_num_actionneurs  | 011
- init_send_info_capteurs    | 010
- init_send_info_actionneurs | 110
- exec_read_write            | 111
- exec_pause                 | 101
+ init_send_num_actionneurs  | 010
+ init_send_info_capteurs    | 011
+ init_send_info_actionneurs | 100
+ ready                      | 101
+ exec_read_write            | 110
+ exec_pause                 | 111
 ----------------------------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controle/lidar_i2c/FSM_2> on signal <bytes_to_write_q[1:2]> with sequential encoding.
@@ -1294,6 +1316,7 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_count
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_12> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_11> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <controle/byte_counter_q_10> has a constant value of 0 in block <mojo_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <controle/frame_write_2_0> in Unit <mojo_top> is equivalent to the following 8 FFs/Latches, which will be removed : <controle/frame_write_3_7> <controle/frame_write_3_6> <controle/frame_write_3_5> <controle/frame_write_3_4> <controle/frame_write_3_3> <controle/frame_write_3_2> <controle/frame_write_3_1> <controle/frame_write_3_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1302,7 +1325,6 @@ WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_2_LD h
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch controle/byte_counter_q_31_LD hinder the constant cleaning in the block mojo_top.
    You should achieve better results by setting this init to 0.
-FlipFlop avr_interface/serial_tx/state_q_FSM_FFd1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1334,27 +1356,27 @@ Top Level Output File Name         : mojo_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 585
+# BELS                             : 598
 #      GND                         : 1
 #      INV                         : 35
 #      LUT1                        : 13
-#      LUT2                        : 29
-#      LUT3                        : 73
-#      LUT4                        : 63
-#      LUT5                        : 89
-#      LUT6                        : 83
-#      MUXCY                       : 131
-#      MUXF7                       : 2
+#      LUT2                        : 36
+#      LUT3                        : 67
+#      LUT4                        : 65
+#      LUT5                        : 107
+#      LUT6                        : 67
+#      MUXCY                       : 136
+#      MUXF7                       : 5
 #      VCC                         : 1
 #      XORCY                       : 65
 # FlipFlops/Latches                : 312
 #      FD                          : 8
-#      FDC                         : 79
+#      FDC                         : 78
 #      FDCE                        : 62
-#      FDE                         : 66
+#      FDE                         : 59
 #      FDP                         : 3
 #      FDPE                        : 7
-#      FDRE                        : 9
+#      FDRE                        : 17
 #      FDSE                        : 8
 #      LD                          : 70
 # Clock Buffers                    : 4
@@ -1374,14 +1396,14 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             308  out of  11440     2%  
- Number of Slice LUTs:                  385  out of   5720     6%  
-    Number used as Logic:               385  out of   5720     6%  
+ Number of Slice LUTs:                  390  out of   5720     6%  
+    Number used as Logic:               390  out of   5720     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    452
-   Number with an unused Flip Flop:     144  out of    452    31%  
-   Number with an unused LUT:            67  out of    452    14%  
-   Number of fully used LUT-FF pairs:   241  out of    452    53%  
+ Number of LUT Flip Flop pairs used:    455
+   Number with an unused Flip Flop:     147  out of    455    32%  
+   Number with an unused LUT:            65  out of    455    14%  
+   Number of fully used LUT-FF pairs:   243  out of    455    53%  
    Number of unique control sets:        29
 
 IO Utilization: 
@@ -1414,7 +1436,7 @@ Clock Information:
 Clock Signal                                                                                                       | Clock buffer(FF name)                        | Load  |
 -------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
 clk                                                                                                                | BUFGP                                        | 242   |
-controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o(controle/lidar_i2c/Mmux_etat_present[3]_PWR_94_o_Mux_92_o13:O)| BUFG(*)(controle/lidar_i2c/count_delay_d_1)  | 32    |
+controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_85_o(controle/lidar_i2c/Mmux_etat_present[3]_PWR_94_o_Mux_85_o13:O)| BUFG(*)(controle/lidar_i2c/count_delay_d_1)  | 32    |
 controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o(controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o1:O)                      | BUFG(*)(controle/lidar_i2c/count_delay_t_31) | 32    |
 avr_interface/new_sample_q                                                                                         | NONE(controle/analogValues/current_channel_0)| 4     |
 rst_n                                                                                                              | IBUF+BUFG                                    | 2     |
@@ -1432,8 +1454,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 6.067ns (Maximum Frequency: 164.826MHz)
-   Minimum input arrival time before clock: 6.110ns
+   Minimum period: 6.235ns (Maximum Frequency: 160.385MHz)
+   Minimum input arrival time before clock: 6.090ns
    Maximum output required time after clock: 5.848ns
    Maximum combinational path delay: 6.045ns
 
@@ -1443,10 +1465,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.067ns (frequency: 164.826MHz)
-  Total number of paths / destination ports: 3385 / 341
+  Clock period: 6.235ns (frequency: 160.385MHz)
+  Total number of paths / destination ports: 3799 / 348
 -------------------------------------------------------------------------
-Delay:               6.067ns (Levels of Logic = 6)
+Delay:               6.235ns (Levels of Logic = 7)
   Source:            controle/byte_counter_q_0_C_0 (FF)
   Destination:       controle/tx_data_q_2 (FF)
   Source Clock:      clk rising
@@ -1458,35 +1480,36 @@ Delay:               6.067ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      FDE:C->Q              2   0.525   0.834  controle/byte_counter_q_0_C_0 (controle/byte_counter_q_0_C_0)
      LUT3:I1->O            1   0.250   0.682  controle/byte_counter_q_01 (controle/byte_counter_q_0)
-     LUT1:I0->O            1   0.254   0.000  controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_cy<0>_rt (controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_cy<0>_rt)
-     XORCY:LI->O          12   0.149   1.069  controle/Msub_byte_counter_q[31]_GND_5_o_sub_56_OUT<31:0>_xor<0> (controle/byte_counter_q[31]_GND_5_o_sub_56_OUT<0>)
-     LUT4:I3->O            1   0.254   0.790  controle/Mmux_tx_data_d104_SW1_SW0 (N118)
-     LUT6:I4->O            1   0.250   0.682  controle/Mmux_tx_data_d104_SW1 (N99)
-     LUT5:I4->O            1   0.254   0.000  controle/Mmux_tx_data_d104 (controle/tx_data_d<2>)
+     LUT1:I0->O            1   0.254   0.000  controle/Msub_n0132_Madd_cy<0>_rt (controle/Msub_n0132_Madd_cy<0>_rt)
+     MUXCY:S->O            1   0.215   0.000  controle/Msub_n0132_Madd_cy<0> (controle/Msub_n0132_Madd_cy<0>)
+     XORCY:CI->O          12   0.206   1.069  controle/Msub_n0132_Madd_xor<1> (controle/n0132<1>)
+     LUT6:I5->O            1   0.254   0.682  controle/Mmux_tx_data_d6_SW0_SW1 (N98)
+     LUT6:I5->O            1   0.254   0.682  controle/Mmux_tx_data_d6 (controle/tx_data_d<2>)
+     LUT5:I4->O            1   0.254   0.000  controle/tx_data_q_2_rstpot (controle/tx_data_q_2_rstpot)
      FDC:D                     0.074          controle/tx_data_q_2
     ----------------------------------------
-    Total                      6.067ns (2.010ns logic, 4.057ns route)
-                                       (33.1% logic, 66.9% route)
+    Total                      6.235ns (2.286ns logic, 3.949ns route)
+                                       (36.7% logic, 63.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 355 / 263
+  Total number of paths / destination ports: 361 / 268
 -------------------------------------------------------------------------
-Offset:              6.110ns (Levels of Logic = 2)
+Offset:              6.090ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       controle/Etat_present_FSM_FFd1 (FF)
+  Destination:       controle/Etat_present_FSM_FFd2 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst_n to controle/Etat_present_FSM_FFd1
+  Data Path: rst_n to controle/Etat_present_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            45   1.328   1.736  rst_n_IBUF (avr_interface/serial_rx/rst_inv)
-     INV:I->O            140   0.255   2.331  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
+     IBUF:I->O            44   1.328   1.720  rst_n_IBUF (avr_interface/serial_rx/rst_inv)
+     INV:I->O            139   0.255   2.328  avr_interface/serial_rx/rst_inv_BUFG_LUT1_INV_0 (avr_interface/serial_rx/rst_inv_BUFG_LUT1)
      FDCE:CLR                  0.459          controle/byte_counter_q_3
     ----------------------------------------
-    Total                      6.110ns (2.042ns logic, 4.068ns route)
-                                       (33.4% logic, 66.6% route)
+    Total                      6.090ns (2.042ns logic, 4.048ns route)
+                                       (33.5% logic, 66.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'avr_interface/new_sample_q'
@@ -1564,9 +1587,9 @@ Clock to Setup on destination clock clk
                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------+---------+---------+---------+---------+
-clk                                                 |    6.067|         |         |         |
-controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o|         |    1.380|         |         |
-rst_n                                               |    6.306|         |         |         |
+clk                                                 |    6.235|         |         |         |
+controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_85_o|         |    1.380|         |         |
+rst_n                                               |    6.474|         |         |         |
 ----------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o
@@ -1578,27 +1601,27 @@ clk            |         |         |    2.660|         |
 rst_n          |         |         |    3.369|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_92_o
+Clock to Setup on destination clock controle/lidar_i2c/etat_present[3]_PWR_94_o_Mux_85_o
 --------------------------------------------+---------+---------+---------+---------+
                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------+---------+---------+---------+---------+
-clk                                         |         |         |    2.997|         |
+clk                                         |         |         |    3.028|         |
 controle/lidar_i2c/GND_91_o_PWR_87_o_OR_14_o|         |         |    1.983|         |
 --------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 13.71 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.92 secs
  
 --> 
 
 
-Total memory usage is 132656 kilobytes
+Total memory usage is 132556 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  568 (   0 filtered)
-Number of infos    :   45 (   0 filtered)
+Number of warnings :  583 (   0 filtered)
+Number of infos    :   47 (   0 filtered)
 

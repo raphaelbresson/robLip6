@@ -1,0 +1,5 @@
+vhdl isim_temp "I2C.vhd"
+vhdl isim_temp "Lidar.vhd"
+vhdl isim_temp "Analog_in.vhd"
+vhdl isim_temp "Controlleur.vhd"
+vhdl isim_temp "tb_controller.vhd"

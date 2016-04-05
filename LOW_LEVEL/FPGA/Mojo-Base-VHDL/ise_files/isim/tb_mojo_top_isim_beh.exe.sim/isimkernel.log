@@ -1,29 +1,29 @@
 Command line:
    tb_mojo_top_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  41634
+     -simrunnum  1
+     -socket  51787
 
-Mon Mar 28 20:28:23 2016
+Sat Apr  2 22:16:06 2016
 
 
  Elaboration Time: 0.1 sec
 
- Current Memory Usage: 135.954 Meg
+ Current Memory Usage: 135.967 Meg
 
- Total Signals          : 271
- Total Nets             : 1118
+ Total Signals          : 277
+ Total Nets             : 1137
  Total Signal Drivers   : 186
  Total Blocks           : 13
  Total Primitive Blocks : 8
  Total Processes        : 79
  Total Traceable Variables  : 42
- Total Scalar Nets and Variables : 1685
-Total Line Count : 654
+ Total Scalar Nets and Variables : 1704
+Total Line Count : 649
 
- Total Simulation Time: 98.21 sec
+ Total Simulation Time: 1.03 sec
 
- Current Memory Usage: 144.347 Meg
+ Current Memory Usage: 144.359 Meg
 
-Mon Mar 28 22:44:15 2016
+Sat Apr  2 22:18:21 2016
 

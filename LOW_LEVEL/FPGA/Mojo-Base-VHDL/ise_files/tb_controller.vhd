@@ -46,6 +46,7 @@ ARCHITECTURE behavior OF tb_controller IS
          NEW_RX_DATA : IN  std_logic;
          RX_DATA : IN  std_logic_vector(7 downto 0);
          TX_BUSY : IN  std_logic;
+			TX_BLOCK : in std_logic;
          TX_DATA : OUT  std_logic_vector(7 downto 0);
          NEW_TX_DATA : OUT  std_logic;
          NEW_SAMPLE : IN  std_logic;
@@ -89,6 +90,7 @@ BEGIN
           NEW_RX_DATA => NEW_RX_DATA,
           RX_DATA => RX_DATA,
           TX_BUSY => TX_BUSY,
+			 TX_BLOCK => '0',
           TX_DATA => TX_DATA,
           NEW_TX_DATA => NEW_TX_DATA,
           NEW_SAMPLE => NEW_SAMPLE,

@@ -15,6 +15,7 @@ entity mojo_top is
 		rst_n			: in  	std_logic;							-- "reset" button input (negative logic)
 		cclk			: in  	std_logic;							-- configuration clock (?) from AVR (to detect when AVR ready)
 --		led			: out 	std_logic_vector(7 downto 0);	-- 8 LEDs on Mojo board
+		-- AVR --
 		spi_sck		: in  	std_logic;							-- SPI clock to from AVR
 		spi_ss		: in  	std_logic;							-- SPI slave select from AVR
 		spi_mosi		: in  	std_logic;							-- SPI serial data master out, slave in (AVR -> FPGA)
@@ -23,10 +24,12 @@ entity mojo_top is
 		avr_tx		: in  	std_logic;							-- serial data transmited from AVR/USB (FPGA recieve)
 		avr_rx		: out 	std_logic;							-- serial data for AVR/USB to receive (FPGA transmit)
 		avr_rx_busy : in  	std_logic;							-- AVR/USB buffer full (don't send data when true)
+		-- I2C --
 		scl			: inout 	std_logic_vector(0 downto 0);	-- horloges i2c
 		sda			: inout	std_logic_vector(0 downto 0)	-- datas i2c
---		uart_rx		: in		std_logic;
---		uart_tx		: out		std_logic
+		-- UART non AVR --
+		--uart_rx		: in		std_logic;
+		--uart_tx		: out		std_logic
 --		servo 		: out 	std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
 --		fast_pwm		: out 	std_logic_vector(1 downto 0)  -- sorties pwm des roues
 	);
@@ -48,11 +51,11 @@ signal new_rx_data		: std_logic;
 signal tx_busy				: std_logic;
 
 -- uart indépendant de l'avr-ATMEGA (115200 bauds) -> clk_per_bit = 434 -> ctr_size = 9
---signal uart_new_tx 	: std_logic;
---signal uart_new_rx	: std_logic;
---signal uart_tx_busy	: std_logic;
---signal uart_data_tx 	: std_logic_vector(7 downto 0);
---signal uart_data_rx	: std_logic_vector(7 downto 0);
+signal uart_new_tx 	: std_logic;
+signal uart_new_rx	: std_logic;
+signal uart_tx_busy	: std_logic;
+signal uart_data_tx 	: std_logic_vector(7 downto 0);
+signal uart_data_rx	: std_logic_vector(7 downto 0);
 -- signaux de commande des entrées pwm
 type com_pwm_tab is array(0 to 7) of std_logic_vector(9 downto 0);
 signal com_pwm : com_pwm_tab; 
@@ -71,7 +74,7 @@ begin
 --		data		=> uart_data_rx,
 --		new_data	=> uart_new_rx
 --	);
---
+----
 --uart_ind_tx	: entity work.serial_tx
 --	generic map (
 --		CLK_PER_BIT	=>	434,
@@ -92,6 +95,8 @@ controle: entity work.controller
 	port map(
 					clk => clk,
 					rst => rst,
+					
+					-- UART --
 					new_rx_data => new_rx_data,
 					--new_rx_data => uart_new_rx,
 					rx_data => rx_data,
@@ -102,12 +107,14 @@ controle: entity work.controller
 					--tx_busy => uart_tx_busy,
 					new_tx_data => new_tx_data,
 					--new_tx_data => uart_new_tx,
-					
+					tx_block => avr_rx_busy,
+					-- Analog -- 
 					new_sample => new_sample,
 					sample => sample,
 					sample_channel => sample_channel,
 					channel => channel,
 					
+					-- I2C --
 					scl => scl,
 					sda => sda
 				);

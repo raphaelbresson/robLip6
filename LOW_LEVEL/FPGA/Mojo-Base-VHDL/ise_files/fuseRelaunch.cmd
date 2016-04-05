@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top_beh.prj" "work.tb_mojo_top" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_beh.prj" "work.tb_controller" 

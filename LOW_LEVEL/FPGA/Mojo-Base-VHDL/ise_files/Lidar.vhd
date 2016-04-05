@@ -138,10 +138,15 @@ begin
 					count_delay_d <= delay;
 					etat_futur <= PAUSE_INIT;
 				end if;
-			else							-- le bus est occupé
-				enable_d <= '1';
-				data_wr_d <= data_wr_q;
-				etat_futur <= INIT2;
+			else -- le bus est occupé
+				if(ack_error_q = '1') then
+					enable_d <= '0';
+					etat_futur <= INIT1;
+				else
+					enable_d <= '1';
+					data_wr_d <= data_wr_q;
+					etat_futur <= INIT2;
+				end if;
 			end if;
 		--	PAUSE_INIT : On ne fait rien pendant 20 ms
 		when PAUSE_INIT =>
@@ -209,6 +214,7 @@ begin
 					etat_futur <= PAUSE_2;
 				end if;
 			else
+				enable_d <= '1';
 				data_wr_d <= data_wr_q;
 				etat_futur <= HIGH_LOW_BYTES;
 			end if;
@@ -252,11 +258,11 @@ begin
 				new_data_d <= '0';
 				enable_d <= '1';
 				etat_futur <= REQUEST2;
-				out_data_d((bytes_to_read_q * 8)-1 downto ((bytes_to_read_q-1)*8)) <= data_rd_q;
+				out_data_d <= out_data_q;
 			end if;
 		-- PAUSE_3 : On ne fait rien pendant 20 ms et on repasse à l'etat START
 		when PAUSE_3 =>
-			new_data_d <= '1';
+			new_data_d <= '0';
 			if(count_delay_q > 0) then
 				enable_d <= '0';
 				count_delay_d <= count_delay_t;

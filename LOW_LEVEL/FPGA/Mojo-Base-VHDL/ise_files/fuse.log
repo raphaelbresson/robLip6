@@ -1,41 +1,29 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top_beh.prj" "work.tb_mojo_top" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_beh.prj" "work.tb_controller" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/spi_slave.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/serial_tx.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/serial_rx.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/cclk_detector.vhd" into library work
 Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
 Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Analog_in.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/avr_interface.vhd" into library work
 Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/../src/mojo_top.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top.vhd" into library work
+Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 37748 KB
-Fuse CPU Usage: 1650 ms
+Fuse Memory Usage: 37448 KB
+Fuse CPU Usage: 1600 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling architecture behavioral of entity Analog_in [analog_in_default]
 Compiling architecture behavioral of entity I2C [i2c_default]
 Compiling architecture behavioral of entity Lidar [lidar_default]
-Compiling architecture behavioral of entity Controller [controller_default]
-Compiling architecture rtl of entity cclk_detector [cclk_detector_default]
-Compiling architecture rtl of entity spi_slave [spi_slave_default]
-Compiling architecture rtl of entity serial_rx [\serial_rx(100,7)\]
-Compiling architecture rtl of entity serial_tx [\serial_tx(100,7)\]
-Compiling architecture rtl of entity avr_interface [avr_interface_default]
-Compiling architecture rtl of entity mojo_top [mojo_top_default]
-Compiling architecture behavior of entity tb_mojo_top
+Compiling architecture behavioral of entity Controller [\Controller(1,1,6,2)\]
+Compiling architecture behavior of entity tb_controller
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 24 VHDL Units
-Built simulation executable /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_mojo_top_isim_beh.exe
-Fuse Memory Usage: 84324 KB
-Fuse CPU Usage: 1840 ms
+Compiled 12 VHDL Units
+Built simulation executable /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe
+Fuse Memory Usage: 84108 KB
+Fuse CPU Usage: 1760 ms
 GCC CPU Usage: 210 ms

@@ -1,0 +1,3 @@
+vhdl work "../src/serial_tx.vhd"
+vhdl work "../src/serial_rx.vhd"
+vhdl work "IMU.vhd"

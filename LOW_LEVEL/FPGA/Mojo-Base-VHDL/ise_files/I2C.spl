@@ -1,0 +1,17 @@
+[Inputs]
+CLK
+RST
+ENABLE
+RW_CMD
+=ADDR[6:0]=
+=data_tx[7:0]=
+[Outputs]
+ERROR_ACK
+BUSY
+SCL
+CLK_I2C
+CLK_I2C_PREC
+=data_rx[7:0]=
+=etat[3:0]=
+[BiDir]
+SDA

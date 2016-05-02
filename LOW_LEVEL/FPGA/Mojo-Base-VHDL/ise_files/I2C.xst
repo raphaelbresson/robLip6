@@ -1,5 +1,5 @@
-set -tmpdir "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/xst/projnav.tmp"
-set -xsthdpdir "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/xst"
+set -tmpdir "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/xst"
 run -compileonly yes
 -p xc6slx9-2-tqg144
 -top I2C

@@ -5,5 +5,29 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_30_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_42_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_122_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_106_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_138_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_90_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_74_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_58_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
 </messages>
 

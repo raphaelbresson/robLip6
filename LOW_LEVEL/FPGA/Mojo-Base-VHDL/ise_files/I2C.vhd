@@ -36,7 +36,10 @@ entity I2C is
 				ERROR_ACK : out  STD_LOGIC;
 				BUSY		 : out  STD_LOGIC;
 				SDA : inout  STD_LOGIC;
-				SCL : inout  STD_LOGIC
+				SCL : out  STD_LOGIC;
+				CLK_I2C : out STD_LOGIC;
+				CLK_I2C_PREC : out STD_LOGIC;
+				etat : out STD_LOGIC_VECTOR(3 downto 0)
 			  );
 end I2C;
 
@@ -57,9 +60,10 @@ type i2c_states is (
 								MASTER_ACK2,
 								STOP1,
 								STOP2,
-								STOP3
+								STOP3,
+								RESTART
 							);
-signal Etat_present, etat_futur : i2c_states;
+signal Etat_present, etat_futur, etatFuturRest_d, etatFuturRest_q : i2c_states;
 signal sda_d,sda_q : STD_LOGIC:='1';
 signal scl_d,scl_q,scl_out_d, scl_out_q : STD_LOGIC:='1';
 signal sclp_d,sclp_q : STD_LOGIC:='1';
@@ -70,14 +74,34 @@ signal adresse_d,adresse_q : STD_LOGIC_VECTOR(7 downto 0);
 signal busy_d, busy_q: STD_LOGIC:='0';
 signal rx_d,rx_q: STD_LOGIC_VECTOR(7 downto 0);
 begin
-
+CLK_I2C <= scl_q;
+CLK_I2C_PREC <= sclp_q; 
 SDA <= 'Z' when sda_q = '1' else '0';
 SCL <= scl_out_q;
 DATA_RX <= rx_q;
 BUSY <= busy_q;
 ERROR_ACK <= ack_error_q;
 
-gen_scl_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,SCL,count_gen_scl_q,scl_q) 
+WITH etat_present SELECT etat <=
+	"0000" WHEN IDLE,				-- 0
+	"0001" WHEN COMMAND1, 		-- 1
+	"0010" WHEN COMMAND2,		-- 2
+	"0011" WHEN SLV_ACK1_1,		-- 3
+	"0100" WHEN	SLV_ACK1_2,		-- 4				
+	"0101" WHEN	WR_DATA1,		-- 5
+	"0110" WHEN	WR_DATA2,		-- 6
+	"0111" WHEN	RD_DATA1,		-- 7
+	"1000" WHEN	RD_DATA2,		-- 8
+	"1001" WHEN	SLV_ACK2_1,		-- 9
+	"1010" WHEN	SLV_ACK2_2,		-- A
+	"1011" WHEN	MASTER_ACK1,	-- B
+	"1100" WHEN	MASTER_ACK2,	-- C
+	"1101" WHEN	STOP1,			-- D
+	"1110" WHEN	STOP2,			-- E
+	"1111" WHEN	STOP3,			-- F
+	"0000" WHEN RESTART;			-- 0
+
+gen_scl_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,count_gen_scl_q,scl_q) 
 begin
 	scl_d <= scl_q;
 	sclp_d <= scl_q;
@@ -105,7 +129,7 @@ begin
 	end if;
 end process;
 
-i2c_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,SCL,scl_q,sda_q,etat_present,ack_error_q,adresse_q,busy_q)
+i2c_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,scl_q,sda_q,etat_present,ack_error_q,adresse_q,busy_q)
 begin
 	sda_d <= sda_q;
 	etat_futur <= etat_present;
@@ -115,13 +139,14 @@ begin
 	scl_out_d <= scl_out_q;
 	rx_d <= rx_q;
 	bit_counter_d <= bit_counter_q;
+	etatFuturRest_d <= etatFuturRest_q;
 	case etat_present is
-		------------------------------- IDLE
+		-------------------------------- IDLE 
 		when IDLE =>
 			scl_out_d <= '1';
 			if(Enable='1') then
 				ack_error_d <= '0';
-				busy_d <='1';
+				busy_d <= '1';
 				sda_d <= '0'; -- start condition
 				bit_counter_d <= 7;
 				etat_futur <= COMMAND1;
@@ -165,8 +190,8 @@ begin
 					bit_counter_d <= 7;
 					etat_futur <= WR_DATA1;
 				else
-					bit_counter_d <= 8;
-					--sda_d <= '1';
+					bit_counter_d <= 7;
+					sda_d <= '1';
 					etat_futur <= RD_DATA1;
 				end if;
 			end if;
@@ -191,14 +216,17 @@ begin
 			scl_out_d <= '0';
 			sda_d <= '1';
 			etat_futur <= RD_DATA2;
+			--rx_d(bit_counter_q) <= SDA;
 		when RD_DATA2 =>
 			busy_d <= '1';
 			scl_out_d <= '1';
+			sda_d <= '1';
+			rx_d(bit_counter_q) <= SDA;
 			if(bit_counter_q > 0) then
 				etat_futur <= RD_DATA1;
 				bit_counter_d <= bit_counter_q - 1;
-				rx_d(bit_counter_q - 1) <= SDA;
 			else
+				--rx_d(0) <= SDA;
 				etat_futur <= MASTER_ACK1;
 			end if;
 		--------------------------------- ACK ECRITURE D'UN OCTET
@@ -209,14 +237,15 @@ begin
 			etat_futur <= SLV_ACK2_2;
 			
 		when SLV_ACK2_2 =>
-			busy_d <= '0';
 			scl_out_d <= '1';
+			busy_d <= '1';
 			if(SDA='1' or ack_error_q='1') then 
 				ack_error_d <= '1';
 				etat_futur <= STOP1;
 			else
 				ack_error_d <= '0';
-				if(RW_CMD = '0' and ADDR = adresse_q(6 downto 0) and Enable='1') then
+				if(RW_CMD = '0' and ADDR = adresse_q(7 downto 1) and Enable='1') then
+					sda_d <= '1';
 					bit_counter_d <= 7;
 					etat_futur <= WR_DATA1;
 				else
@@ -230,31 +259,36 @@ begin
 			sda_d <= '0';
 			etat_futur <= MASTER_ACK2;
 		when MASTER_ACK2 =>
-			busy_d <= '0';
 			scl_out_d <= '1';
-			sda_d <= '0';
-			if(RW_CMD = '1' and ADDR = adresse_q(6 downto 0) and Enable='1') then
-				bit_counter_d <= 8;
+			busy_d <= '1';
+			if(RW_CMD = '1' and ADDR = adresse_q(7 downto 1) and Enable='1') then
+				sda_d <= '0'; -- ACK
+				bit_counter_d <= 7;
 				etat_futur <= RD_DATA1;
 			else
+				sda_d <= '1'; -- NACK
 				etat_futur <= STOP1;
 			end if;
 		---------------------------------- STOP ARRET DU BUS
 		when STOP1 =>
-			busy_d <= '0';
+			busy_d <= '1';
 			scl_out_d <= '0';
 			sda_d <= '0';
 			etat_futur <= STOP2;
 		when STOP2 =>
-			busy_d <= '0';
+			busy_d <= '1';
 			scl_out_d <= '1';
 			sda_d <= '0';
 			etat_futur <= STOP3;
 		when STOP3 =>
-			busy_d <= '0';
+			busy_d <= '1';
 			scl_out_d <= '1';
 			sda_d <= '1';
 			etat_futur <= IDLE;
+		when RESTART =>
+			scl_out_d <= '1';
+			sda_d <= '0';
+			etat_futur <= etatFuturRest_q;
 	end case;
 end process;
 
@@ -279,6 +313,7 @@ begin
 				scl_out_q <= scl_out_d;
 				rx_q <= rx_d;
 				bit_counter_q <= bit_counter_d;
+				etatFuturRest_q <= etatFuturRest_d;
 			elsif(scl_q='0' and sclp_q = '1') then
 				sda_q <= sda_d;
 				etat_present <= etat_futur;
@@ -288,6 +323,7 @@ begin
 				scl_out_q <= scl_out_d;
 				rx_q <= rx_d;
 				bit_counter_q <= bit_counter_d;
+				etatFuturRest_q <= etatFuturRest_d;
 			end if;
 	end if;
 end process;

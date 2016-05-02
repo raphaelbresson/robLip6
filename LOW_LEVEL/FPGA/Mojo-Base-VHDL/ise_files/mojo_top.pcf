@@ -1,12 +1,18 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 03 17:54:32 2016
+// Written by: Map P.20131013 on Mon May 02 01:54:50 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "fast_pwm<0>" LOCATE = SITE "P80" LEVEL 1;
+COMP "fast_pwm<1>" LOCATE = SITE "P81" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
 PIN cclk_pin<0> = BEL "cclk" PINNAME PAD;
 PIN "cclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "etat<0>" LOCATE = SITE "P111" LEVEL 1;
+COMP "etat<1>" LOCATE = SITE "P112" LEVEL 1;
+COMP "etat<2>" LOCATE = SITE "P101" LEVEL 1;
+COMP "etat<3>" LOCATE = SITE "P102" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 PIN rst_n_pin<0> = BEL "rst_n" PINNAME PAD;
 PIN "rst_n_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
@@ -21,11 +27,24 @@ COMP "scl<0>" LOCATE = SITE "P12" LEVEL 1;
 COMP "avr_rx" LOCATE = SITE "P59" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "etatLidar<0>" LOCATE = SITE "P116" LEVEL 1;
+COMP "etatLidar<1>" LOCATE = SITE "P117" LEVEL 1;
+COMP "etatLidar<2>" LOCATE = SITE "P118" LEVEL 1;
+COMP "servo<0>" LOCATE = SITE "P57" LEVEL 1;
+COMP "servo<1>" LOCATE = SITE "P58" LEVEL 1;
+COMP "servo<2>" LOCATE = SITE "P66" LEVEL 1;
+COMP "servo<3>" LOCATE = SITE "P67" LEVEL 1;
+COMP "servo<4>" LOCATE = SITE "P74" LEVEL 1;
+COMP "servo<5>" LOCATE = SITE "P75" LEVEL 1;
 COMP "spi_miso" LOCATE = SITE "P45" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
 TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/Etat_present_FSM_FFd3" BEL "controle/Etat_present_FSM_FFd1"
-        BEL "controle/new_tx_data_q" BEL "controle/byte_counter_q_3" BEL
+        BEL "controle/tx_data_q_7" BEL "controle/tx_data_q_6" BEL
+        "controle/tx_data_q_5" BEL "controle/tx_data_q_4" BEL
+        "controle/tx_data_q_3" BEL "controle/tx_data_q_2" BEL
+        "controle/tx_data_q_1" BEL "controle/tx_data_q_0" BEL
+        "controle/enable_recept_q" BEL "controle/byte_counter_q_3" BEL
         "controle/frame_write_2_0" BEL "controle/i2c_datas_q_0_15" BEL
         "controle/i2c_datas_q_0_14" BEL "controle/i2c_datas_q_0_13" BEL
         "controle/i2c_datas_q_0_12" BEL "controle/i2c_datas_q_0_11" BEL
@@ -34,16 +53,15 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/i2c_datas_q_0_6" BEL "controle/i2c_datas_q_0_5" BEL
         "controle/i2c_datas_q_0_4" BEL "controle/i2c_datas_q_0_3" BEL
         "controle/i2c_datas_q_0_2" BEL "controle/i2c_datas_q_0_1" BEL
-        "controle/i2c_datas_q_0_0" BEL "controle/rx_data_q_7" BEL
-        "controle/rx_data_q_6" BEL "controle/rx_data_q_5" BEL
-        "controle/rx_data_q_4" BEL "controle/rx_data_q_3" BEL
-        "controle/rx_data_q_2" BEL "controle/rx_data_q_1" BEL
-        "controle/rx_data_q_0" BEL "controle/lidar_i2c/etat_present_FSM_FFd2"
-        BEL "controle/lidar_i2c/etat_present_FSM_FFd3" BEL
+        "controle/i2c_datas_q_0_0" BEL "controle/new_tx_data_q" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd2" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd3" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd1" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd4" BEL
         "controle/lidar_i2c/bytes_to_write_q_FSM_FFd1" BEL
         "controle/lidar_i2c/bytes_to_write_q_FSM_FFd2" BEL
+        "controle/lidar_i2c/bytes_to_read_q_FSM_FFd1" BEL
+        "controle/lidar_i2c/bytes_to_read_q_FSM_FFd2" BEL
         "controle/lidar_i2c/out_data_q_15" BEL
         "controle/lidar_i2c/out_data_q_14" BEL
         "controle/lidar_i2c/out_data_q_13" BEL
@@ -64,10 +82,9 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/data_rd_q_5" BEL "controle/lidar_i2c/data_rd_q_4"
         BEL "controle/lidar_i2c/data_rd_q_3" BEL
         "controle/lidar_i2c/data_rd_q_2" BEL "controle/lidar_i2c/data_rd_q_1"
-        BEL "controle/lidar_i2c/data_rd_q_0" BEL "controle/lidar_i2c/enable_q"
-        BEL "controle/lidar_i2c/data_wr_q_2" BEL
-        "controle/lidar_i2c/data_wr_q_0" BEL
-        "controle/lidar_i2c/count_delay_q_31" BEL
+        BEL "controle/lidar_i2c/data_rd_q_0" BEL
+        "controle/lidar_i2c/data_wr_q_2" BEL "controle/lidar_i2c/data_wr_q_0"
+        BEL "controle/lidar_i2c/count_delay_q_31" BEL
         "controle/lidar_i2c/count_delay_q_30" BEL
         "controle/lidar_i2c/count_delay_q_29" BEL
         "controle/lidar_i2c/count_delay_q_28" BEL
@@ -79,21 +96,59 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/count_delay_q_22" BEL
         "controle/lidar_i2c/count_delay_q_21" BEL
         "controle/lidar_i2c/count_delay_q_20" BEL
+        "controle/lidar_i2c/count_delay_q_19" BEL
+        "controle/lidar_i2c/count_delay_q_18" BEL
+        "controle/lidar_i2c/count_delay_q_17" BEL
+        "controle/lidar_i2c/count_delay_q_16" BEL
         "controle/lidar_i2c/count_delay_q_15" BEL
+        "controle/lidar_i2c/count_delay_q_14" BEL
         "controle/lidar_i2c/count_delay_q_13" BEL
         "controle/lidar_i2c/count_delay_q_12" BEL
         "controle/lidar_i2c/count_delay_q_11" BEL
         "controle/lidar_i2c/count_delay_q_10" BEL
+        "controle/lidar_i2c/count_delay_q_9" BEL
         "controle/lidar_i2c/count_delay_q_8" BEL
         "controle/lidar_i2c/count_delay_q_7" BEL
+        "controle/lidar_i2c/count_delay_q_6" BEL
         "controle/lidar_i2c/count_delay_q_5" BEL
         "controle/lidar_i2c/count_delay_q_4" BEL
         "controle/lidar_i2c/count_delay_q_3" BEL
-        "controle/lidar_i2c/count_delay_q_2" BEL
         "controle/lidar_i2c/count_delay_q_1" BEL
         "controle/lidar_i2c/count_delay_q_0" BEL
-        "controle/lidar_i2c/new_data_q" BEL "controle/lidar_i2c/ack_error_q"
-        BEL "controle/lidar_i2c/i2c_interface/count_gen_scl_q_8" BEL
+        "controle/lidar_i2c/new_data_q" BEL
+        "controle/lidar_i2c/count_delay_t_31" BEL
+        "controle/lidar_i2c/count_delay_t_30" BEL
+        "controle/lidar_i2c/count_delay_t_29" BEL
+        "controle/lidar_i2c/count_delay_t_28" BEL
+        "controle/lidar_i2c/count_delay_t_27" BEL
+        "controle/lidar_i2c/count_delay_t_26" BEL
+        "controle/lidar_i2c/count_delay_t_25" BEL
+        "controle/lidar_i2c/count_delay_t_24" BEL
+        "controle/lidar_i2c/count_delay_t_23" BEL
+        "controle/lidar_i2c/count_delay_t_22" BEL
+        "controle/lidar_i2c/count_delay_t_21" BEL
+        "controle/lidar_i2c/count_delay_t_20" BEL
+        "controle/lidar_i2c/count_delay_t_19" BEL
+        "controle/lidar_i2c/count_delay_t_18" BEL
+        "controle/lidar_i2c/count_delay_t_17" BEL
+        "controle/lidar_i2c/count_delay_t_16" BEL
+        "controle/lidar_i2c/count_delay_t_15" BEL
+        "controle/lidar_i2c/count_delay_t_14" BEL
+        "controle/lidar_i2c/count_delay_t_13" BEL
+        "controle/lidar_i2c/count_delay_t_12" BEL
+        "controle/lidar_i2c/count_delay_t_11" BEL
+        "controle/lidar_i2c/count_delay_t_10" BEL
+        "controle/lidar_i2c/count_delay_t_9" BEL
+        "controle/lidar_i2c/count_delay_t_8" BEL
+        "controle/lidar_i2c/count_delay_t_7" BEL
+        "controle/lidar_i2c/count_delay_t_6" BEL
+        "controle/lidar_i2c/count_delay_t_5" BEL
+        "controle/lidar_i2c/count_delay_t_4" BEL
+        "controle/lidar_i2c/count_delay_t_3" BEL
+        "controle/lidar_i2c/count_delay_t_2" BEL
+        "controle/lidar_i2c/count_delay_t_1" BEL
+        "controle/lidar_i2c/count_delay_t_0" BEL
+        "controle/lidar_i2c/i2c_interface/count_gen_scl_q_8" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_7" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_6" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_5" BEL
@@ -102,10 +157,6 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_2" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_1" BEL
         "controle/lidar_i2c/i2c_interface/count_gen_scl_q_0" BEL
-        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd2" BEL
-        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd3" BEL
-        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd1" BEL
-        "controle/lidar_i2c/i2c_interface/Etat_present_FSM_FFd4" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_7" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_6" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_5" BEL
@@ -114,15 +165,18 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_2" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_1" BEL
         "controle/lidar_i2c/i2c_interface/rx_q_0" BEL
-        "controle/lidar_i2c/i2c_interface/scl_out_q" BEL
-        "controle/lidar_i2c/i2c_interface/bit_counter_q_3" BEL
+        "controle/lidar_i2c/i2c_interface/busy_q" BEL
         "controle/lidar_i2c/i2c_interface/bit_counter_q_2" BEL
         "controle/lidar_i2c/i2c_interface/bit_counter_q_1" BEL
         "controle/lidar_i2c/i2c_interface/bit_counter_q_0" BEL
         "controle/lidar_i2c/i2c_interface/sclp_q" BEL
-        "controle/lidar_i2c/i2c_interface/busy_q" BEL
+        "controle/lidar_i2c/i2c_interface/scl_out_q" BEL
         "controle/lidar_i2c/i2c_interface/adresse_q_2" BEL
         "controle/lidar_i2c/i2c_interface/adresse_q_0" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_3" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_2" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_1" BEL
+        "controle/lidar_i2c/i2c_interface/Etat_present_0" BEL
         "avr_interface/cclk_detector/ctr_q_12" BEL
         "avr_interface/cclk_detector/ctr_q_11" BEL
         "avr_interface/cclk_detector/ctr_q_10" BEL
@@ -141,7 +195,244 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "avr_interface/sample_channel_q_2" BEL
         "avr_interface/sample_channel_q_1" BEL
         "avr_interface/sample_channel_q_0" BEL "avr_interface/new_sample_q"
-        BEL "avr_interface/serial_tx/bit_ctr_q_2" BEL
+        BEL "controle/gestion_ordres/etat_q_FSM_FFd1" BEL
+        "controle/gestion_ordres/etat_q_FSM_FFd2" BEL
+        "controle/gestion_ordres/memoire_q_1_7" BEL
+        "controle/gestion_ordres/memoire_q_1_6" BEL
+        "controle/gestion_ordres/memoire_q_1_5" BEL
+        "controle/gestion_ordres/memoire_q_1_4" BEL
+        "controle/gestion_ordres/memoire_q_1_3" BEL
+        "controle/gestion_ordres/memoire_q_1_2" BEL
+        "controle/gestion_ordres/memoire_q_1_1" BEL
+        "controle/gestion_ordres/memoire_q_1_0" BEL
+        "controle/gestion_ordres/memoire_q_2_7" BEL
+        "controle/gestion_ordres/memoire_q_2_6" BEL
+        "controle/gestion_ordres/memoire_q_2_5" BEL
+        "controle/gestion_ordres/memoire_q_2_4" BEL
+        "controle/gestion_ordres/memoire_q_2_3" BEL
+        "controle/gestion_ordres/memoire_q_2_2" BEL
+        "controle/gestion_ordres/memoire_q_2_1" BEL
+        "controle/gestion_ordres/memoire_q_2_0" BEL
+        "controle/gestion_ordres/memoire_q_0_7" BEL
+        "controle/gestion_ordres/memoire_q_0_6" BEL
+        "controle/gestion_ordres/memoire_q_0_5" BEL
+        "controle/gestion_ordres/memoire_q_0_4" BEL
+        "controle/gestion_ordres/memoire_q_0_3" BEL
+        "controle/gestion_ordres/memoire_q_0_2" BEL
+        "controle/gestion_ordres/memoire_q_0_1" BEL
+        "controle/gestion_ordres/memoire_q_0_0" BEL
+        "controle/gestion_ordres/memoire_q_4_7" BEL
+        "controle/gestion_ordres/memoire_q_4_6" BEL
+        "controle/gestion_ordres/memoire_q_4_5" BEL
+        "controle/gestion_ordres/memoire_q_4_4" BEL
+        "controle/gestion_ordres/memoire_q_4_3" BEL
+        "controle/gestion_ordres/memoire_q_4_2" BEL
+        "controle/gestion_ordres/memoire_q_4_1" BEL
+        "controle/gestion_ordres/memoire_q_4_0" BEL
+        "controle/gestion_ordres/memoire_q_5_7" BEL
+        "controle/gestion_ordres/memoire_q_5_6" BEL
+        "controle/gestion_ordres/memoire_q_5_5" BEL
+        "controle/gestion_ordres/memoire_q_5_4" BEL
+        "controle/gestion_ordres/memoire_q_5_3" BEL
+        "controle/gestion_ordres/memoire_q_5_2" BEL
+        "controle/gestion_ordres/memoire_q_5_1" BEL
+        "controle/gestion_ordres/memoire_q_5_0" BEL
+        "controle/gestion_ordres/memoire_q_3_7" BEL
+        "controle/gestion_ordres/memoire_q_3_6" BEL
+        "controle/gestion_ordres/memoire_q_3_5" BEL
+        "controle/gestion_ordres/memoire_q_3_4" BEL
+        "controle/gestion_ordres/memoire_q_3_3" BEL
+        "controle/gestion_ordres/memoire_q_3_2" BEL
+        "controle/gestion_ordres/memoire_q_3_1" BEL
+        "controle/gestion_ordres/memoire_q_3_0" BEL
+        "controle/gestion_ordres/memoire_q_7_7" BEL
+        "controle/gestion_ordres/memoire_q_7_6" BEL
+        "controle/gestion_ordres/memoire_q_7_5" BEL
+        "controle/gestion_ordres/memoire_q_7_4" BEL
+        "controle/gestion_ordres/memoire_q_7_3" BEL
+        "controle/gestion_ordres/memoire_q_7_2" BEL
+        "controle/gestion_ordres/memoire_q_7_1" BEL
+        "controle/gestion_ordres/memoire_q_7_0" BEL
+        "controle/gestion_ordres/memoire_q_6_7" BEL
+        "controle/gestion_ordres/memoire_q_6_6" BEL
+        "controle/gestion_ordres/memoire_q_6_5" BEL
+        "controle/gestion_ordres/memoire_q_6_4" BEL
+        "controle/gestion_ordres/memoire_q_6_3" BEL
+        "controle/gestion_ordres/memoire_q_6_2" BEL
+        "controle/gestion_ordres/memoire_q_6_1" BEL
+        "controle/gestion_ordres/memoire_q_6_0" BEL
+        "controle/gestion_ordres/indice_q_2" BEL
+        "controle/gestion_ordres/indice_q_1" BEL
+        "controle/gestion_ordres/indice_q_0" BEL
+        "controle/gestion_ordres/data_q_7" BEL
+        "controle/gestion_ordres/data_q_6" BEL
+        "controle/gestion_ordres/data_q_5" BEL
+        "controle/gestion_ordres/data_q_4" BEL
+        "controle/gestion_ordres/data_q_3" BEL
+        "controle/gestion_ordres/data_q_2" BEL
+        "controle/gestion_ordres/data_q_1" BEL
+        "controle/gestion_ordres/data_q_0" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[4].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[3].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[2].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[1].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/pwm_q" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/pwm_q" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_0" BEL
+        "avr_interface/serial_tx/bit_ctr_q_2" BEL
         "avr_interface/serial_tx/bit_ctr_q_1" BEL
         "avr_interface/serial_tx/bit_ctr_q_0" BEL
         "avr_interface/serial_tx/state_q_FSM_FFd1" BEL
@@ -206,33 +497,21 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/i2c_interface/sda_q" BEL
         "controle/lidar_i2c/i2c_interface/ack_error_q" BEL
         "avr_interface/byte_ct_q" BEL "avr_interface/spi_slave/miso_q" BEL
-        "controle/lidar_i2c/bytes_to_read_q_1" BEL
-        "controle/lidar_i2c/bytes_to_read_q_0" BEL "controle/tx_data_q_3" BEL
-        "controle/tx_data_q_7" BEL "controle/tx_data_q_6" BEL
-        "controle/tx_data_q_5" BEL "controle/tx_data_q_4" BEL
-        "controle/tx_data_q_2" BEL "controle/tx_data_q_1" BEL
-        "controle/tx_data_q_0" BEL "controle/byte_counter_q_31_C_31" BEL
-        "controle/byte_counter_q_31_P_31" BEL "controle/byte_counter_q_2_C_2"
-        BEL "controle/byte_counter_q_2_P_2" BEL
-        "controle/byte_counter_q_1_C_1" BEL "controle/byte_counter_q_1_P_1"
-        BEL "controle/byte_counter_q_0_C_0" BEL
-        "controle/byte_counter_q_0_P_0" BEL
-        "controle/lidar_i2c/count_delay_q_19_C_19" BEL
-        "controle/lidar_i2c/count_delay_q_19_P_19" BEL
-        "controle/lidar_i2c/count_delay_q_18_C_18" BEL
-        "controle/lidar_i2c/count_delay_q_18_P_18" BEL
-        "controle/lidar_i2c/count_delay_q_17_C_17" BEL
-        "controle/lidar_i2c/count_delay_q_17_P_17" BEL
-        "controle/lidar_i2c/count_delay_q_16_C_16" BEL
-        "controle/lidar_i2c/count_delay_q_16_P_16" BEL
-        "controle/lidar_i2c/count_delay_q_14_C_14" BEL
-        "controle/lidar_i2c/count_delay_q_14_P_14" BEL
-        "controle/lidar_i2c/count_delay_q_9_C_9" BEL
-        "controle/lidar_i2c/count_delay_q_9_P_9" BEL
-        "controle/lidar_i2c/count_delay_q_6_C_6" BEL
-        "controle/lidar_i2c/count_delay_q_6_P_6" BEL
+        "controle/lidar_i2c/ack_error_q" BEL "controle/byte_counter_q_31_C_31"
+        BEL "controle/byte_counter_q_31_P_31" BEL
+        "controle/byte_counter_q_2_C_2" BEL "controle/byte_counter_q_2_P_2"
+        BEL "controle/byte_counter_q_1_C_1" BEL
+        "controle/byte_counter_q_1_P_1" BEL "controle/byte_counter_q_0_C_0"
+        BEL "controle/byte_counter_q_0_P_0" BEL
+        "controle/lidar_i2c/enable_q_C" BEL "controle/lidar_i2c/enable_q_P"
+        BEL "controle/lidar_i2c/count_delay_q_2_C_2" BEL
+        "controle/lidar_i2c/count_delay_q_2_P_2" BEL
         "controle/lidar_i2c/i2c_interface/scl_q_C" BEL
-        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL "clk_BUFGP/BUFG";
+        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd3_1" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd1_1" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd2_1" BEL
+        "controle/lidar_i2c/etat_present_FSM_FFd4_1" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

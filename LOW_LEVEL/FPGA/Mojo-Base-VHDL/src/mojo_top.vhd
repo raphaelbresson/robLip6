@@ -25,13 +25,15 @@ entity mojo_top is
 		avr_rx		: out 	std_logic;							-- serial data for AVR/USB to receive (FPGA transmit)
 		avr_rx_busy : in  	std_logic;							-- AVR/USB buffer full (don't send data when true)
 		-- I2C --
-		scl			: inout 	std_logic_vector(0 downto 0);	-- horloges i2c
-		sda			: inout	std_logic_vector(0 downto 0)	-- datas i2c
+		scl			: out 	std_logic_vector(0 downto 0);	-- horloges i2c
+		sda			: inout	std_logic_vector(0 downto 0);	-- datas i2c
 		-- UART non AVR --
 		--uart_rx		: in		std_logic;
 		--uart_tx		: out		std_logic
---		servo 		: out 	std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
---		fast_pwm		: out 	std_logic_vector(1 downto 0)  -- sorties pwm des roues
+		servo 		: out 	std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
+		fast_pwm		: out 	std_logic_vector(1 downto 0);  -- sorties pwm des roues
+		etat : out STD_LOGIC_VECTOR(3 downto 0);
+		etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
 	);
 end mojo_top;
 
@@ -116,7 +118,11 @@ controle: entity work.controller
 					
 					-- I2C --
 					scl => scl,
-					sda => sda
+					sda => sda,
+					etat => etat,
+					servo_out => servo,
+					fast_pwm => fast_pwm,
+					etatLidar => etatLidar
 				);
 
 -- sorties pwm des servo-moteurs

@@ -7,19 +7,17 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/ActionControlleur - Behavioral |home|raphael|Desktop|Mojo-Base-VHDL|ise_files|ActionControlleur.vhd</ClosedNode>
-         <ClosedNode>/CapteursController - Behavioral |home|raphael|Desktop|Mojo-Base-VHDL|ise_files|CapteursController.vhd</ClosedNode>
-         <ClosedNode>/Global - Behavioral |home|raphael|Desktop|Mojo-Base-VHDL|ise_files|Global.vhd/actionneurs - ActionControlleur - Behavioral</ClosedNode>
-         <ClosedNode>/Global - Behavioral |home|raphael|Desktop|Mojo-Base-VHDL|ise_files|Global.vhd/capteurs - CapteursController - Behavioral/lidar_i2c - Lidar - Behavioral</ClosedNode>
+         <ClosedNode>/Global - Behavioral C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|Global.vhd/actionneurs - ActionControlleur - Behavioral</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>xc6slx9-2tqg144</SelectedItem>
+         <SelectedItem>controle - Controller - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001fc000000020000000000000000000000000200000064ffffffff000000810000000300000002000001fc0000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>xc6slx9-2tqg144</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ce000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ce0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>controle - Controller - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -27,13 +25,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -42,9 +40,9 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000327000000040101000100000000000000000000000064ffffffff000000810000000000000004000000890000000100000000000000cb0000000100000000000000800000000100000000000001530000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000aa00000001000000000000009d0000000100000000000000660000000100000000000000d00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>avr_interface.vhd</CurrentItem>
+      <CurrentItem>ActionControlleur.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -54,60 +52,29 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000121000000010001000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
-   <CopyAdditionalFiles/>
-   <SourceProcessView>000000ff00000000000000020000013c0000011d01000000060100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
-         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b30000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
-      <ClosedNodes>
-         <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/mojo_top - RTL |home|raphael|Desktop|Mojo-Base-VHDL|src|mojo_top.vhd</ClosedNode>
-         <ClosedNode>/tb_controller - behavior |home|raphael|Desktop|Mojo-Base-VHDL|ise_files|tb_controller.vhd/uut - Controller - Behavioral</ClosedNode>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>controle - Controller - Behavioral (/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001cf000000020000000000000000000000000200000064ffffffff000000810000000300000002000001cf0000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>controle - Controller - Behavioral (/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</CurrentItem>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
@@ -118,20 +85,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b30000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem></SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>

@@ -17,7 +17,7 @@ public class FenetreDebug extends JFrame
 	{
 		this.setTitle("Fenetre de debug de l'interface UART");
 		this.terminer = false;
-		this.uart = new UART_Communicator("/dev/ttyACM1");
+		this.uart = new UART_Communicator("COM3");
 		this.setSize(800, 600);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);

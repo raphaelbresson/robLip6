@@ -8,7 +8,14 @@ NET "clk" LOC = P56;
 NET "rst_n" LOC = P38;
 NET "cclk" LOC = P70;
 
+NET "etat<0>" LOC = P111;
+NET "etat<1>" LOC = P112;
+NET "etat<2>" LOC = P101;
+NET "etat<3>" LOC = P102;
 
+NET "etatLidar<0>" LOC = P116;
+NET "etatLidar<1>" LOC = P117;
+NET "etatLidar<2>" LOC = P118;
 #NET "led<0>" LOC = P134;
 #NET "led<1>" LOC = P133;
 #NET "led<2>" LOC = P132;
@@ -18,15 +25,15 @@ NET "cclk" LOC = P70;
 #NET "led<6>" LOC = P124;
 #NET "led<7>" LOC = P123;
 
-#NET "servo<0>" LOC = P57;
-#NET "servo<1>" LOC = P58;
-#NET "servo<2>" LOC = P66;
-#NET "servo<3>" LOC = P67;
-#NET "servo<4>" LOC = P74;
-#NET "servo<5>" LOC = P75;
+NET "servo<0>" LOC = P57;
+NET "servo<1>" LOC = P58;
+NET "servo<2>" LOC = P66;
+NET "servo<3>" LOC = P67;
+NET "servo<4>" LOC = P74;
+NET "servo<5>" LOC = P75;
 
-#NET "fast_pwm<0>" LOC = P80;
-#NET "fast_pwm<1>" LOC = P81;
+NET "fast_pwm<0>" LOC = P80;
+NET "fast_pwm<1>" LOC = P81;
 
 #NET "uart_tx" LOC = P14;
 #NET "uart_rx" LOC = P15;

@@ -30,6 +30,7 @@ public class UART_Sender implements Runnable {
 		return this.tailleTrame;
 	}
 	
+	@Override
 	public void run()
 	{
 		try

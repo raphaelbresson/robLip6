@@ -21,6 +21,7 @@ public class UART_Receiver implements Runnable {
 		this.terminer = false;
 	}
 	
+	@Override
 	public void run()
 	{
 		

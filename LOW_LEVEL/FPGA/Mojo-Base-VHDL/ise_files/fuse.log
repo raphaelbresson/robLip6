@@ -1,29 +1,22 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe" -prj "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_beh.prj" "work.tb_controller" 
-ISim P.20131013 (signature 0xfbc00daa)
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe" -prj "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_beh.prj" "work.tb_lidar" 
+ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Analog_in.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/Controlleur.vhd" into library work
-Parsing VHDL file "/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 37448 KB
-Fuse CPU Usage: 1600 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture behavioral of entity Analog_in [analog_in_default]
 Compiling architecture behavioral of entity I2C [i2c_default]
-Compiling architecture behavioral of entity Lidar [lidar_default]
-Compiling architecture behavioral of entity Controller [\Controller(1,1,6,2)\]
-Compiling architecture behavior of entity tb_controller
+Compiling architecture behavioral of entity Lidar [\Lidar(16,1000000)\]
+Compiling architecture behavior of entity tb_lidar
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 12 VHDL Units
-Built simulation executable /home/raphael/Desktop/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe
-Fuse Memory Usage: 84108 KB
-Fuse CPU Usage: 1760 ms
-GCC CPU Usage: 210 ms
+Compiled 8 VHDL Units
+Built simulation executable C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe
+Fuse Memory Usage: 34204 KB
+Fuse CPU Usage: 1062 ms

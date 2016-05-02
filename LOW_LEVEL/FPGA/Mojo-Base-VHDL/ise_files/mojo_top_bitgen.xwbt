@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/mojo_top.ncd
-OUTFILE=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/mojo_top.bit
+INFILE=C:\Users\Raf\Desktop\RobLip6\proj\rob\robLip6\LOW_LEVEL\FPGA\Mojo-Base-VHDL\ise_files\mojo_top.ncd
+OUTFILE=C:\Users\Raf\Desktop\RobLip6\proj\rob\robLip6\LOW_LEVEL\FPGA\Mojo-Base-VHDL\ise_files\mojo_top.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=/home/raphael/Desktop/Mojo-Base-VHDL/ise_files
+WORKINGDIR=C:\Users\Raf\Desktop\RobLip6\proj\rob\robLip6\LOW_LEVEL\FPGA\Mojo-Base-VHDL\ise_files
 LICENSE=WebPack
-USER_INFO=211112930_0_0_255
+USER_INFO=211148253_0_0_158

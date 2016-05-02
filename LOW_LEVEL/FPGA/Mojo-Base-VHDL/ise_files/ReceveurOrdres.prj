@@ -1,0 +1,2 @@
+vhdl work "../../PWM/pwm_mgr.vhd"
+vhdl work "ReceveurOrdres.vhd"

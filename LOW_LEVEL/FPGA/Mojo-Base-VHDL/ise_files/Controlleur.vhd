@@ -52,12 +52,14 @@ entity Controller is
 					SAMPLE_CHANNEL : in STD_LOGIC_VECTOR(3 downto 0);-- Entrée de la nouvelle valuer analogique
 					CHANNEL: out STD_LOGIC_VECTOR(3 downto 0);-- Entrée ADC à lire
 												-- I2C --
-					 SCL : inout STD_LOGIC_VECTOR(Num_Capteurs_I2C - 1 downto 0);-- horloge I2C
-					 SDA : inout STD_LOGIC_VECTOR(Num_Capteurs_I2C - 1 downto 0)-- Data I2C
+					 SCL : out STD_LOGIC_VECTOR(Num_Capteurs_I2C - 1 downto 0);-- horloge I2C
+					 SDA : inout STD_LOGIC_VECTOR(Num_Capteurs_I2C - 1 downto 0);-- Data I2C
 												-- Servos --
-					-- servo_out : out STD_LOGIC_VECTOR(Num_Servos - 1 downto 0);-- sorties servo-moteurs
+					servo_out : out STD_LOGIC_VECTOR(Num_Servos - 1 downto 0);-- sorties servo-moteurs
 												-- fast-pwm --
-					-- fast_pwm : out STD_LOGIC_VECTOR(Num_FastPwm - 1 downto 0);-- sorties fast_pwm
+					fast_pwm : out STD_LOGIC_VECTOR(Num_FastPwm - 1 downto 0);-- sorties fast_pwm
+					etat : out STD_LOGIC_VECTOR(3 downto 0);
+					etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
 				);
 end Controller;
 
@@ -122,6 +124,9 @@ architecture Behavioral of Controller is
 	-- pause
 	constant delay_pause : integer:=0;
 	signal count_delay_d, count_delay_q : integer := delay_pause;
+	
+	-- reception des ordres
+	signal enable_recept_d, enable_recept_q: STD_LOGIC :='0';
 begin
 -- entrée/sortie UART
 rx_data_t <= RX_DATA;
@@ -160,8 +165,25 @@ lidar_i2c: entity work.lidar
 			scl => scl(0),
 			sda => sda(0),
 			data => i2c_datas_t(0),
-			new_data => new_data_lidar
+			new_data => new_data_lidar,
+			etat => etat,
+			etatLidar => etatLidar
 		);
+		
+---------------------------------------------------------------------------
+---------  Reception des ordre + g�n�ration des sorties PWM  --------------
+---------------------------------------------------------------------------
+gestion_ordres: entity work.ReceveurOrdres
+	PORT MAP(
+			CLK => CLK,
+			RST => RST,
+			ENABLE => enable_recept_q,
+			DATA_RX => RX_DATA,
+			NEW_DATA_RX => NEW_RX_DATA,
+			SERVO => servo_out,
+			FAST_PWM => fast_pwm
+			);
+		
 
 
 ---------------------------------------------------------------
@@ -209,14 +231,7 @@ if(new_data_lidar = '1') then
 else
 		i2c_datas_d <= i2c_datas_q;
 end if;
-
-if(NEW_RX_DATA = '1') then
-	rx_data_d <= rx_data_t;
-	new_rx_data_d <= '1';
-else
-	rx_data_d <= rx_data_q;
-	new_rx_data_d <= '0';
-end if;
+enable_recept_d <= enable_recept_q;
 count_delay_d <= count_delay_q;
 new_tx_data_d <= new_tx_data_q;
 byte_counter_d <= byte_counter_q;
@@ -225,7 +240,8 @@ etat_futur <= etat_Present;
 	case Etat_present is
 		-- ON COMMENCE L'INITIALISATION EN ENVOYANT LE NOMBRE DE CAPTEURS (1 OCTET)
 		when INIT_START =>
-			if(rx_data_q="11111111") then
+			enable_recept_d<= '0';
+			if(NEW_RX_DATA='1' and RX_DATA="11111111") then
 				new_tx_data_d <= '1';
 				tx_data_d <= std_logic_vector(to_unsigned(num_capteurs,8));
 				etat_futur <= INIT_SEND_NUM_CAPTEURS;
@@ -235,7 +251,8 @@ etat_futur <= etat_Present;
 			end if;
 			
 		-- ATTENTE DE LA FIN DE L'ECRITURE SUR LE BUS UART DU NOMBRE DE CAPTEURS (1 OCTET)
-		when INIT_SEND_NUM_CAPTEURS=>		
+		when INIT_SEND_NUM_CAPTEURS=>
+			enable_recept_d<= '0';
 			if(TX_BUSY = '0' and new_tx_data_q='0') then -- si l'écriture est finie on passe à l'envoi
 				new_tx_data_d <= '1';							-- du nombre d'actionneurs
 				tx_data_d <= std_logic_vector(to_unsigned(num_actionneurs,8));
@@ -248,6 +265,7 @@ etat_futur <= etat_Present;
 			
 		-- ATTENTE DE LA FIN DE L'ECRITURE SUR LE BUS UART DU NOMBRE D'ACTIONNEURS (1 OCTET)
 		when INIT_SEND_NUM_ACTIONNEURS =>
+			enable_recept_d<= '0';
 			if(TX_BUSY = '0' and new_tx_data_q='0') then -- si l'écriture est finie on passe à l'envoi
 				new_tx_data_d <= '1';							-- des infos de chaque capteur
 				byte_counter_d <= last_init_byte_capteurs;
@@ -261,6 +279,7 @@ etat_futur <= etat_Present;
 			
 		-- ECRITURE UART DE CHAQUE INFORMATION DES CAPTEURS
 		when INIT_SEND_INFO_CAPTEURS =>
+			enable_recept_d<= '0';
 			if(TX_BUSY = '0' and new_tx_data_q = '0') then 		-- si l'écriture d'un octet est finie
 				new_tx_data_d <= '1';
 				if(byte_counter_q > 0) then					  		-- si ce n'est pas le dernier octet
@@ -280,6 +299,7 @@ etat_futur <= etat_Present;
 			
 		-- ECRITURE UART DE CHAQUE INFORMATION DES ACTIONNEURS
 		when INIT_SEND_INFO_ACTIONNEURS =>
+			enable_recept_d<= '0';
 			if(TX_BUSY = '0' and new_tx_data_q = '0') then 	-- l'écriture d'un octet est finie
 				new_tx_data_d <= '1';
 				if(byte_counter_q > 0) then						-- si ce n'est pas le dernier octet
@@ -297,18 +317,15 @@ etat_futur <= etat_Present;
 			end if;
 			
 		when READY =>
-			if(rx_data_q="00000000") then
+			enable_recept_d<= '1';
 				new_tx_data_d <= '1';							-- on passe à l'exécution
 				byte_counter_d <= frame_write_size;
 				tx_data_d <= frame_write(frame_write_size);
 				etat_futur <= EXEC_READ_WRITE;
-			else
-				new_tx_data_d <= '0';
-				etat_futur <= READY;
-			end if;
 		-- LECTURE/ECRITURE DES TRAMES SUR L'UART (BOUCLE INFINIE SUR CET ETAT)
 		when EXEC_READ_WRITE =>
 			-- ECRITURE
+			enable_recept_d<= '1';
 			if(TX_BUSY = '0' and new_tx_data_q = '0') then 	-- l'écriture d'un octet est finie
 				if(byte_counter_q > 0) then						-- si ce n'est pas le dernier octet 
 					new_tx_data_d <= '1';							-- on envoie l'octet suivant
@@ -325,19 +342,8 @@ etat_futur <= etat_Present;
 				tx_data_d <= tx_data_q;
 				etat_futur <= EXEC_READ_WRITE;
 			end if;
-			--LECTURE
---			if(new_rx_data_q = '1') then 			-- 1 nouvel octet à lire
---				if(byte_counter2_q > 0) then 	-- si ce n'est pas le dernier octet, on passe au suivant
---					frame_read(byte_counter2_q -1) <= rx_data_q;
---					byte_counter2_d <= byte_counter2_q - 1;
---				else										-- si c'est le dernier on revient au premier
---					byte_counter2_d <= frame_read_size;
---					frame_read(frame_read_size) <= rx_data_q;
---				end if;
---			else											-- sinon lecture en cours
---				frame_read(byte_counter2_q) <= rx_data_q;
---			end if;
 		when EXEC_PAUSE =>
+			enable_recept_d<= '1';
 			new_tx_data_d <= '0';
 			rx_data_d <= (others=>'0');
 			if(count_delay_q > 0) then
@@ -359,6 +365,7 @@ if(RST='1') then
 	new_tx_data_q <= '0';
 	byte_counter_q <= 7;
 	tx_data_q <= (others=>'0');
+	enable_recept_q <= '0';
 elsif(CLK='1' and CLK'event) then
 	new_tx_data_q <= new_tx_data_d;
 	new_rx_data_q <= new_rx_data_d;
@@ -369,6 +376,7 @@ elsif(CLK='1' and CLK'event) then
 	etat_present <= Etat_futur;
 	i2c_datas_q <= i2c_datas_d;
 	count_delay_q <= count_delay_d;
+	enable_recept_q<= enable_recept_d;
 	-- sorties UART
 	frame_write(frame_write_size) <= X"00"; -- analog : 0
 	frame_write(frame_write_size-1) <= (others=>'0');

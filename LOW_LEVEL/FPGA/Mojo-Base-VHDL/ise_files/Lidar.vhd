@@ -32,15 +32,17 @@ use IEEE.NUMERIC_STD.ALL;
 entity Lidar is
 	 Generic ( 	
 					data_length : Integer := 16;
-					delay			: Integer := 1_000_000
+					delay			: Integer := 4
 				);
     Port ( 
 			  CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
-           SCL : inout  STD_LOGIC;
+           SCL : out  STD_LOGIC;
            SDA : inout  STD_LOGIC;
            DATA : out  STD_LOGIC_VECTOR(data_length - 1 downto 0);
-			  NEW_DATA : out std_logic
+			  NEW_DATA : out std_logic;
+			  etat : out STD_LOGIC_VECTOR(3 downto 0);
+			  etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
 			  );
 end Lidar;
 
@@ -61,7 +63,7 @@ architecture Behavioral of Lidar is
 								 REQUEST2,
 								 PAUSE_3);
 	signal etat_present, etat_futur : Lidar_states := INIT1;
-	signal enable_d, enable_q : std_logic;
+	signal enable_d, enable_q : std_logic:='1';
 	signal bytes_to_write_d, bytes_to_write_q : integer := 0;
 	signal bytes_to_read_d, bytes_to_read_q : integer := 0;
 	signal count_delay_t,count_delay_d, count_delay_q : integer := delay;
@@ -72,7 +74,18 @@ architecture Behavioral of Lidar is
 	signal ack_error_t, ack_error_d,ack_error_q : std_logic;
 	signal out_data_d, out_data_q : std_logic_vector(data_length - 1 downto 0);
 	signal new_data_d, new_data_q : std_logic:='0';
+	signal clk_i2c, clk_i2c_prec : std_logic;
 begin
+
+WITH etat_present SELECT etatLidar <=
+	"000" WHEN INIT1,
+	"001" WHEN INIT2,
+	"010" WHEN START,
+	"011" WHEN HIGH_LOW_BYTES,
+	"100" WHEN REQUEST1,
+	"101" WHEN REQUEST2,
+	"111" WHEN OTHERS;
+
 DATA <= out_data_q;
 NEW_DATA <= new_data_q;
 i2c_interface: entity work.i2c
@@ -87,18 +100,23 @@ i2c_interface: entity work.i2c
 			error_ack => ack_error_t,
 			busy => busy,
 			SCL => SCL,
-			SDA => SDA
+			SDA => SDA,
+			CLK_I2C => clk_i2c,
+			CLK_I2C_PREC => clk_i2c_prec,
+			etat => etat
 		);
 		
 delai:process(CLK)
 begin
-	if(etat_present=PAUSE_INIT or etat_present=PAUSE_1 or etat_present=PAUSE_2 or etat_present=PAUSE_3) then 
-		count_delay_t <= count_delay_q - 1;
-	else
+	if(CLK='1' and CLK'event) then
+		if(etat_present=PAUSE_INIT or etat_present=PAUSE_1 or etat_present=PAUSE_2 or etat_present=PAUSE_3) then 
+			count_delay_t <= count_delay_q - 1;
+		else
+		end if;
 	end if;
 end process;
 
-comb_lidar: process(enable_q,RST,busy,ack_error_t,SCL,count_delay_t)
+comb_lidar: process(enable_q,RST,busy,ack_error_t,count_delay_t,CLK_I2C)
 begin
 	enable_d <= enable_q;
 	data_rd_d <= data_rd_t;
@@ -134,7 +152,6 @@ begin
 					etat_futur <= INIT2;
 				else											-- fin de l'etat
 					enable_d <= '0';
-					data_wr_d <= (others=>'0');
 					count_delay_d <= delay;
 					etat_futur <= PAUSE_INIT;
 				end if;
@@ -176,13 +193,16 @@ begin
 					bytes_to_write_d <= 0;
 					etat_futur <= START;
 				else											-- fin de l'etat
-					enable_d <= '0';
-				--	data_wr_d <= (others=>'0');
 					count_delay_d <= delay;
+					enable_d <= '0';
 					etat_futur <= PAUSE_1;
 				end if;
-			else							-- le bus est occupé
-				enable_d <= '1';
+			else -- le bus est occupé
+				if(bytes_to_write_q = 0) then
+					enable_d <= '0';
+				else
+					enable_d <= '1';
+				end if;
 				data_wr_d <= data_wr_q;
 				etat_futur <= START;
 			end if;
@@ -197,6 +217,7 @@ begin
 				enable_d <= '1';
 				bytes_to_write_d <= 1;
 				etat_futur <= HIGH_LOW_BYTES;
+				data_wr_d <= register_high_low_b;
 			end if;
 		-- HIGH_LOW_BYTES : On envoie la commande pour récupérer les deux octets d'un coup
 		when HIGH_LOW_BYTES =>
@@ -214,7 +235,7 @@ begin
 					etat_futur <= PAUSE_2;
 				end if;
 			else
-				enable_d <= '1';
+				enable_d <= '0';
 				data_wr_d <= data_wr_q;
 				etat_futur <= HIGH_LOW_BYTES;
 			end if;
@@ -243,20 +264,26 @@ begin
 		when REQUEST2 =>
 			out_data_d <= out_data_q;
 			if(busy = '0' and ack_error_q = '0') then
-				if(bytes_to_read_q > 1) then
+				if(bytes_to_read_q = 2) then
+					rw_d <= '1';
 					new_data_d <= '0';
 					enable_d <= '1';
-					bytes_to_read_d <= bytes_to_read_q - 1;
+					bytes_to_read_d <= 1;
 					etat_futur <= REQUEST1;
 				else
+					--rw_d <= '0';
 					new_data_d <= '1';
 					enable_d <= '0';
 					count_delay_d <= delay;
 					etat_futur <= PAUSE_3;
 				end if;
-			else		
+			else
+				if(bytes_to_read_q = 1) then
+					enable_d <= '0';
+				else
+					enable_d <= '1';
+				end if;
 				new_data_d <= '0';
-				enable_d <= '1';
 				etat_futur <= REQUEST2;
 				out_data_d <= out_data_q;
 			end if;
@@ -269,8 +296,8 @@ begin
 				etat_futur <= PAUSE_3;
 			else
 				enable_d <= '1';
-				rw_d <= '1';
-				bytes_to_read_d <= 2;
+				rw_d <= '0';
+				bytes_to_write_d <= 2;
 				etat_futur <= START;
 			end if;
 	end case;
@@ -289,18 +316,32 @@ begin
 		count_delay_q <= 0;
 		rw_q <= '0';
 		new_data_q <= '0';
-	elsif(CLK='1' and CLK'event) then	
-		enable_q <= enable_d;
-		data_rd_q <= data_rd_d;
-		data_wr_q <= data_wr_d;
-		bytes_to_write_q <= bytes_to_write_d;
-		bytes_to_read_q <= bytes_to_read_d; 
-		ack_error_q <= ack_error_d;
-		out_data_q <= out_data_d;
-		count_delay_q <= count_delay_d;
-		rw_q <= rw_d;
-		new_data_q <= new_data_d;
-		etat_present <= etat_futur;
+	elsif(CLK='1' and CLK'event) then
+		if(CLK_I2C = '0' and CLK_I2C_PREC = '1') then
+			enable_q <= enable_d;
+			data_rd_q <= data_rd_d;
+			data_wr_q <= data_wr_d;
+			bytes_to_write_q <= bytes_to_write_d;
+			bytes_to_read_q <= bytes_to_read_d; 
+			ack_error_q <= ack_error_d;
+			out_data_q <= out_data_d;
+			count_delay_q <= count_delay_d;
+			rw_q <= rw_d;
+			new_data_q <= new_data_d;
+			etat_present <= etat_futur;
+		elsif(CLK_I2C = '1' and CLK_I2C_PREC = '0') then
+			enable_q <= enable_d;
+			data_rd_q <= data_rd_d;
+			data_wr_q <= data_wr_d;
+			bytes_to_write_q <= bytes_to_write_d;
+			bytes_to_read_q <= bytes_to_read_d; 
+			ack_error_q <= ack_error_d;
+			out_data_q <= out_data_d;
+			count_delay_q <= count_delay_d;
+			rw_q <= rw_d;
+			new_data_q <= new_data_d;
+			etat_present <= etat_futur;
+		end if;
 	else
 	end if;
 end process;

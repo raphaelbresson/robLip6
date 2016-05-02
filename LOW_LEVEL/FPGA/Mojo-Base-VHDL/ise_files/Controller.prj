@@ -1,4 +1,6 @@
-vhdl work "i2C_master.vhd"
+vhdl work "../../PWM/pwm_mgr.vhd"
+vhdl work "I2C.vhd"
+vhdl work "ReceveurOrdres.vhd"
 vhdl work "Lidar.vhd"
 vhdl work "Analog_in.vhd"
 vhdl work "Controlleur.vhd"

@@ -1,15 +1,16 @@
-Release 14.7 par P.20131013 (lin)
+Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-raphael-bresson::  Sun Apr 03 17:54:37 2016
+ORDI::  Mon May 02 01:54:57 2016
 
 par -filter
-/home/raphael/Desktop/Mojo-Base-VHDL/ise_files/iseconfig/filter.filter -w
--intstyle ise -ol high -mt off mojo_top_map.ncd mojo_top.ncd mojo_top.pcf 
+C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_
+files/iseconfig/filter.filter -w -intstyle ise -ol high -mt off mojo_top_map.ncd
+mojo_top.ncd mojo_top.pcf 
 
 
 Constraints file: mojo_top.pcf.
-Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "mojo_top" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -23,30 +24,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   308 out of  11,440    2%
-    Number used as Flip Flops:                 242
-    Number used as Latches:                     66
+  Number of Slice Registers:                   752 out of  11,440    6%
+    Number used as Flip Flops:                 494
+    Number used as Latches:                    258
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        378 out of   5,720    6%
-    Number used as logic:                      368 out of   5,720    6%
-      Number using O6 output only:             226
-      Number using O5 output only:              11
-      Number using O5 and O6:                  131
+  Number of Slice LUTs:                        622 out of   5,720   10%
+    Number used as logic:                      584 out of   5,720   10%
+      Number using O6 output only:             248
+      Number using O5 output only:             146
+      Number using O5 and O6:                  190
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:     10
-      Number with same-slice register load:      9
-      Number with same-slice carry load:         1
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:     29
+      Number with same-slice carry load:         9
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   148 out of   1,430   10%
-  Number of MUXCYs used:                       156 out of   2,860    5%
-  Number of LUT Flip Flop pairs used:          430
-    Number with an unused Flip Flop:           162 out of     430   37%
-    Number with an unused LUT:                  52 out of     430   12%
-    Number of fully used LUT-FF pairs:         216 out of     430   50%
+  Number of occupied Slices:                   279 out of   1,430   19%
+  Number of MUXCYs used:                       356 out of   2,860   12%
+  Number of LUT Flip Flop pairs used:          913
+    Number with an unused Flip Flop:           223 out of     913   24%
+    Number with an unused LUT:                 291 out of     913   31%
+    Number of fully used LUT-FF pairs:         399 out of     913   43%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -57,8 +58,9 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        16 out of     102   15%
-    Number of LOCed IOBs:                       16 out of      16  100%
+  Number of bonded IOBs:                        31 out of     102   30%
+    Number of LOCed IOBs:                       31 out of      31  100%
+    IOB Flip Flops:                              8
     IOB Latches:                                 4
 
 Specific Feature Utilization:
@@ -66,14 +68,14 @@ Specific Feature Utilization:
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       4 out of      16   25%
-    Number used as BUFGs:                        4
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
-  Number of OLOGIC2/OSERDES2s:                   4 out of     200    2%
-    Number used as OLOGIC2s:                     4
+  Number of OLOGIC2/OSERDES2s:                  12 out of     200    6%
+    Number used as OLOGIC2s:                    12
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
@@ -92,35 +94,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 13 secs 
+Finished initial Timing Analysis.  REAL time: 13 secs 
 
 Starting Router
 
 
-Phase  1  : 1849 unrouted;      REAL time: 6 secs 
+Phase  1  : 3097 unrouted;      REAL time: 13 secs 
 
-Phase  2  : 1593 unrouted;      REAL time: 7 secs 
+Phase  2  : 2542 unrouted;      REAL time: 14 secs 
 
-Phase  3  : 621 unrouted;      REAL time: 7 secs 
+Phase  3  : 888 unrouted;      REAL time: 17 secs 
 
-Phase  4  : 621 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 888 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 19 secs 
 
 Updating file: mojo_top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
-Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 9 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Total REAL time to Router completion: 22 secs 
+Total CPU time to Router completion: 22 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -138,21 +140,49 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   89 |  0.109     |  1.508      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |  156 |  0.648     |  2.039      |
++---------------------+--------------+------+------+------------+-------------+
+|avr_interface/serial |              |      |      |            |             |
+|    _rx/rst_inv_BUFG |  BUFGMUX_X2Y9| No   |   48 |  0.108     |  1.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |controle/lidar_i2c/e |              |      |      |            |             |
 |tat_present[3]_PWR_9 |              |      |      |            |             |
-|   4_o_Mux_85_o_BUFG | BUFGMUX_X2Y10| No   |    9 |  0.005     |  1.404      |
+|   4_o_Mux_91_o_BUFG |  BUFGMUX_X3Y6| No   |    9 |  0.013     |  1.404      |
 +---------------------+--------------+------+------+------------+-------------+
-|controle/lidar_i2c/G |              |      |      |            |             |
-|ND_91_o_PWR_87_o_OR_ |              |      |      |            |             |
-|           14_o_BUFG |  BUFGMUX_X3Y8| No   |    8 |  0.008     |  1.405      |
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|      _q[2]_Mux_30_o |         Local|      |    2 |  0.276     |  0.981      |
 +---------------------+--------------+------+------+------------+-------------+
-|avr_interface/serial |              |      |      |            |             |
-|    _rx/rst_inv_BUFG | BUFGMUX_X3Y16| No   |    2 |  0.007     |  1.402      |
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|      _q[2]_Mux_42_o |         Local|      |    2 |  0.187     |  1.181      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|     _q[2]_Mux_122_o |         Local|      |    2 |  0.183     |  1.337      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|     _q[2]_Mux_106_o |         Local|      |    2 |  0.000     |  1.681      |
 +---------------------+--------------+------+------+------------+-------------+
 |avr_interface/new_sa |              |      |      |            |             |
-|              mple_q |         Local|      |    4 |  0.640     |  2.155      |
+|              mple_q |         Local|      |    4 |  0.178     |  1.843      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|     _q[2]_Mux_138_o |         Local|      |    2 |  0.183     |  1.118      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|      _q[2]_Mux_90_o |         Local|      |    2 |  0.185     |  1.258      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|      _q[2]_Mux_74_o |         Local|      |    2 |  0.434     |  1.254      |
++---------------------+--------------+------+------+------------+-------------+
+|controle/gestion_ord |              |      |      |            |             |
+|res/etat_q[1]_indice |              |      |      |            |             |
+|      _q[2]_Mux_58_o |         Local|      |    2 |  0.043     |  1.059      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,8 +202,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    13.457ns|     6.543ns|       0|           0
-   50%                                      | HOLD        |     0.388ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    13.315ns|     6.685ns|       0|           0
+   50%                                      | HOLD        |     0.417ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -184,10 +214,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 10 secs 
-Total CPU time to PAR completion: 9 secs 
+Total REAL time to PAR completion: 24 secs 
+Total CPU time to PAR completion: 23 secs 
 
-Peak Memory Usage:  195 MB
+Peak Memory Usage:  315 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

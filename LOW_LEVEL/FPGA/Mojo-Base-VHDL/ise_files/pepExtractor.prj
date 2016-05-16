@@ -1,1 +1,1 @@
-work	"I2C.vhd"
+work	"../src/serial_rx.vhd"

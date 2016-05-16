@@ -40,9 +40,10 @@ entity Lidar is
            SCL : out  STD_LOGIC;
            SDA : inout  STD_LOGIC;
            DATA : out  STD_LOGIC_VECTOR(data_length - 1 downto 0);
-			  NEW_DATA : out std_logic;
-			  etat : out STD_LOGIC_VECTOR(3 downto 0);
-			  etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
+			  NEW_DATA : out std_logic
+			  -- debug
+			 -- etat : out STD_LOGIC_VECTOR(3 downto 0);
+			 -- etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
 			  );
 end Lidar;
 
@@ -76,15 +77,15 @@ architecture Behavioral of Lidar is
 	signal new_data_d, new_data_q : std_logic:='0';
 	signal clk_i2c, clk_i2c_prec : std_logic;
 begin
-
-WITH etat_present SELECT etatLidar <=
-	"000" WHEN INIT1,
-	"001" WHEN INIT2,
-	"010" WHEN START,
-	"011" WHEN HIGH_LOW_BYTES,
-	"100" WHEN REQUEST1,
-	"101" WHEN REQUEST2,
-	"111" WHEN OTHERS;
+--DEBUG
+--WITH etat_present SELECT etatLidar <=
+--	"000" WHEN INIT1,
+--	"001" WHEN INIT2,
+--	"010" WHEN START,
+--	"011" WHEN HIGH_LOW_BYTES,
+--	"100" WHEN REQUEST1,
+--	"101" WHEN REQUEST2,
+--	"111" WHEN OTHERS;
 
 DATA <= out_data_q;
 NEW_DATA <= new_data_q;
@@ -102,8 +103,9 @@ i2c_interface: entity work.i2c
 			SCL => SCL,
 			SDA => SDA,
 			CLK_I2C => clk_i2c,
-			CLK_I2C_PREC => clk_i2c_prec,
-			etat => etat
+			CLK_I2C_PREC => clk_i2c_prec
+			--debug
+			--etat => etat
 		);
 		
 delai:process(CLK)

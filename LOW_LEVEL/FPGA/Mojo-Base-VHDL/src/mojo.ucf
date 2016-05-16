@@ -2,20 +2,25 @@
 NET "clk" TNM_NET = clk;
 TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
 NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE;
-NET "cclk" CLOCK_DEDICATED_ROUTE = FALSE;
+
 # PlanAhead Generated physical constraints 
-NET "clk" LOC = P56;
-NET "rst_n" LOC = P38;
-NET "cclk" LOC = P70;
+NET "clk" LOC = P56;#clock 50 MHz
+NET "rst_n" LOC = P38;#reset general
+NET "cclk" LOC = P70;#clock 16MHz(AVR)
 
-NET "etat<0>" LOC = P111;
-NET "etat<1>" LOC = P112;
-NET "etat<2>" LOC = P101;
-NET "etat<3>" LOC = P102;
+######DEBUG##############
+#NET "etat<0>" LOC = P111;
+#NET "etat<1>" LOC = P112;
+#NET "etat<2>" LOC = P101;
+#NET "etat<3>" LOC = P102;
+#NET "etatLidar<0>" LOC = P116;
+#NET "etatLidar<1>" LOC = P117;
+#NET "etatLidar<2>" LOC = P118;
+NET "etat_sender<0>" LOC = P123;
+NET "etat_sender<1>" LOC = P124;
+NET "etat_sender<2>" LOC = p126;
 
-NET "etatLidar<0>" LOC = P116;
-NET "etatLidar<1>" LOC = P117;
-NET "etatLidar<2>" LOC = P118;
+#####LEDS################
 #NET "led<0>" LOC = P134;
 #NET "led<1>" LOC = P133;
 #NET "led<2>" LOC = P132;
@@ -25,22 +30,29 @@ NET "etatLidar<2>" LOC = P118;
 #NET "led<6>" LOC = P124;
 #NET "led<7>" LOC = P123;
 
+#####SERVOS##############
 NET "servo<0>" LOC = P57;
 NET "servo<1>" LOC = P58;
 NET "servo<2>" LOC = P66;
 NET "servo<3>" LOC = P67;
 NET "servo<4>" LOC = P74;
 NET "servo<5>" LOC = P75;
+NET "servo<6>" LOC=P80;#TOURELLE
 
-NET "fast_pwm<0>" LOC = P80;
-NET "fast_pwm<1>" LOC = P81;
+#####ROUES#################
+NET "fast_pwm<0>" LOC = P78;
+NET "fast_pwm<1>" LOC = P79;
 
-#NET "uart_tx" LOC = P14;
-#NET "uart_rx" LOC = P15;
 
+#####IMU###################
+NET "TX_IMU" LOC = P14;
+NET "RX_IMU" LOC = P15;
+
+#####I2C(LIDAR)############
 NET "scl<0>" LOC = p12;
 NET "sda<0>" LOC = p11;
 
+#####AVR###################
 NET "spi_mosi" LOC = P44;
 NET "spi_miso" LOC = P45;
 NET "spi_ss" LOC = P48;
@@ -49,7 +61,6 @@ NET "spi_channel<0>" LOC = P46;
 NET "spi_channel<1>" LOC = P61;
 NET "spi_channel<2>" LOC = P62;
 NET "spi_channel<3>" LOC = P65;
-
 NET "avr_tx" LOC = P55;
 NET "avr_rx" LOC = P59;
 NET "avr_rx_busy" LOC = P39;

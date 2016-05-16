@@ -50,7 +50,7 @@ signal rx_data,tx_data_d, tx_data_q : STD_LOGIC_VECTOR(7 downto 0);
 signal new_rx_data, new_tx_data_d, new_tx_data_q, tx_busy : STD_LOGIC;
 -- COMMANDE --
 type MOT is ARRAY(0 to 3) of STD_LOGIC_VECTOR(7 downto 0);
-constant BINARY_MODE: MOT := (X"43", X"157", X"98", X"00") ; -- #ob
+constant BINARY_MODE: MOT := (X"23", X"6F", X"62", X"00") ; -- #ob
 constant NB_BYTES : INTEGER := 4;
 -- Compteur
 signal cpt_d, cpt_q : INTEGER:=0;
@@ -62,7 +62,7 @@ signal roll_d, roll_q : MOT:=(others=>(others=>'0'));
 begin
 
 YAW <= yaw_q(0) & yaw_q(1) & yaw_q(2) & yaw_q(3);
-PITCH <= pitch_q(0) & pitch_q(2) & pitch_q(3);
+PITCH <= pitch_q(0) & pitch_q(1) & pitch_q(2) & pitch_q(3);
 ROLL <= roll_q(0) & roll_q(1) & roll_q(2) & roll_q(3);
 
 IMU_rx: entity work.serial_rx
@@ -118,9 +118,9 @@ begin
 			new_tx_data_d <= '1';
 			state_d <= INIT2;
 		when INIT2 =>
-			if(tx_busy='0' and new_tx_data_d <= '0') then
-				new_tx_data_d <= '0';
-				if(cpt_q < NB_BYTES) then
+			new_tx_data_d <= '0';
+			if(tx_busy='0' and new_tx_data_q = '0') then
+				if(cpt_q < NB_BYTES-1) then
 					cpt_d <= cpt_q + 1;
 					state_d <= INIT1;
 				elsif(new_rx_data = '1') then
@@ -136,7 +136,7 @@ begin
 		when RD_YAW2 =>
 			new_data_d <= '0';
 			if(new_rx_data='1') then
-				if(cpt_q < NB_BYTES) then
+				if(cpt_q < NB_BYTES-1) then
 					cpt_d <= cpt_q + 1;
 					state_d <= RD_YAW1;
 				else
@@ -153,7 +153,7 @@ begin
 		when RD_PITCH2 =>
 			new_data_d <= '0';
 			if(new_rx_data='1') then
-				if(cpt_q < NB_BYTES) then
+				if(cpt_q < NB_BYTES-1) then
 					cpt_d <= cpt_q + 1;
 					state_d <= RD_PITCH1;
 				else
@@ -164,10 +164,10 @@ begin
 		when RD_ROLL1 =>
 			new_data_d <= '0';
 			roll_d(cpt_q) <= rx_data;
-			state_d <= RD_PITCH2;
+			state_d <= RD_ROLL2;
 		when RD_ROLL2 =>
 			if(new_rx_data='1') then
-				if(cpt_q < NB_BYTES) then
+				if(cpt_q < NB_BYTES-1) then
 					cpt_d <= cpt_q + 1;
 					state_d <= RD_ROLL1;
 					new_data_d <= '0';
@@ -198,6 +198,7 @@ begin
 		roll_q <= (others=>(others=>'0'));
 		new_data_q <= '0';
 		state_q <= START;
+		cpt_q <= 0;
 	elsif(CLK='1' and CLK'event) then
 		tx_data_q <= tx_data_d;
 		new_tx_data_q <= new_tx_data_d;
@@ -206,6 +207,7 @@ begin
 		roll_q <= roll_d;
 		new_data_q <= new_data_d;
 		state_q <= state_d;
+		cpt_q <= cpt_d;
 	end if;
 end process;
 

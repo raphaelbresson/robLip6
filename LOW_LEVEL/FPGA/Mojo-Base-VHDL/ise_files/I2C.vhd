@@ -38,8 +38,9 @@ entity I2C is
 				SDA : inout  STD_LOGIC;
 				SCL : out  STD_LOGIC;
 				CLK_I2C : out STD_LOGIC;
-				CLK_I2C_PREC : out STD_LOGIC;
-				etat : out STD_LOGIC_VECTOR(3 downto 0)
+				CLK_I2C_PREC : out STD_LOGIC
+					-- debug
+				--etat : out STD_LOGIC_VECTOR(3 downto 0)
 			  );
 end I2C;
 
@@ -81,25 +82,25 @@ SCL <= scl_out_q;
 DATA_RX <= rx_q;
 BUSY <= busy_q;
 ERROR_ACK <= ack_error_q;
-
-WITH etat_present SELECT etat <=
-	"0000" WHEN IDLE,				-- 0
-	"0001" WHEN COMMAND1, 		-- 1
-	"0010" WHEN COMMAND2,		-- 2
-	"0011" WHEN SLV_ACK1_1,		-- 3
-	"0100" WHEN	SLV_ACK1_2,		-- 4				
-	"0101" WHEN	WR_DATA1,		-- 5
-	"0110" WHEN	WR_DATA2,		-- 6
-	"0111" WHEN	RD_DATA1,		-- 7
-	"1000" WHEN	RD_DATA2,		-- 8
-	"1001" WHEN	SLV_ACK2_1,		-- 9
-	"1010" WHEN	SLV_ACK2_2,		-- A
-	"1011" WHEN	MASTER_ACK1,	-- B
-	"1100" WHEN	MASTER_ACK2,	-- C
-	"1101" WHEN	STOP1,			-- D
-	"1110" WHEN	STOP2,			-- E
-	"1111" WHEN	STOP3,			-- F
-	"0000" WHEN RESTART;			-- 0
+--DEBUG
+--WITH etat_present SELECT etat <=
+--	"0000" WHEN IDLE,				-- 0
+--	"0001" WHEN COMMAND1, 		-- 1
+--	"0010" WHEN COMMAND2,		-- 2
+--	"0011" WHEN SLV_ACK1_1,		-- 3
+--	"0100" WHEN	SLV_ACK1_2,		-- 4				
+--	"0101" WHEN	WR_DATA1,		-- 5
+--	"0110" WHEN	WR_DATA2,		-- 6
+--	"0111" WHEN	RD_DATA1,		-- 7
+--	"1000" WHEN	RD_DATA2,		-- 8
+--	"1001" WHEN	SLV_ACK2_1,		-- 9
+--	"1010" WHEN	SLV_ACK2_2,		-- A
+--	"1011" WHEN	MASTER_ACK1,	-- B
+--	"1100" WHEN	MASTER_ACK2,	-- C
+--	"1101" WHEN	STOP1,			-- D
+--	"1110" WHEN	STOP2,			-- E
+--	"1111" WHEN	STOP3,			-- F
+--	"0000" WHEN RESTART;			-- 0
 
 gen_scl_comb:process(CLK,RST,data_tx,ADDR,RW_CMD,ENABLE,SDA,count_gen_scl_q,scl_q) 
 begin

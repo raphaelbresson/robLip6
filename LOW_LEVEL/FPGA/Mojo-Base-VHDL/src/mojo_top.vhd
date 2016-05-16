@@ -27,13 +27,17 @@ entity mojo_top is
 		-- I2C --
 		scl			: out 	std_logic_vector(0 downto 0);	-- horloges i2c
 		sda			: inout	std_logic_vector(0 downto 0);	-- datas i2c
-		-- UART non AVR --
-		--uart_rx		: in		std_logic;
-		--uart_tx		: out		std_logic
-		servo 		: out 	std_logic_vector(5 downto 0); -- sorties pwm des servo-moteurs du bras
+		-- PWM --
+		servo 		: out 	std_logic_vector(6 downto 0); -- sorties pwm des servomoteurs
 		fast_pwm		: out 	std_logic_vector(1 downto 0);  -- sorties pwm des roues
-		etat : out STD_LOGIC_VECTOR(3 downto 0);
-		etatLidar : out STD_LOGIC_VECTOR(2 downto 0)
+			--debug lidar
+		--etat : out STD_LOGIC_VECTOR(3 downto 0);
+		--etatLidar : out STD_LOGIC_VECTOR(2 downto 0);
+		-- debug sender
+		etat_sender : OUT STD_LOGIC_VECTOR(2 downto 0);
+		-- UART IMU
+		RX_IMU : in STD_LOGIC;
+		TX_IMU : out STD_LOGIC
 	);
 end mojo_top;
 
@@ -64,35 +68,6 @@ signal com_pwm : com_pwm_tab;
 
 begin
 
---uart_ind_rx	: entity work.serial_rx
---	generic map (
---		CLK_PER_BIT	=> 434,
---		CTR_SIZE	=> 9
---	)
---	port map (
---		clk			=> clk,
---		rst			=> rst,
---		rx			=> uart_rx,
---		data		=> uart_data_rx,
---		new_data	=> uart_new_rx
---	);
-----
---uart_ind_tx	: entity work.serial_tx
---	generic map (
---		CLK_PER_BIT	=>	434,
---		CTR_SIZE	=>	9
---	)
---	port map (
---		clk			=> clk,
---		rst			=> rst,
---		tx			=> uart_tx,
---		tx_block	=> '0',
---		busy		=> uart_tx_busy,
---		data		=> uart_data_tx,
---		new_data	=> uart_new_tx
---	);
-
-
 controle: entity work.controller
 	port map(
 					clk => clk,
@@ -119,45 +94,18 @@ controle: entity work.controller
 					-- I2C --
 					scl => scl,
 					sda => sda,
-					etat => etat,
+					--servos
 					servo_out => servo,
 					fast_pwm => fast_pwm,
-					etatLidar => etatLidar
+					-- debug lidar --
+					--	etat => etat,
+					--etatLidar => etatLidar,
+					etat_sender => etat_sender,
+					--IMU
+					RX_IMU => RX_IMU,
+					TX_IMU => TX_IMU
 				);
 
--- sorties pwm des servo-moteurs
--- pins: P57, P58, P66, P67, P74, P75 
---gen_servo: for i in 0 to 5 generate
---	pwm_servo : entity work.pwm_mgr
---		generic map(
---							com_length => 10, -- 10 bits pour la valeur commande
---							cmp_length => 20,  -- 20 bits pour avoir un fréquence de 50Hz
---							offset => 165
---			)
---		port map(
---						clk => clk,
---						rst => rst,
---						com => com_pwm(i)(9 downto 2) & "11",
---						pwm => servo(i)
---		);
---end generate;
-
--- sorties pwm pour les roues
--- pins: P80, P81
---gen_pwms_roues : for i in 6 to 7 generate
---	pwm_base: entity work.pwm_mgr
---		generic map(
---						com_length => 8,  -- 8 bits pour la valeur commande
---						cmp_length => 16,	 -- 16 bits pour avoir une fréquence de 1kHz
---						offset => 0
---					)
---		port map(
---						clk => clk,
---						rst => rst,
---						com => com_pwm(i)(9 downto 2),
---						pwm => fast_pwm(i-6)
---					);
---end generate;
 		
 rst	<= NOT rst_n;						-- generate non-inverted reset signal from rst_n button
 

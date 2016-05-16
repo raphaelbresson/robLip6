@@ -1,22 +1,38 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe" -prj "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_beh.prj" "work.tb_lidar" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe" -prj "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_controller_beh.prj" "work.tb_controller" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/../../PWM/pwm_mgr.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/../src/serial_tx.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/../src/serial_rx.vhd" into library work
 Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/I2C.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/ReceveurOrdres.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/ReceveurOrdres.vhd" Line 62: Actual for formal port com is neither a static name nor a globally static expression
 Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Lidar.vhd" into library work
-Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/IMU.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Analog_in.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Controlleur.vhd" into library work
+Parsing VHDL file "C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_controller.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
+Compiling architecture behavioral of entity Analog_in [analog_in_default]
 Compiling architecture behavioral of entity I2C [i2c_default]
-Compiling architecture behavioral of entity Lidar [\Lidar(16,1000000)\]
-Compiling architecture behavior of entity tb_lidar
+Compiling architecture behavioral of entity Lidar [lidar_default]
+Compiling architecture rtl of entity serial_rx [\serial_rx(868,10)\]
+Compiling architecture rtl of entity serial_tx [\serial_tx(868,10)\]
+Compiling architecture behavioral of entity IMU [imu_default]
+Compiling architecture behavioral of entity pwm_mgr [\pwm_mgr(10,20,165)\]
+Compiling architecture behavioral of entity pwm_mgr [\pwm_mgr(8,16,0)\]
+Compiling architecture behavioral of entity ReceveurOrdres [receveurordres_default]
+Compiling architecture behavioral of entity Controller [\Controller(1,1,7,2)\]
+Compiling architecture behavior of entity tb_controller
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 8 VHDL Units
-Built simulation executable C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.exe
-Fuse Memory Usage: 34204 KB
-Fuse CPU Usage: 1062 ms
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.exe
+Fuse Memory Usage: 36712 KB
+Fuse CPU Usage: 1890 ms

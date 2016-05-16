@@ -52,8 +52,12 @@ ARCHITECTURE behavior OF tb_mojo_top IS
          avr_tx : IN  std_logic;
          avr_rx : OUT  std_logic;
          avr_rx_busy : IN  std_logic;
-         scl : INOUT  std_logic_vector(0 downto 0);
-         sda : INOUT  std_logic_vector(0 downto 0)
+         scl : OUT  std_logic_vector(0 downto 0);
+         sda : INOUT  std_logic_vector(0 downto 0);
+			servo 		: out 	std_logic_vector(6 downto 0); 
+			fast_pwm		: out 	std_logic_vector(1 downto 0);
+			RX_IMU : in STD_LOGIC;
+			TX_IMU : out STD_LOGIC
         );
     END COMPONENT;
     
@@ -68,6 +72,10 @@ ARCHITECTURE behavior OF tb_mojo_top IS
    signal avr_tx : std_logic := '0';
    signal avr_rx_busy : std_logic := '0';
 
+	signal servo : std_logic_vector(6 downto 0):=(others=>'0'); 
+	signal fast_pwm	: std_logic_vector(1 downto 0):=(others=>'0');
+	signal RX_IMU : STD_LOGIC:='0';
+	signal TX_IMU : STD_LOGIC:='0';
 	--BiDirs
    signal scl : std_logic_vector(0 downto 0);
    signal sda : std_logic_vector(0 downto 0);
@@ -97,7 +105,11 @@ BEGIN
           avr_rx => avr_rx,
           avr_rx_busy => avr_rx_busy,
           scl => scl,
-          sda => sda
+          sda => sda,
+			 servo => servo,
+			 fast_pwm=>fast_pwm,
+			 RX_IMU => RX_IMU,
+			 TX_IMU => TX_IMU
         );
 
    -- Clock process definitions

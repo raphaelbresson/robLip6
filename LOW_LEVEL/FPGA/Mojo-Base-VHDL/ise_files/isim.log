@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Raf\Desktop\RobLip6\proj\rob\robLip6\LOW_LEVEL\FPGA\Mojo-Base-VHDL\ise_files\tb_lidar_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_lidar_isim_beh.wdb 
+Running: C:\Users\Raf\Desktop\RobLip6\proj\rob\robLip6\LOW_LEVEL\FPGA\Mojo-Base-VHDL\ise_files\tb_controller_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/tb_controller_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,6 +10,15 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(0)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(1)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(2)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(3)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(4)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(5)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(6)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_pwms_roues(7)\/pwm_base/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_pwms_roues(8)\/pwm_base/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
 Finished circuit initialization process.
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
@@ -18,6 +27,14 @@ WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for 
 This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(0)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(1)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(2)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(3)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(4)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(5)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_servo(6)\/pwm_servo/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_pwms_roues(7)\/pwm_base/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_controller/uut/gestion_ordres/\gen_pwms_roues(8)\/pwm_base/ : Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
 Finished circuit initialization process.
-# run 1ms
-# run 100ms
+# run 100us

@@ -1,18 +1,15 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon May 02 01:54:50 2016
+// Written by: Map P.20131013 on Fri May 13 22:42:47 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "P56" LEVEL 1;
-COMP "fast_pwm<0>" LOCATE = SITE "P80" LEVEL 1;
-COMP "fast_pwm<1>" LOCATE = SITE "P81" LEVEL 1;
+COMP "fast_pwm<0>" LOCATE = SITE "P78" LEVEL 1;
+COMP "fast_pwm<1>" LOCATE = SITE "P79" LEVEL 1;
 COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
-PIN cclk_pin<0> = BEL "cclk" PINNAME PAD;
-PIN "cclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "etat<0>" LOCATE = SITE "P111" LEVEL 1;
-COMP "etat<1>" LOCATE = SITE "P112" LEVEL 1;
-COMP "etat<2>" LOCATE = SITE "P101" LEVEL 1;
-COMP "etat<3>" LOCATE = SITE "P102" LEVEL 1;
+COMP "etat_sender<0>" LOCATE = SITE "P123" LEVEL 1;
+COMP "etat_sender<1>" LOCATE = SITE "P124" LEVEL 1;
+COMP "etat_sender<2>" LOCATE = SITE "P126" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
 PIN rst_n_pin<0> = BEL "rst_n" PINNAME PAD;
 PIN "rst_n_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
@@ -22,38 +19,46 @@ COMP "spi_channel<1>" LOCATE = SITE "P61" LEVEL 1;
 COMP "spi_channel<2>" LOCATE = SITE "P62" LEVEL 1;
 COMP "spi_channel<3>" LOCATE = SITE "P65" LEVEL 1;
 COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "RX_IMU" LOCATE = SITE "P15" LEVEL 1;
+COMP "TX_IMU" LOCATE = SITE "P14" LEVEL 1;
 COMP "sda<0>" LOCATE = SITE "P11" LEVEL 1;
 COMP "scl<0>" LOCATE = SITE "P12" LEVEL 1;
 COMP "avr_rx" LOCATE = SITE "P59" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
-COMP "etatLidar<0>" LOCATE = SITE "P116" LEVEL 1;
-COMP "etatLidar<1>" LOCATE = SITE "P117" LEVEL 1;
-COMP "etatLidar<2>" LOCATE = SITE "P118" LEVEL 1;
 COMP "servo<0>" LOCATE = SITE "P57" LEVEL 1;
 COMP "servo<1>" LOCATE = SITE "P58" LEVEL 1;
 COMP "servo<2>" LOCATE = SITE "P66" LEVEL 1;
 COMP "servo<3>" LOCATE = SITE "P67" LEVEL 1;
 COMP "servo<4>" LOCATE = SITE "P74" LEVEL 1;
 COMP "servo<5>" LOCATE = SITE "P75" LEVEL 1;
+COMP "servo<6>" LOCATE = SITE "P80" LEVEL 1;
 COMP "spi_miso" LOCATE = SITE "P45" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
-        "controle/Etat_present_FSM_FFd3" BEL "controle/Etat_present_FSM_FFd1"
-        BEL "controle/tx_data_q_7" BEL "controle/tx_data_q_6" BEL
+TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd1" BEL
+        "controle/Etat_present_FSM_FFd2" BEL "controle/Etat_present_FSM_FFd3"
+        BEL "controle/count_delay_q_13" BEL "controle/count_delay_q_12" BEL
+        "controle/count_delay_q_11" BEL "controle/count_delay_q_10" BEL
+        "controle/count_delay_q_9" BEL "controle/count_delay_q_8" BEL
+        "controle/count_delay_q_7" BEL "controle/count_delay_q_6" BEL
+        "controle/count_delay_q_5" BEL "controle/count_delay_q_4" BEL
+        "controle/count_delay_q_3" BEL "controle/count_delay_q_2" BEL
+        "controle/count_delay_q_1" BEL "controle/count_delay_q_0" BEL
+        "controle/tx_data_q_7" BEL "controle/tx_data_q_6" BEL
         "controle/tx_data_q_5" BEL "controle/tx_data_q_4" BEL
         "controle/tx_data_q_3" BEL "controle/tx_data_q_2" BEL
         "controle/tx_data_q_1" BEL "controle/tx_data_q_0" BEL
-        "controle/enable_recept_q" BEL "controle/byte_counter_q_3" BEL
-        "controle/frame_write_2_0" BEL "controle/i2c_datas_q_0_15" BEL
-        "controle/i2c_datas_q_0_14" BEL "controle/i2c_datas_q_0_13" BEL
-        "controle/i2c_datas_q_0_12" BEL "controle/i2c_datas_q_0_11" BEL
-        "controle/i2c_datas_q_0_10" BEL "controle/i2c_datas_q_0_9" BEL
-        "controle/i2c_datas_q_0_8" BEL "controle/i2c_datas_q_0_7" BEL
-        "controle/i2c_datas_q_0_6" BEL "controle/i2c_datas_q_0_5" BEL
-        "controle/i2c_datas_q_0_4" BEL "controle/i2c_datas_q_0_3" BEL
-        "controle/i2c_datas_q_0_2" BEL "controle/i2c_datas_q_0_1" BEL
-        "controle/i2c_datas_q_0_0" BEL "controle/new_tx_data_q" BEL
+        "controle/enable_recept_q" BEL "controle/byte_counter_q_4" BEL
+        "controle/byte_counter_q_3" BEL "controle/frame_write_19_0" BEL
+        "controle/i2c_datas_q_0_15" BEL "controle/i2c_datas_q_0_14" BEL
+        "controle/i2c_datas_q_0_13" BEL "controle/i2c_datas_q_0_12" BEL
+        "controle/i2c_datas_q_0_11" BEL "controle/i2c_datas_q_0_10" BEL
+        "controle/i2c_datas_q_0_9" BEL "controle/i2c_datas_q_0_8" BEL
+        "controle/i2c_datas_q_0_7" BEL "controle/i2c_datas_q_0_6" BEL
+        "controle/i2c_datas_q_0_5" BEL "controle/i2c_datas_q_0_4" BEL
+        "controle/i2c_datas_q_0_3" BEL "controle/i2c_datas_q_0_2" BEL
+        "controle/i2c_datas_q_0_1" BEL "controle/i2c_datas_q_0_0" BEL
+        "controle/new_tx_data_q" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd2" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd3" BEL
         "controle/lidar_i2c/etat_present_FSM_FFd1" BEL
@@ -83,8 +88,7 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         BEL "controle/lidar_i2c/data_rd_q_3" BEL
         "controle/lidar_i2c/data_rd_q_2" BEL "controle/lidar_i2c/data_rd_q_1"
         BEL "controle/lidar_i2c/data_rd_q_0" BEL
-        "controle/lidar_i2c/data_wr_q_2" BEL "controle/lidar_i2c/data_wr_q_0"
-        BEL "controle/lidar_i2c/count_delay_q_31" BEL
+        "controle/lidar_i2c/count_delay_q_31" BEL
         "controle/lidar_i2c/count_delay_q_30" BEL
         "controle/lidar_i2c/count_delay_q_29" BEL
         "controle/lidar_i2c/count_delay_q_28" BEL
@@ -197,22 +201,14 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "avr_interface/sample_channel_q_0" BEL "avr_interface/new_sample_q"
         BEL "controle/gestion_ordres/etat_q_FSM_FFd1" BEL
         "controle/gestion_ordres/etat_q_FSM_FFd2" BEL
-        "controle/gestion_ordres/memoire_q_1_7" BEL
-        "controle/gestion_ordres/memoire_q_1_6" BEL
-        "controle/gestion_ordres/memoire_q_1_5" BEL
-        "controle/gestion_ordres/memoire_q_1_4" BEL
-        "controle/gestion_ordres/memoire_q_1_3" BEL
-        "controle/gestion_ordres/memoire_q_1_2" BEL
-        "controle/gestion_ordres/memoire_q_1_1" BEL
-        "controle/gestion_ordres/memoire_q_1_0" BEL
-        "controle/gestion_ordres/memoire_q_2_7" BEL
-        "controle/gestion_ordres/memoire_q_2_6" BEL
-        "controle/gestion_ordres/memoire_q_2_5" BEL
-        "controle/gestion_ordres/memoire_q_2_4" BEL
-        "controle/gestion_ordres/memoire_q_2_3" BEL
-        "controle/gestion_ordres/memoire_q_2_2" BEL
-        "controle/gestion_ordres/memoire_q_2_1" BEL
-        "controle/gestion_ordres/memoire_q_2_0" BEL
+        "controle/gestion_ordres/memoire_q_8_7" BEL
+        "controle/gestion_ordres/memoire_q_8_6" BEL
+        "controle/gestion_ordres/memoire_q_8_5" BEL
+        "controle/gestion_ordres/memoire_q_8_4" BEL
+        "controle/gestion_ordres/memoire_q_8_3" BEL
+        "controle/gestion_ordres/memoire_q_8_2" BEL
+        "controle/gestion_ordres/memoire_q_8_1" BEL
+        "controle/gestion_ordres/memoire_q_8_0" BEL
         "controle/gestion_ordres/memoire_q_0_7" BEL
         "controle/gestion_ordres/memoire_q_0_6" BEL
         "controle/gestion_ordres/memoire_q_0_5" BEL
@@ -221,6 +217,30 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/memoire_q_0_2" BEL
         "controle/gestion_ordres/memoire_q_0_1" BEL
         "controle/gestion_ordres/memoire_q_0_0" BEL
+        "controle/gestion_ordres/memoire_q_2_7" BEL
+        "controle/gestion_ordres/memoire_q_2_6" BEL
+        "controle/gestion_ordres/memoire_q_2_5" BEL
+        "controle/gestion_ordres/memoire_q_2_4" BEL
+        "controle/gestion_ordres/memoire_q_2_3" BEL
+        "controle/gestion_ordres/memoire_q_2_2" BEL
+        "controle/gestion_ordres/memoire_q_2_1" BEL
+        "controle/gestion_ordres/memoire_q_2_0" BEL
+        "controle/gestion_ordres/memoire_q_3_7" BEL
+        "controle/gestion_ordres/memoire_q_3_6" BEL
+        "controle/gestion_ordres/memoire_q_3_5" BEL
+        "controle/gestion_ordres/memoire_q_3_4" BEL
+        "controle/gestion_ordres/memoire_q_3_3" BEL
+        "controle/gestion_ordres/memoire_q_3_2" BEL
+        "controle/gestion_ordres/memoire_q_3_1" BEL
+        "controle/gestion_ordres/memoire_q_3_0" BEL
+        "controle/gestion_ordres/memoire_q_1_7" BEL
+        "controle/gestion_ordres/memoire_q_1_6" BEL
+        "controle/gestion_ordres/memoire_q_1_5" BEL
+        "controle/gestion_ordres/memoire_q_1_4" BEL
+        "controle/gestion_ordres/memoire_q_1_3" BEL
+        "controle/gestion_ordres/memoire_q_1_2" BEL
+        "controle/gestion_ordres/memoire_q_1_1" BEL
+        "controle/gestion_ordres/memoire_q_1_0" BEL
         "controle/gestion_ordres/memoire_q_4_7" BEL
         "controle/gestion_ordres/memoire_q_4_6" BEL
         "controle/gestion_ordres/memoire_q_4_5" BEL
@@ -237,14 +257,6 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/memoire_q_5_2" BEL
         "controle/gestion_ordres/memoire_q_5_1" BEL
         "controle/gestion_ordres/memoire_q_5_0" BEL
-        "controle/gestion_ordres/memoire_q_3_7" BEL
-        "controle/gestion_ordres/memoire_q_3_6" BEL
-        "controle/gestion_ordres/memoire_q_3_5" BEL
-        "controle/gestion_ordres/memoire_q_3_4" BEL
-        "controle/gestion_ordres/memoire_q_3_3" BEL
-        "controle/gestion_ordres/memoire_q_3_2" BEL
-        "controle/gestion_ordres/memoire_q_3_1" BEL
-        "controle/gestion_ordres/memoire_q_3_0" BEL
         "controle/gestion_ordres/memoire_q_7_7" BEL
         "controle/gestion_ordres/memoire_q_7_6" BEL
         "controle/gestion_ordres/memoire_q_7_5" BEL
@@ -261,6 +273,7 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/memoire_q_6_2" BEL
         "controle/gestion_ordres/memoire_q_6_1" BEL
         "controle/gestion_ordres/memoire_q_6_0" BEL
+        "controle/gestion_ordres/indice_q_3" BEL
         "controle/gestion_ordres/indice_q_2" BEL
         "controle/gestion_ordres/indice_q_1" BEL
         "controle/gestion_ordres/indice_q_0" BEL
@@ -272,6 +285,27 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/data_q_2" BEL
         "controle/gestion_ordres/data_q_1" BEL
         "controle/gestion_ordres/data_q_0" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/pwm_q" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_19" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_18" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_17" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_16" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_servo[6].pwm_servo/cmp_q_0" BEL
         "controle/gestion_ordres/gen_servo[5].pwm_servo/pwm_q" BEL
         "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_19" BEL
         "controle/gestion_ordres/gen_servo[5].pwm_servo/cmp_q_18" BEL
@@ -398,6 +432,23 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_2" BEL
         "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_1" BEL
         "controle/gestion_ordres/gen_servo[0].pwm_servo/cmp_q_0" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/pwm_q" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_15" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_14" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_13" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_12" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_11" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_10" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_9" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_8" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_7" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_6" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_5" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_4" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_3" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_2" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_1" BEL
+        "controle/gestion_ordres/gen_pwms_roues[8].pwm_base/cmp_q_0" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/pwm_q" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_15" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_14" BEL
@@ -415,23 +466,54 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_2" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_1" BEL
         "controle/gestion_ordres/gen_pwms_roues[7].pwm_base/cmp_q_0" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/pwm_q" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_15" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_14" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_13" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_12" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_11" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_10" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_9" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_8" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_7" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_6" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_5" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_4" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_3" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_2" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_1" BEL
-        "controle/gestion_ordres/gen_pwms_roues[6].pwm_base/cmp_q_0" BEL
+        "controle/Gestion_IMU/state_q_FSM_FFd2" BEL
+        "controle/Gestion_IMU/state_q_FSM_FFd3" BEL
+        "controle/Gestion_IMU/state_q_FSM_FFd1" BEL
+        "controle/Gestion_IMU/tx_data_q_6" BEL
+        "controle/Gestion_IMU/tx_data_q_2" BEL
+        "controle/Gestion_IMU/tx_data_q_1" BEL
+        "controle/Gestion_IMU/tx_data_q_0" BEL "controle/Gestion_IMU/cpt_q_2"
+        BEL "controle/Gestion_IMU/cpt_q_1" BEL "controle/Gestion_IMU/cpt_q_0"
+        BEL "controle/Gestion_IMU/IMU_rx/bit_ctr_q_2" BEL
+        "controle/Gestion_IMU/IMU_rx/bit_ctr_q_1" BEL
+        "controle/Gestion_IMU/IMU_rx/bit_ctr_q_0" BEL
+        "controle/Gestion_IMU/IMU_rx/state_q_FSM_FFd1" BEL
+        "controle/Gestion_IMU/IMU_rx/state_q_FSM_FFd2" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_9" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_8" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_7" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_6" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_5" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_4" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_3" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_2" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_1" BEL
+        "controle/Gestion_IMU/IMU_rx/ctr_q_0" BEL
+        "controle/Gestion_IMU/IMU_rx/new_data_q" BEL
+        "controle/Gestion_IMU/IMU_rx/rx_q" BEL
+        "controle/Gestion_IMU/IMU_tx/bit_ctr_q_2" BEL
+        "controle/Gestion_IMU/IMU_tx/bit_ctr_q_1" BEL
+        "controle/Gestion_IMU/IMU_tx/bit_ctr_q_0" BEL
+        "controle/Gestion_IMU/IMU_tx/state_q_FSM_FFd1" BEL
+        "controle/Gestion_IMU/IMU_tx/state_q_FSM_FFd2" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_9" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_8" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_7" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_6" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_5" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_4" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_3" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_2" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_1" BEL
+        "controle/Gestion_IMU/IMU_tx/ctr_q_0" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_6" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_5" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_4" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_3" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_2" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_1" BEL
+        "controle/Gestion_IMU/IMU_tx/data_q_0" BEL
+        "controle/Gestion_IMU/IMU_tx/tx_q" BEL
         "avr_interface/serial_tx/bit_ctr_q_2" BEL
         "avr_interface/serial_tx/bit_ctr_q_1" BEL
         "avr_interface/serial_tx/bit_ctr_q_0" BEL
@@ -496,8 +578,10 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         BEL "controle/lidar_i2c/rw_q" BEL
         "controle/lidar_i2c/i2c_interface/sda_q" BEL
         "controle/lidar_i2c/i2c_interface/ack_error_q" BEL
-        "avr_interface/byte_ct_q" BEL "avr_interface/spi_slave/miso_q" BEL
-        "controle/lidar_i2c/ack_error_q" BEL "controle/byte_counter_q_31_C_31"
+        "avr_interface/byte_ct_q" BEL "controle/Gestion_IMU/new_tx_data_q" BEL
+        "avr_interface/spi_slave/miso_q" BEL "controle/lidar_i2c/ack_error_q"
+        BEL "controle/lidar_i2c/data_wr_q_2" BEL
+        "controle/lidar_i2c/data_wr_q_0" BEL "controle/byte_counter_q_31_C_31"
         BEL "controle/byte_counter_q_31_P_31" BEL
         "controle/byte_counter_q_2_C_2" BEL "controle/byte_counter_q_2_P_2"
         BEL "controle/byte_counter_q_1_C_1" BEL
@@ -507,11 +591,7 @@ TIMEGRP clk = BEL "controle/Etat_present_FSM_FFd2" BEL
         BEL "controle/lidar_i2c/count_delay_q_2_C_2" BEL
         "controle/lidar_i2c/count_delay_q_2_P_2" BEL
         "controle/lidar_i2c/i2c_interface/scl_q_C" BEL
-        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL
-        "controle/lidar_i2c/etat_present_FSM_FFd3_1" BEL
-        "controle/lidar_i2c/etat_present_FSM_FFd1_1" BEL
-        "controle/lidar_i2c/etat_present_FSM_FFd2_1" BEL
-        "controle/lidar_i2c/etat_present_FSM_FFd4_1" BEL "clk_BUFGP/BUFG";
+        "controle/lidar_i2c/i2c_interface/scl_q_P" BEL "clk_BUFGP/BUFG";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

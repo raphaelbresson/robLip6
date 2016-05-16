@@ -38,7 +38,7 @@ public class ControlAction extends JPanel {
 		for(Integer i = 0; i < this.nb_actionneurs ; i++)
 		{
 			result.add(this.actionneurs[i].getValue()+10);
-			System.out.println("value:" + this.actionneurs[i].getValue());
+			//System.out.println("value:" + this.actionneurs[i].getValue());
 		}
 		return result;
 	}

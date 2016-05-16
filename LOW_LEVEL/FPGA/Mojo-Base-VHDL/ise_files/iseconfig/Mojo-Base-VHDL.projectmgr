@@ -8,16 +8,17 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Global - Behavioral C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|Global.vhd/actionneurs - ActionControlleur - Behavioral</ClosedNode>
-         <ClosedNode>/mojo_top - RTL C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|src|mojo_top.vhd/avr_interface - avr_interface - RTL</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|src|mojo_top.vhd/controle - Controller - Behavioral/Gestion_IMU - IMU - Behavioral</ClosedNode>
+         <ClosedNode>/mojo_top - RTL C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|src|mojo_top.vhd/controle - Controller - Behavioral/lidar_i2c - Lidar - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>controle - Controller - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</SelectedItem>
+         <SelectedItem>lidar_i2c - Lidar - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Lidar.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ce000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ce0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>controle - Controller - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Controlleur.vhd)</CurrentItem>
+      <CurrentItem>lidar_i2c - Lidar - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/Mojo-Base-VHDL/ise_files/Lidar.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -42,7 +43,7 @@
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000aa00000001000000000000009d0000000100000000000000660000000100000000000000d00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ActionControlleur.vhd</CurrentItem>
+      <CurrentItem>Analog_in.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -65,13 +66,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Create Schematic Symbol</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Create Schematic Symbol</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -81,12 +82,61 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/tb_IMU - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_IMU.vhd</ClosedNode>
+         <ClosedNode>/tb_controller - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_controller.vhd/uut - Controller - Behavioral/Gestion_IMU - IMU - Behavioral</ClosedNode>
+         <ClosedNode>/tb_i2c_master - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_i2c_master.vhd</ClosedNode>
+         <ClosedNode>/tb_lidar - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_lidar.vhd</ClosedNode>
+         <ClosedNode>/tb_mojo_top - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_mojo_top.vhd/uut - mojo_top - RTL/controle - Controller - Behavioral</ClosedNode>
+         <ClosedNode>/tb_mojo_top - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_mojo_top.vhd/uut - mojo_top - RTL/controle - Controller - Behavioral/Gestion_IMU - IMU - Behavioral</ClosedNode>
+         <ClosedNode>/tb_mojo_top - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_mojo_top.vhd/uut - mojo_top - RTL/controle - Controller - Behavioral/gestion_ordres - ReceveurOrdres - Behavioral</ClosedNode>
+         <ClosedNode>/tb_mojo_top - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|Mojo-Base-VHDL|ise_files|tb_mojo_top.vhd/uut - mojo_top - RTL/controle - Controller - Behavioral/lidar_i2c - Lidar - Behavioral</ClosedNode>
+         <ClosedNode>/tb_pwm_mgr - behavior C:|Users|Raf|Desktop|RobLip6|proj|rob|robLip6|LOW_LEVEL|FPGA|PWM|tb_pwm_mgr.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>pwm_servo - pwm_mgr - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/PWM/pwm_mgr.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ce000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ce0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>pwm_servo - pwm_mgr - Behavioral (C:/Users/Raf/Desktop/RobLip6/proj/rob/robLip6/LOW_LEVEL/FPGA/PWM/pwm_mgr.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Utilities</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Utilities</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
 </Project>

@@ -1,41 +1,8 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon May 02 01:55:54 2016
+Fri May 13 22:43:44 2016
 
 drc -z mojo_top.ncd mojo_top.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_30_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_42_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_122_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_106_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_138_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_90_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_74_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   controle/gestion_ordres/etat_q[1]_indice_q[2]_Mux_58_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-DRC detected 0 errors and 8 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

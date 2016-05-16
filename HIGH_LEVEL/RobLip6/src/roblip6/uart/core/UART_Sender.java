@@ -1,15 +1,41 @@
 package roblip6.uart.core;
 import java.io.OutputStream;	
 import java.util.concurrent.Semaphore;
-
+/**
+ * <b>Classe d'envoi pour la communication UART avec le HIGH LEVEL</b> 
+ * @author Raf
+ * @version 1.0
+ */
 public class UART_Sender implements Runnable {
-	
+	/**
+	 * True pour terminer
+	 */
 	private Boolean terminer;
+	/**
+	 * Stream de sortie
+	 */
 	private OutputStream out;
+	/**
+	 * buffer d'envoi
+	 */
 	private Integer trame[];
+	/**
+	 * Taille de la trame d'envoi
+	 */
 	private Integer tailleTrame;
+	/**
+	 * Curseur déterminant l'envoi courant
+	 */
 	private Integer curseur;
+	/**
+	 * Mutexes pour chaque case du buffer
+	 */
 	private final Semaphore mutexes_trame[];
+	/**
+	 * Constructeur en fonction d'un stream d'entrée et de la taille de la trame
+	 * @param out stream d'entrée
+	 * @param tailleTrame taille de la trame
+	 */
 	public UART_Sender(OutputStream out, Integer tailleTrame)
 	{
 		this.terminer = false;
@@ -24,12 +50,18 @@ public class UART_Sender implements Runnable {
 		}
 		this.curseur = tailleTrame - 1;
 	}
-	
+	/**
+	 * Retourne la taille du buffer d'écriture
+	 * @return la taille de la trame de sortie
+	 */
 	public Integer getTailleTrame()
 	{
 		return this.tailleTrame;
 	}
 	
+	/**
+	 * Ecriture asynchrone
+	 */
 	@Override
 	public void run()
 	{
@@ -55,6 +87,12 @@ public class UART_Sender implements Runnable {
 		}
 	}
 	
+	/**
+	 * Modifier l'élément placé à la case i et remplacer sa valeur par e.
+	 * @param e nouvelle valeur
+	 * @param i index
+	 * @throws Exception
+	 */
 	public void setElement(Integer e, Integer i) throws Exception
 	{
 		this.mutexes_trame[i].acquire();
@@ -62,6 +100,9 @@ public class UART_Sender implements Runnable {
 		this.mutexes_trame[i].release();
 	}
 	
+	/**
+	 * Terminer proprement
+	 */
 	public void setTerminer()
 	{
 		this.terminer = true;

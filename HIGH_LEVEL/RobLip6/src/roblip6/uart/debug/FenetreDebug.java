@@ -17,7 +17,7 @@ public class FenetreDebug extends JFrame
 	{
 		this.setTitle("Fenetre de debug de l'interface UART");
 		this.terminer = false;
-		this.uart = new UART_Communicator("COM3");
+		this.uart = new UART_Communicator("COM6");
 		this.setSize(800, 600);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -45,10 +45,10 @@ public class FenetreDebug extends JFrame
 	{
 		while(!terminer)
 		{
-			Vector<Integer> temp = this.uart.readData();
+			Vector<Number> temp = this.uart.readData();
 			this.capts.setValues(temp);
 			this.uart.sendData(this.actions.getActions());
-			System.out.println("lidar=");
+			System.out.println("lidar="+ temp.elementAt(1));
 		}
 	}
 	

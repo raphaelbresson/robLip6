@@ -32,11 +32,11 @@ public class VueCapteurs extends JPanel {
 		this.add(global);
 	}
 	
-	public void setValues(Vector<Integer> values)
+	public void setValues(Vector<Number> values)
 	{
 		for(Integer i=0; i< values.size() ; i++)
 		{
-			this.capteurs[i].setValue(values.elementAt(i));
+			this.capteurs[i].setValue(values.elementAt(i).intValue());
 		}
 	}
 }

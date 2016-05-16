@@ -63,7 +63,7 @@ begin
 		
 	end process;
 	
-	proc:process(CLK) -- mise à jour des registres pour la sortie
+	proc:process(CLK,RST) -- mise à jour des registres pour la sortie
 	begin
 		if(RST = '1') then -- reset asynchrone
 			pwm_q <= '0';

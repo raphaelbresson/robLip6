@@ -4,23 +4,58 @@ import java.io.InputStream;
 import java.io.OutputStream;	
 import java.util.*;
 
-
+/**
+ * <b>UART_Communicator est une classe permettant de gérer la 
+ * communication UART avec la carte HIGH LEVEL</b>
+ * @see UART_Receiver
+ * @author Raphael
+ * @version 1.0
+ */
 public class UART_Communicator {
-	
+	/**
+	 * Stream d'entrée pour la lecture
+	 */
 	private InputStream in;
+	/**
+	 * Stream de sortie pour l'écriture
+	 */
 	private OutputStream out;
+	/**
+	 * Port UART pour la communication
+	 */
 	private CommPort port;
+	/**
+	 * Objet récepteur
+	 */
 	private UART_Receiver receiver;
+	/**
+	 * Objet Receveur
+	 */
 	private UART_Sender sender;
-	
+	/**
+	 * Taille de la trame d'envoi
+	 */
 	private Integer tailleTrameSend;
-	
+	/**
+	 * Taille de la trame de réception
+	 */
 	private Integer tailleTrameRecv;
-	
+	/**
+	 * 
+	 * Retourne la taille de la trame de réception
+	 * @return la taille de la trame de réception
+	 */
 	public Integer getTailleTrameRecv() { return this.tailleTrameRecv; }
+	/**
+	 * Retourne la taille de trame d'envoi
+	 * @return la taille de trame d'envoi
+	 */
 	public Integer getTailleTrameSend() { return this.tailleTrameSend; }
 	
-	
+	/**
+	 * Constructeur: Initialise le protocole et commence la communication
+	 * @param com le port série à utiliser
+	 */
     public UART_Communicator(String com)
 	{
     	try
@@ -33,7 +68,11 @@ public class UART_Communicator {
     		e.printStackTrace();
     	}
 	}
-    
+    /**
+     * Initialisation de la connection
+     * @param com le port série à utiliser
+     * @throws Exception
+     */
     public void init(String com) throws Exception
     {
     	CommPortIdentifier comPortID = CommPortIdentifier.getPortIdentifier(com);
@@ -48,7 +87,7 @@ public class UART_Communicator {
 			if(port instanceof SerialPort)
 			{
 				SerialPort serial = (SerialPort)port;
-				serial.setSerialPortParams(	115200, 					//BAUDS
+				serial.setSerialPortParams(	5000_000, 					//BAUDS
 											SerialPort.DATABITS_8,  // TAILLE DONNÃ‰ES
 											SerialPort.STOPBITS_1,
 											SerialPort.PARITY_NONE  
@@ -62,6 +101,9 @@ public class UART_Communicator {
 		}
     }
     
+    /**
+     * Démarrage des threads de communication (in/out)
+     */
     public void start()
     {
     	this.receiver = new UART_Receiver(in,this.tailleTrameRecv);
@@ -72,6 +114,10 @@ public class UART_Communicator {
     	thread_send.start();
     }
     
+    /**
+     * Envoyer des données
+     * @param dataToSend Données à envoyer
+     */
     public void sendData(Vector<Integer> dataToSend)
     {
     	try
@@ -87,10 +133,13 @@ public class UART_Communicator {
     	}
     }
     
-    
-    public Vector<Integer> readData()
+    /**
+     * Récupérer les valeurs des capteurs
+     * @return Un vecteur contenant les valeurs des capteurs
+     */
+    public Vector<Number> readData()
     {
-    	Vector<Integer> result = new Vector<Integer>();
+    	Vector<Number> result = new Vector<Number>();
     	try
     	{
     		for(int i = 0  ; i < this.getTailleTrameRecv() ; i++)
@@ -104,12 +153,19 @@ public class UART_Communicator {
     	return result;
     }
     
+    /**
+     * Terminer proprement le protocole
+     * @throws Exception
+     */
     public void terminer() throws Exception
     {
     	this.sender.setTerminer();
     	this.receiver.setTerminer();
     }
     
+    /**
+     * Initialisation du protocole de communication avec le HIGH LEVEL
+     */
     public void initialisation() throws Exception
     {
     	this.out.write(0XFF);

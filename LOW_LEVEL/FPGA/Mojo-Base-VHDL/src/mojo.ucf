@@ -45,8 +45,8 @@ NET "fast_pwm<1>" LOC = P79;
 
 
 #####IMU###################
-NET "TX_IMU" LOC = P41;
-NET "RX_IMU" LOC = P40;
+NET "TX_IMU" LOC = P40;
+NET "RX_IMU" LOC = P34;
 
 #####I2C(LIDAR)############
 NET "scl<0>" LOC = p51;

@@ -9,4 +9,5 @@ Ce projet est parytagé en 2 parties:<br/>
 	-> <b>FPGA</b> : Contient le code (VHDL) nécessaire pour programmer le FPGA (Carte MOJO dans notre cas)<br/>
 	-> <b>MBED</b> : Contient le code (C++) nécessaire pour programmer le microcontroleur MBED (plan B) <br/>
 	-> <b>RobLip6</b> : Contient le design (EAGLE) du circuit imprimé pour la solution FPGA <br/>
+Les scripts shells ("<b>config2octets.sh</b>" et "<b>config4octets.sh</b>" placés à la racine permettant de revenir à une configuration 2 bits (respectivement 4 bits).<br/>
 Bonne lecture!
